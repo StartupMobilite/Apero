@@ -1,0 +1,8 @@
+1er Rapport:
+
++ Ajout de taches dans VisualStudio online
++ Création de la maquette
++ Optimisation de la maquette (optimisation UI)
++ Ajout de différentes pages dans la maquette
++ Finalisation de la maquette
++ Préparation de github

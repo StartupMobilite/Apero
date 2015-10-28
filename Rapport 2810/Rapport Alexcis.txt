@@ -1,0 +1,11 @@
+Rapport 1:
+
++ ajout des membres au projet
++ creation de la maquette
++ tuto gitHub
++ creations des taches dans visual studio pour la maquete et le git hub
++ liaison de git hub avec visual studio online
++ instalation de github (echec)
++ creation d'un compte windows azure
++ réflexion sur les fonctionalités
++ ecriture d'un rapport

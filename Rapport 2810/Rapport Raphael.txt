@@ -1,0 +1,13 @@
+1er Rapport:
+
++ Préparation de VisualStudio online
++ Préparation de github
++ Réflexion sur les fonctionnalitées.
++ Ajout de taches dans VisualStudio online
++ Liaison VS => github
++ Création de la maquette
++ Optimisation de la maquette (optimisation UI)
++ Actualisation des taches finis
++ Rédaction du rapport
+
+
