@@ -1,0 +1,5 @@
+1er Rapport:
+Aujourd'hui, j'ai préparer la maquettes de l'application (réflexion sur l'affichage des fonctionnalités que nous souhaitons intégré à 
+l'application, les actions a faire pour obtenir le résultat désiré). J'ai aussi préparer github et visualstudio, pour préparer le planning
+de la maquette, ce qui nous reste à rajouter, ce qu'on a déjà fais. Nous avons travailler ensemble sur cette scéance afin de bien préparer
+le projet.
