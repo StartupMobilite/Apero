@@ -1,0 +1,2 @@
+.Sprint meeting (établissement des taches à faire dans la journée)
+.Apprentissage de l'utilisation de l'api facebook pour gérer les connexions.
