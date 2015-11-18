@@ -1,1 +1,15 @@
-repartitions des differentes taches pour la journ�e.
+﻿(commun) Sprint meeting
+	→ deffinition des differents api pour le projet
+	→ mise en commun desdifferentes taches effectuées
+
+Repartitions des differentes taches pour la journée.
+Creations des differents fichiers et dossiers pour l'organisation de l'espace de travail
+Installation de l'outil Xamarin, et des differentes bibliotheque d'api
+
+tuto creation d'une fonctionallite de chat (http://grand.patrice.free.fr/net/chat/index.htm)
+
+Cours api et c#
+
+prevision des taches a effectuer avant le prochain sprint meeting
+
+
