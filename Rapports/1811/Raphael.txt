@@ -1,3 +1,7 @@
 .Sprint meeting (établissement des taches à faire dans la journée)
-.Apprentissage de l'utilisation de l'api facebook pour gérer les connexions.
+.Apprentissage de l'utilisation de l'api facebook pour gérer les connexions afin de pouvoir s'en servir d'ici la prochaine scéance.
 .installation de xamarin & visualstudio
+.cours c# & api
+.réflexion sur les classes user (fiche d'information, récupérer par fb ou manuellement pour l'instant) et event (fiche information sur l'évènement)
+afin qu'elles soient opérationnelles d'ici la prochaine scéance.
+.Prévision du prochain spring meeting
