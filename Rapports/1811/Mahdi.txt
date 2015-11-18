@@ -1,0 +1,2 @@
+.Ajout d'un sprint 2 (taches de la journée sur VS)
+.Définition des apis : (facebook, gmaps, ...)
