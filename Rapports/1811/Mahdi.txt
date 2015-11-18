@@ -1,4 +1,8 @@
 .Ajout d'un sprint 2 (taches de la journée sur VS)
 .Définition des apis : (facebook, gmaps, ...)
 .Installation des emulateurs & parametrage xamarin et VS
+.installation des sdk et api
 .déploiement de l'api GMAPS
+.Cours C# & API's
+.début configuration API GMAPS
+.clé gmaps
