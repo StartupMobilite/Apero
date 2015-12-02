@@ -1,0 +1,5 @@
+*Debut dev Interface XAML
+*Configuration API GMAPS
+*Afficher carte GMAPS
+*Creation Menu interactif (slideView)
+*Correction erreurs (missing aapt.exe)
