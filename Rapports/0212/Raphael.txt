@@ -1,0 +1,6 @@
+.Sprint meeting (établissement des taches à faire dans la journée)
+.Création compte pour l'api facebook
+.Réglage de la gestion de l'api facebook
+.préparation classe api facebook
+.Commencement des tests unitaire
+.Commencement view de connexion par facebook
