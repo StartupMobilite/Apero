@@ -1,0 +1,8 @@
+Sprint meeting.
+Creations et distribution des differentes taches pour les 2 semaines a venir.
+Creation de la classe user.
+Creation de la classe event.
+Apprentisage XAML.
+Debut XAML pour une vue de profil.
+
+
