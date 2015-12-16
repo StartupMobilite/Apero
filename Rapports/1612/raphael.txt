@@ -1,7 +1,7 @@
 .Sprint meeting (établissement des tâches à faire dans la journée)
-.participation à la conférence/Atelier création compte Azure.
+.participation à la conférence/Atelier création compte Azure
 .Traduction XAML vers famarin form
-.Création de view + action de différentes pages de l'appli.
-.Installation de différents sdk.
+.Création de view + action de différentes pages de l'appli
+.Installation de différents sdk
 .Test de déploiment Android & winwdows
-.Analyse de l'avancement du projet en groupe pour la rédaction du rapport commun.
+.Analyse de l'avancement du projet en groupe pour la rédaction du rapport commun
