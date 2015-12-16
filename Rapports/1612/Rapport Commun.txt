@@ -1,0 +1,5 @@
+Nous validons le cahier des charges établi au début de l'année, c'est à dire nos obligations:
+.Connection par facebook
+.Utilisation de google maps pour générer une map d'évènements
+.Possibilité de création d'évènement + participation à ces évènements
+Avec possibilité d'ajout d'options supplémentaire à réfléchir en fonction du temps.
