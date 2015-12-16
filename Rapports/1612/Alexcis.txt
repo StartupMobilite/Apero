@@ -1,0 +1,7 @@
+*Conference azure
+*Sprint meeting
+*Creation de lapplication sur le git
+*Debut de la traduction de xaml (windows) vers xarmarin form
+*test du deploiment android et windows (compilation impossible sous ios)
+*Rapport de groupe
+*Creation de la vue Inscription
