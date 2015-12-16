@@ -1,4 +1,5 @@
 .Sprint meeting (établissement des taches à faire dans la journée)
 .participation à la conférence/Atelier création compte Azure.
 .Création de view + action de différentes pages de l'appli.
-.Installation de sdk windows phone.
+.Installation de différent sdk.
+.Analyse de l'avancement du projet en groupe pour la rédaction du rapport commun.
