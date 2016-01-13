@@ -1,0 +1,7 @@
+.Sprint meeting (établissement des tâches à faire dans la journée).
+.Participation à la conférence STARTUP.
+.Mise en place de l'api facebook:
+Problème rencontrer:
+Après plusieurs essais d'intégration, je n'ai pas trouver pour l'instant de bonnes méthodes pour gérer l'api en windows10 universal,
+seulement des choses obseletes pour windows 8.1. Il faut donc que je continue ma recherche.
+.Mise en commun de views.
