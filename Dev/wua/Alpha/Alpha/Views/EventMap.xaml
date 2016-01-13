@@ -14,7 +14,9 @@
        x:Name="MapControl1"            
        ZoomInteractionMode="GestureAndControl"
        TiltInteractionMode="GestureAndControl"   
-       MapServiceToken="EnterYourAuthenticationKeyHere"/>
+       MapServiceToken="EnterYourAuthenticationKeyHere"
+            Height="300"
+            Width="300"/>
 
     </Grid>
     
