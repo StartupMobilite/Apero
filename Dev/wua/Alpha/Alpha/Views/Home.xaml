@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="Alpha.Views.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Alpha"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <RelativePanel>
+
+            <StackPanel Name="HomeButtonsPanel"
+                        Orientation="Horizontal"
+                        BorderThickness="2"
+                        BorderBrush="Black"
+                        RelativePanel.AlignLeftWithPanel="True"
+                        RelativePanel.AlignRightWithPanel="True"
+                        RelativePanel.AlignTopWithPanel="True"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        HorizontalAlignment="Center"
+                        Margin="10,10,10,10"
+                    >
+
+                <Button Name="IGiveButton"
+                        Content="Je Propose"
+                        Background="Gray"
+                        FontSize="16"
+                        Margin="10,10,10,10"/>
+
+                <Button Name="ISoldButton"
+                        Content="Je vend"
+                        Background="Gray"
+                        Margin="10,10,10,10"
+                        FontSize="16"
+                        />
+
+            </StackPanel>
+
+            <StackPanel Name="PopulairePanel"
+                        RelativePanel.Below="HomeButtonsPanel">
+                <TextBlock Text="Les Plus Populaires"
+                           HorizontalAlignment="Center"/>
+                <ListBox Margin="10,10,10,10"
+                         BorderThickness="5"
+                     BorderBrush="Black">
+                    <ListBoxItem>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </ListBoxItem>
+                    
+                    <ListBoxItem>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </ListBoxItem>
+                    
+                    <ListBoxItem>
+                        <StackPanel>
+
+                        </StackPanel>
+                    </ListBoxItem>
+                    
+                </ListBox>
+            </StackPanel>
+
+            <StackPanel Name="PubPanel"
+                        RelativePanel.AlignBottomWithPanel="True"
+                        RelativePanel.AlignHorizontalCenterWithPanel="True"
+                        RelativePanel.AlignLeftWithPanel="True"
+                        RelativePanel.AlignRightWithPanel="True"
+                        MinHeight="60"
+                        MinWidth="310"
+                        >
+                
+            </StackPanel>
+
+        </RelativePanel>
+
+    </StackPanel>
+
+</Page>
