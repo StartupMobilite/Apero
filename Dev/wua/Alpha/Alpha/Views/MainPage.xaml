@@ -116,6 +116,15 @@
                                            />
                             </StackPanel>
                         </ListBoxItem>
+                        
+                        <ListBoxItem Name="EventMap">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Carte Des Events"
+                                           FontSize="24"
+                                           Margin="20,0,0,0"
+                                           />
+                            </StackPanel>
+                        </ListBoxItem>
 
                     </ListBox>
                 </SplitView.Pane>
