@@ -8,16 +8,18 @@
     x:Class="Alpha.Views.EventMap"
     mc:Ignorable="d">
 
-    <Grid x:Name="pageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Maps:MapControl
+        <Grid x:Name="pageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel>
+            <Maps:MapControl
        x:Name="MapControl1"            
        ZoomInteractionMode="GestureAndControl"
        TiltInteractionMode="GestureAndControl"   
-       MapServiceToken="EnterYourAuthenticationKeyHere"
-            Height="300"
-            Width="300"/>
-
+       MapServiceToken="NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8"
+            MinHeight="320"
+            MinWidth="500" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
     </Grid>
-    
+
 </Page>

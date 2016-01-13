@@ -40,7 +40,7 @@ namespace Alpha.Views
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             // Specify a known location.
-            BasicGeoposition cityPosition = new BasicGeoposition() { Latitude = 47.604, Longitude = -122.329 };
+            BasicGeoposition cityPosition = new BasicGeoposition() { Latitude = 48.869465, Longitude = 2.394892 };
             Geopoint cityCenter = new Geopoint(cityPosition);
 
             // Set the map location.
@@ -81,7 +81,7 @@ namespace Alpha.Views
             if (MapControl1.IsStreetsideSupported)
             {
                 // Find a panorama near Avenue Gustave Eiffel.
-                BasicGeoposition cityPosition = new BasicGeoposition() { Latitude = 48.858, Longitude = 2.295 };
+                BasicGeoposition cityPosition = new BasicGeoposition() { Latitude = 48.869465, Longitude = 2.394892 };
                 Geopoint cityCenter = new Geopoint(cityPosition);
                 StreetsidePanorama panoramaNearCity = await StreetsidePanorama.FindNearbyAsync(cityCenter);
 
@@ -115,7 +115,7 @@ namespace Alpha.Views
                 MapControl1.Style = MapStyle.Aerial3DWithRoads;
 
                 // Specify the location.
-                BasicGeoposition hwGeoposition = new BasicGeoposition() { Latitude = 34.134, Longitude = -118.3216 };
+                BasicGeoposition hwGeoposition = new BasicGeoposition() { Latitude = 48.869465, Longitude = 2.394892 };
                 Geopoint hwPoint = new Geopoint(hwGeoposition);
 
                 // Create the map scene.
