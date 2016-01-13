@@ -9,15 +9,15 @@
     mc:Ignorable="d">
 
 
-        <Grid x:Name="pageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid x:Name="pageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <StackPanel>
-            
-            <Maps:MapControl>
-                <TextBox Text="Seattle" Maps:MapControl.Location="{Binding SeattleLocation}"/>
+          <StackPanel Width="361" Canvas.ZIndex="10" Margin="0,0,0,1">
+                <Maps:MapControl>
+                    <TextBox Text="Seattle" Maps:MapControl.Location="{Binding SeattleLocation}"/>
                 <TextBox Text="Bellevue" Maps:MapControl.Location="{Binding BellevueLocation}"/>
             </Maps:MapControl>
-            
+          </StackPanel>
             <Maps:MapControl
        x:Name="MapControl1"            
        ZoomInteractionMode="GestureAndControl"
