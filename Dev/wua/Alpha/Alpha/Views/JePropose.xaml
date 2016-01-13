@@ -24,25 +24,33 @@
             <TextBox Text="Titre *"
                          Margin="5"
                      Name="TextBoxTitre"/>
+            
             <TextBox Text="Thème *"
                          Margin="5"
                      Name="TextBoxTheme"/>
+            
             <TextBox Text="Téléphone *"
                          Margin="5"
                      Name="TextBoxTel"/>
+            
             <TextBox Text="Email *"
                          Margin="5"
                      Name="TextBoxMail"/>
+            
             <CalendarDatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5" Name="CalendarStart"/>
+            
             <TextBox Text="nombre de participant max"
                          Margin="5"
                      Name="TextBoxNbrPartMax"/>
+            
             <TextBox Text="Durée"
                        Margin="5"
                      Name="TextBoxTime"/>
+            
             <TextBox Text="adresse *"
                        Margin="5"
                      Name="TextBoxAdress"/>
+            
             <Button x:Name="JePropose1"
             	Content="Je propose"
             	Background="Gray"

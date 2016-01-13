@@ -40,6 +40,10 @@ namespace Alpha.Views
             NewEvent.email = TextBoxMail.Text;
             NewEvent.titre = TextBoxTitre.Text;
             NewEvent.tel = TextBoxTel.Text;
+            NewEvent.nbrPartMax = TextBoxNbrPartMax.Text;
+            NewEvent.theme = TextBoxTheme.Text;
+            NewEvent.time = TextBoxTime.Text;
+            NewEvent.adresse = TextBoxAdress.Text;
             Frame.GoBack();
         }
     }

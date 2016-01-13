@@ -71,7 +71,7 @@
             
             <SplitView Name="HamburgerSplitView" 
                    DisplayMode="CompactOverlay" 
-                   OpenPaneLength="200" 
+                   OpenPaneLength= "{StaticResource SplitViewOpenPaneThemeLength}" 
                    CompactPaneLength="0"
                    HorizontalAlignment="Left">
 
