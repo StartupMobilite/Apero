@@ -26,5 +26,10 @@ namespace Alpha.Views
         {
             this.InitializeComponent();
         }
+
+        private void IGiveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(JePropose));
+        }
     }
 }
