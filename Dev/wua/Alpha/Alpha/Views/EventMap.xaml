@@ -14,8 +14,8 @@
         <StackPanel>
             
             <Maps:MapControl>
-                <TextBox Text="Seattle" maps:MapControl.Location="{Binding SeattleLocation}"/>
-                <TextBox Text="Bellevue" maps:MapControl.Location="{Binding BellevueLocation}"/>
+                <TextBox Text="Seattle" Maps:MapControl.Location="{Binding SeattleLocation}"/>
+                <TextBox Text="Bellevue" Maps:MapControl.Location="{Binding BellevueLocation}"/>
             </Maps:MapControl>
             
             <Maps:MapControl
