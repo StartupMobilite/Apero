@@ -102,6 +102,9 @@
     <Compile Include="Views\APropos.xaml.cs">
       <DependentUpon>APropos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EventMap.xaml.cs">
+      <DependentUpon>EventMap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
