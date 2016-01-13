@@ -1,0 +1,6 @@
+*Sprint Meeting (établissement des taches et point global)
+*API Bing
+*Création d'une vue pour afficher la carte
+*Paramétrage de l'api
+*Affichage de POI's sur la carte avec action via boutton
+*Debug

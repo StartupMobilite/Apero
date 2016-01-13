@@ -14,9 +14,11 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Controls.Maps;
 using Windows.Devices.Geolocation;
+using Windows.Storage.Streams;
+using Windows.UI;
 
 namespace Alpha.Views
-{ 
+{
 
     public sealed partial class EventMap : Page
     {
@@ -137,6 +139,93 @@ namespace Alpha.Views
                 };
                 await viewNotSupportedDialog.ShowAsync();
             }
+        }
+
+        private void displayPOIButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Specify a known location.
+            BasicGeoposition snPosition = new BasicGeoposition() { Latitude = 47.620, Longitude = -122.349 };
+            Geopoint snPoint = new Geopoint(snPosition);
+
+            // Create a MapIcon.
+            MapIcon mapIcon1 = new MapIcon();
+            mapIcon1.Location = snPoint;
+            mapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
+            mapIcon1.Title = "Space Needle";
+            mapIcon1.ZIndex = 0;
+
+            //Add Image to MapIcon
+            mapIcon1.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/customicon.png"));
+
+            // Add the MapIcon to the map.
+            MapControl1.MapElements.Add(mapIcon1);
+
+            // Center the map over the POI.
+            MapControl1.Center = snPoint;
+            MapControl1.ZoomLevel = 14;
+
+        }
+
+        private void displayXAMLButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Specify a known location.
+            BasicGeoposition snPosition = new BasicGeoposition() { Latitude = 47.620, Longitude = -122.349 };
+            Geopoint snPoint = new Geopoint(snPosition);
+
+            // Create a XAML border.
+            Border border = new Border
+            {
+                Height = 100,
+                Width = 100,
+                BorderBrush = new SolidColorBrush(Windows.UI.Colors.Blue),
+                BorderThickness = new Thickness(5),
+            };
+
+            // Center the map over the POI.
+            MapControl1.Center = snPoint;
+            MapControl1.ZoomLevel = 14;
+
+            // Add XAML to the map.
+            MapControl1.Children.Add(border);
+            MapControl.SetLocation(border, snPoint);
+            MapControl.SetNormalizedAnchorPoint(border, new Point(0.5, 0.5));
+        }
+
+        private void mapPolygonAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            double centerLatitude = MapControl1.Center.Position.Latitude;
+            double centerLongitude = MapControl1.Center.Position.Longitude;
+            MapPolygon mapPolygon = new MapPolygon();
+            mapPolygon.Path = new Geopath(new List<BasicGeoposition>() {
+         new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude-0.001 },
+         new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },
+         new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude+0.001 },
+         new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
+
+   });
+
+            mapPolygon.ZIndex = 1;
+            mapPolygon.FillColor = Colors.Red;
+            mapPolygon.StrokeColor = Colors.Blue;
+            mapPolygon.StrokeThickness = 3;
+            mapPolygon.StrokeDashed = false;
+            MapControl1.MapElements.Add(mapPolygon);
+        }
+
+        private void mapPolylineAddButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            double centerLatitude = MapControl1.Center.Position.Latitude;
+            double centerLongitude = MapControl1.Center.Position.Longitude;
+            MapPolyline mapPolyline = new MapPolyline();
+            mapPolyline.Path = new Geopath(new List<BasicGeoposition>() {
+         new BasicGeoposition() {Latitude=centerLatitude-0.0005, Longitude=centerLongitude-0.001 },
+         new BasicGeoposition() {Latitude=centerLatitude+0.0005, Longitude=centerLongitude+0.001 },
+   });
+
+            mapPolyline.StrokeColor = Colors.Black;
+            mapPolyline.StrokeThickness = 3;
+            mapPolyline.StrokeDashed = true;
+            MapControl1.MapElements.Add(mapPolyline);
         }
 
     }
