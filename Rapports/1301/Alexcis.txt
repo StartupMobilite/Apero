@@ -1,0 +1,11 @@
+•Réunion de sprint et assignations des taches
+•Creation d'une librairie de classes pour le projet
+•Creation de la classe event
+•Creation des liaison entre le formulaire et la classe
+•Resolution de bugs
+•Ajout de nouvelle page
+•Liaisons de plusieurs pages
+•Conference start up
+•Resolutions de bugs
+
+
