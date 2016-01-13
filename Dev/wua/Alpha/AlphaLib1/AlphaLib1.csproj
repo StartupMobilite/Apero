@@ -107,7 +107,7 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Contacts\Contacts.cs" />
     <Compile Include="Events\Event.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Properties\AlphaLib1.rd.xml" />

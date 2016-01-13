@@ -102,6 +102,9 @@
     <Compile Include="Views\APropos.xaml.cs">
       <DependentUpon>APropos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Contacts.xaml.cs">
+      <DependentUpon>Contacts.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EventMap.xaml.cs">
       <DependentUpon>EventMap.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\APropos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Contacts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
