@@ -26,19 +26,24 @@
                         Content="Je Propose"
                         Background="Gray"
                         FontSize="16"
-                        Margin="10,10,10,10"/>
+                        Margin="10,10,10,10"
+                        Click="IGiveButton_Click"
+                        />
 
                 <Button Name="ISoldButton"
                         Content="Je vend"
                         Background="Gray"
                         Margin="10,10,10,10"
                         FontSize="16"
+                        BorderThickness="0.5"
+                        BorderBrush="Black"
                         />
 
             </StackPanel>
 
             <StackPanel Name="PopulairePanel"
-                        RelativePanel.Below="HomeButtonsPanel">
+                        RelativePanel.Below="HomeButtonsPanel"
+                        CornerRadius="5">
                 <TextBlock Text="Les Plus Populaires"
                            HorizontalAlignment="Center"/>
                 <ListBox Margin="10,10,10,10"
