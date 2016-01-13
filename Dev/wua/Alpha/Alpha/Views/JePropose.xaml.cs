@@ -26,5 +26,10 @@ namespace Alpha.Views
         {
             this.InitializeComponent();
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }

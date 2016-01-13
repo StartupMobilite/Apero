@@ -44,6 +44,7 @@
             	Content="Annuler"
             	Background="Gray"
             	FontSize="15"
+                Click="Cancel_Click"
             	/>
         </StackPanel>
     </StackPanel>
