@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlphaLib1
+namespace AlphaLib1.Contacts
 {
-    public class Class1
+    class Contacts
     {
+        
     }
 }

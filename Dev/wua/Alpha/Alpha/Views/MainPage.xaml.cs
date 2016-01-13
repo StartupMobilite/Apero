@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AlphaLib1.Events;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,11 +24,28 @@ namespace Alpha.Views
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public ObservableCollection<Event> allEvents;
+
         public MainPage()
         {
             this.InitializeComponent();
             MyFrame.Navigate(typeof(Home));
         }
+
+        #region "ajout d'events"
+
+        public ObservableCollection<Event> AllEvents
+        {
+            get
+            {
+                return allEvents ?? (allEvents = new ObservableCollection<Event>());
+            }
+        }
+
+        #endregion
+
+        #region "Barre principale"
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
@@ -53,5 +72,7 @@ namespace Alpha.Views
         {
             HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
         }
+
+        #endregion
     }
 }
