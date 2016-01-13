@@ -1,0 +1,7 @@
+*Conférence Azure
+*Installation de differents SDKs
+*Création application sur GIT
+*Traduction XAML (windows) vers Xamarin form
+*Test de déploiement Android & Windows (Compilation IOS impossible car manque de device pour l'instant)
+*Mise en place et début de l'affichage de GMAPS
+*Analyse de l'avancement du projet en groupe pour la rédaction du rapport en commun
