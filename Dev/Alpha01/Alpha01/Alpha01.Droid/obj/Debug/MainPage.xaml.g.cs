@@ -16,8 +16,11 @@ namespace Alpha01 {
     
     public partial class MainPage : ContentPage {
         
+        private StackLayout ;
+        
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
+             = this.FindByName<StackLayout>("");
         }
     }
 }

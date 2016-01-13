@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="Alpha.Views.Inscription"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Alpha"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="White">
+        <StackPanel Name="ImageInscriptionPanel"
+                    Margin="10"
+                    HorizontalAlignment="Center">
+            <Image MinHeight="50"
+                       MinWidth="50"
+                       Source="Assets/Square44x44Logo.png"/>
+
+            <StackPanel Name="ButtonImageInscriptionPanel"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Margin="5">
+                <Button HorizontalAlignment="Center"
+                            Name="ImportButton"
+                            Margin="5"/>
+                <Button HorizontalAlignment="Center"
+                            Name="TakeButton"
+                            Margin="5"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Name="InscriptionInformationsListBox"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="10">
+
+            <TextBox Text="Identifiant *"
+                         Margin="5"/>
+            <TextBox Text="Mot de passe *"
+                         Margin="5"/>
+            <TextBox Text="Comfirmation *"
+                         Margin="5"/>
+            <TextBox Text="Téléphone"
+                         Margin="5"/>
+            <TextBox Text="Email"
+                         Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Margin="10">
+            <Button HorizontalAlignment="Center"
+                            Name="BackButton"
+                            Margin="5"/>
+            <Button HorizontalAlignment="Center"
+                            Name="ValidButton"
+                            Margin="5"/>
+        </StackPanel>
+
+    </StackPanel>
+</Page>
