@@ -8,9 +8,14 @@
     x:Class="Alpha.Views.EventMap"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="pageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Maps:MapControl HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Maps:MapControl
+       x:Name="MapControl1"            
+       ZoomInteractionMode="GestureAndControl"
+       TiltInteractionMode="GestureAndControl"   
+       MapServiceToken="EnterYourAuthenticationKeyHere"/>
 
     </Grid>
+    
 </Page>
