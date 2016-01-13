@@ -12,6 +12,12 @@
         <Grid x:Name="pageGrid" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <StackPanel>
+            
+            <Maps:MapControl>
+                <TextBox Text="Seattle" maps:MapControl.Location="{Binding SeattleLocation}"/>
+                <TextBox Text="Bellevue" maps:MapControl.Location="{Binding BellevueLocation}"/>
+            </Maps:MapControl>
+            
             <Maps:MapControl
        x:Name="MapControl1"            
        ZoomInteractionMode="GestureAndControl"
@@ -20,6 +26,7 @@
             MinHeight="320"
             MinWidth="500" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
+        
     </Grid>
 
 </Page>
