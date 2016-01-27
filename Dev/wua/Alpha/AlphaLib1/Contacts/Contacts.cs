@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlphaLib1.Contacts
 {
-    class Contacts
+    public class Contacts
     {
         
     }

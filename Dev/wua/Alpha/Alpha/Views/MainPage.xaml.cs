@@ -61,11 +61,14 @@ namespace Alpha.Views
 
         private void HamburgerListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            HamburgerSplitView.IsPaneOpen = false;
+
             if (ShareListBoxItem.IsSelected) { NamePageTextBlock.Text = "Share"; }
             else if (FavoritesListBoxItem.IsSelected) {  NamePageTextBlock.Text = "Favorites";}
             else if (HomeListBoxItem.IsSelected) { NamePageTextBlock.Text = "Home"; MyFrame.Navigate(typeof(Home));}
             else if (AProposListBoxItem.IsSelected) { NamePageTextBlock.Text = "A Propos"; MyFrame.Navigate(typeof(APropos));}
             else if (EventMap.IsSelected) { NamePageTextBlock.Text = "Carte Des Evenement"; MyFrame.Navigate(typeof(EventMap)); }
+
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
