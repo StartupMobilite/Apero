@@ -1,0 +1,6 @@
+.Sprint meeting (établissement des tâches à faire dans la journée).
+.Création view FirstConnect + actions.
+.Création view CGU + actions.
+.Création view MentionsLégales + actions.
+.Création view NousContacter + actions.
+.Recherche pour designer (code couleures, logo, etc...) l'applications.

@@ -1,0 +1,4 @@
+.Sprint meeting (établissement des tâches à faire dans la journée).
+.Corrections de bugs.
+.Commencement mise en responsive de l'application.
+.Recherche pour designer (code couleures, logo, etc...) l'applications.

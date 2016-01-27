@@ -49,7 +49,7 @@ namespace Alpha.Views
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(Home));
         }
 
         private void InfoButton_Click(object sender, RoutedEventArgs e)

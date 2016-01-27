@@ -1,0 +1,5 @@
+.Sprint meeting (établissement des tâches à faire dans la journée).
+.Recherche API Facebook.
+.Flux json.
+.Afficher la localisation sur la map.
+.Recherche pour designer (code couleures, logo, etc...) l'applications.
