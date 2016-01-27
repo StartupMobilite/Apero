@@ -15,14 +15,18 @@
                     >
             <Image Stretch="UniformToFill" Source="/Assets/NY31752LOGO.jpe"/>
         </StackPanel>
-        <Button x:Name="LogInButton"
-            	Content="Connexion via Facebook"
-            	Background="#2883CC"
-                Foreground="White"
-            	FontSize="20"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Bottom" Click="LogInButton_Click"
-            	/>
+
+        <Grid x:Name="LayoutRoot" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="ContentPanel" Grid.Row="1">
+                <Button Content="Connexion via Facebook" Height="42" Width="240" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Bottom" BorderThickness="3" Foreground="White" BorderBrush="White" Background="Transparent"/>
+            </Grid>
+        </Grid>
+       
         <Button x:Name="LogAdButton"
             	Content="go"
                 Foreground="White"
