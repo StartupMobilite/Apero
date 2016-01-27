@@ -34,7 +34,8 @@
             <ListBoxItem Content="Mentions Légales"
                          FontSize="24"
                          HorizontalAlignment="Center"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         Tapped="ListBoxItem_Tapped"/>
 
             <ListBoxItem Name="BugListBoxItem"
                          Content="Signaler un bug"

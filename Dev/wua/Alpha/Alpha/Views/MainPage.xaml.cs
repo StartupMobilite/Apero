@@ -30,7 +30,7 @@ namespace Alpha.Views
         public MainPage()
         {
             this.InitializeComponent();
-            MyFrame.Navigate(typeof(Home));
+            MyFrame.Navigate(typeof(FirstConnect));
         }
 
         #region "ajout d'events"
