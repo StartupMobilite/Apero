@@ -26,16 +26,17 @@
         <ListBox Grid.Row="3"
                  Margin="10,10,0,0">
 
-            <ListBoxItem Content="Cgu"
+            <ListBoxItem Content="CGU"
                          FontSize="24"
                          HorizontalAlignment="Center"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         Tapped="CGU_Tapped"/>
 
             <ListBoxItem Content="Mentions Légales"
                          FontSize="24"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Center"
-                         Tapped="ListBoxItem_Tapped"/>
+                         Tapped="MentionsLegales_Tapped"/>
 
             <ListBoxItem Name="BugListBoxItem"
                          Content="Signaler un bug"
@@ -47,7 +48,8 @@
             <ListBoxItem Content="Nous contacter"
                          FontSize="24"
                          HorizontalAlignment="Center"
-                         VerticalAlignment="Center"/>
+                         VerticalAlignment="Center"
+                         Tapped="NousContacter_Tapped"/>
 
         </ListBox>
     </Grid>

@@ -102,6 +102,9 @@
     <Compile Include="Views\APropos.xaml.cs">
       <DependentUpon>APropos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CGU.xaml.cs">
+      <DependentUpon>CGU.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Contacts.xaml.cs">
       <DependentUpon>Contacts.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\MentionsLegales.xaml.cs">
       <DependentUpon>MentionsLegales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NousContacter.xaml.cs">
+      <DependentUpon>NousContacter.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\APropos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CGU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -188,6 +198,10 @@
     <Page Include="Views\MentionsLegales.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NousContacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

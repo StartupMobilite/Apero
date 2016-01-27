@@ -63,7 +63,7 @@ namespace Alpha.Views
         {
             HamburgerSplitView.IsPaneOpen = false;
 
-            if (ShareListBoxItem.IsSelected) { NamePageTextBlock.Text = "Share"; }
+            if (ContactListBoxItem.IsSelected) { NamePageTextBlock.Text = "Contactes"; MyFrame.Navigate(typeof(Contacts)); }
             else if (FavoritesListBoxItem.IsSelected) {  NamePageTextBlock.Text = "Favorites";}
             else if (HomeListBoxItem.IsSelected) { NamePageTextBlock.Text = "Home"; MyFrame.Navigate(typeof(Home));}
             else if (AProposListBoxItem.IsSelected) { NamePageTextBlock.Text = "A Propos"; MyFrame.Navigate(typeof(APropos));}

@@ -32,10 +32,20 @@ namespace Alpha.Views
             Frame.SourcePageType = typeof(AddBug);
         }
 
-        private void ListBoxItem_Tapped(object sender, TappedRoutedEventArgs e)
+        private void MentionsLegales_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.SourcePageType = typeof(MentionsLegal);
 
+        }
+
+        private void CGU_Tapped (object sender, TappedRoutedEventArgs e)
+        {
+            Frame.SourcePageType = typeof(CGU);
+        }
+
+        private void NousContacter_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.SourcePageType = typeof(NousContacter);
         }
     }
 }

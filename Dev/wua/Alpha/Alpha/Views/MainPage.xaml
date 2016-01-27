@@ -91,9 +91,9 @@
                             </StackPanel>
                         </ListBoxItem>
 
-                        <ListBoxItem Name="ShareListBoxItem" >
+                        <ListBoxItem Name="ContactListBoxItem" >
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Share" 
+                                <TextBlock Text="Contactes" 
                                            FontSize="24" 
                                            Margin="20,0,0,0"
                                            />

@@ -20,14 +20,14 @@ namespace Alpha.Views
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MentionsLegal : Page
+    public sealed partial class CGU : Page
     {
-        public MentionsLegal()
+        public CGU()
         {
             this.InitializeComponent();
         }
 
-        private void MentionLegalesButton_Tapped(object sender, TappedRoutedEventArgs e)
+        private void CGUButton_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Frame.SourcePageType = typeof(APropos);
         }
