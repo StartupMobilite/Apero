@@ -35,7 +35,7 @@ namespace Alpha.Views
             pageGrid.Children.Add(MapControl2);
 
 //            MapControl1.Center = cityCenter;
-            MapControl1.ZoomLevel = 12;
+            MapControl1.ZoomLevel = 18;
             MapControl1.LandmarksVisible = true;
         }
 
@@ -47,7 +47,7 @@ namespace Alpha.Views
 
             // Set the map location.
             MapControl1.Center = cityCenter;
-            MapControl1.ZoomLevel = 12;
+            MapControl1.ZoomLevel = 18;
             MapControl1.LandmarksVisible = true;
 
             // Set your current location.
@@ -183,7 +183,7 @@ namespace Alpha.Views
 
             // Center the map over the POI.
             MapControl1.Center = snPoint;
-            MapControl1.ZoomLevel = 14;
+            MapControl1.ZoomLevel = 18;
 
             // Add XAML to the map.
             MapControl1.Children.Add(border);
