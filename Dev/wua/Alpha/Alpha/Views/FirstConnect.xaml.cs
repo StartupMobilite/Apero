@@ -31,5 +31,10 @@ namespace Alpha.Views
         {
             Frame.Navigate(typeof(Home));
         }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
