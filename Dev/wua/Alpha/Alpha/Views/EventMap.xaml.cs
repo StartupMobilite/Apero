@@ -26,16 +26,8 @@ namespace Alpha.Views
         public EventMap()
         {
             this.InitializeComponent();
-
-            // Add the MapControl and the specify maps authentication key.
-            MapControl MapControl2 = new MapControl();
-            MapControl2.ZoomInteractionMode = MapInteractionMode.GestureAndControl;
-            MapControl2.TiltInteractionMode = MapInteractionMode.GestureAndControl;
-            MapControl2.MapServiceToken = "NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8";
-            pageGrid.Children.Add(MapControl2);
-
-//            MapControl1.Center = cityCenter;
-            MapControl1.ZoomLevel = 18;
+            //          MapControl1.Center = cityCenter;
+            MapControl1.ZoomLevel = 10;
             MapControl1.LandmarksVisible = true;
         }
 
@@ -47,7 +39,7 @@ namespace Alpha.Views
 
             // Set the map location.
             MapControl1.Center = cityCenter;
-            MapControl1.ZoomLevel = 18;
+            MapControl1.ZoomLevel = 14;
             MapControl1.LandmarksVisible = true;
 
             // Set your current location.
@@ -229,6 +221,4 @@ namespace Alpha.Views
         }
 
     }
-
-
 }
