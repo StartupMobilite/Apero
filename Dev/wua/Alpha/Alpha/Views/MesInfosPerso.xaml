@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="Alpha.Views.MesInfosPerso"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Alpha.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="White">
+
+        <StackPanel  Name="SAVEListBox"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="10">
+
+            <TextBox Text="Changer de pseudo *"
+                         Margin="5"
+                     Name="TextBoxPseudo"/>
+
+            <TextBox Text="Entrer nouveau mot de passe *"
+                         Margin="5"
+                     Name="TextBoxNMDP1"/>
+
+            <TextBox Text="Remettre nouveau mot de passe *"
+                         Margin="5"
+                     Name="TextBoxNMDP2"/>
+
+            <TextBox Text="Email *"
+                         Margin="5"
+                     Name="TextBoxMail"/>
+
+            <TextBox Text="Telephone *"
+                         Margin="5"
+                     Name="TextBoxNbrPartMax"/>
+
+            <TextBox Text="Durée *"
+                       Margin="5"
+                     Name="TextBoxTime"/>
+
+            <TextBox Text="adresse *"
+                       Margin="5"
+                     Name="TextBoxAdress"/>
+
+            <Button x:Name="SAVEbutton"
+            	Content="Enregistrer"
+            	Background="Gray"
+            	FontSize="15"
+                    Click="SAVEbutton_Click"
+            	/>
+            <Button x:Name="Cancelbutton"
+            	Content="Annuler"
+            	Background="Gray"
+            	FontSize="15"
+                Click="Cancelbutton_Click"
+            	/>
+        </StackPanel>
+    </StackPanel>
+</Page>

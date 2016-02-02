@@ -130,6 +130,9 @@
     <Compile Include="Views\MentionsLegales.xaml.cs">
       <DependentUpon>MentionsLegales.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MesInfosPerso.xaml.cs">
+      <DependentUpon>MesInfosPerso.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NousContacter.xaml.cs">
       <DependentUpon>NousContacter.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\FFA-logo-ss-fd-298x300.png" />
     <Content Include="Assets\NY31752LOGO.jpe" />
     <Content Include="Assets\user.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -199,6 +203,10 @@
     <Page Include="Views\MentionsLegales.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MesInfosPerso.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\NousContacter.xaml">
       <SubType>Designer</SubType>

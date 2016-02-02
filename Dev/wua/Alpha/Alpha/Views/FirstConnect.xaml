@@ -8,12 +8,16 @@
     mc:Ignorable="d">
 
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
         <StackPanel Name="LogoStartPannel"
                     MinHeight="150"
                     MinWidth="150"
                     Margin="10,10,10,10"
+                    Height="300"
+                    Width="300"
                     >
-            <Image Stretch="UniformToFill" Source="/Assets/NY31752LOGO.jpe"/>
+            
+            <Image Stretch="UniformToFill" Source="/Assets/FFA-logo-ss-fd-298x300.png"/>
         </StackPanel>
 
         <Grid x:Name="LayoutRoot" Background="Transparent">

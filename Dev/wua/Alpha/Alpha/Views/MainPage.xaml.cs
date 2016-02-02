@@ -49,7 +49,7 @@ namespace Alpha.Views
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Home));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private void InfoButton_Click(object sender, RoutedEventArgs e)
@@ -64,7 +64,7 @@ namespace Alpha.Views
             HamburgerSplitView.IsPaneOpen = false;
 
             if (ContactListBoxItem.IsSelected) { NamePageTextBlock.Text = "Contactes"; MyFrame.Navigate(typeof(Contacts)); }
-            else if (FavoritesListBoxItem.IsSelected) {  NamePageTextBlock.Text = "Favorites";}
+            else if (ProfilListBoxItem.IsSelected) {  NamePageTextBlock.Text = "Profil";MyFrame.Navigate(typeof(MesInfosPerso));}
             else if (HomeListBoxItem.IsSelected) { NamePageTextBlock.Text = "Home"; MyFrame.Navigate(typeof(Home));}
             else if (AProposListBoxItem.IsSelected) { NamePageTextBlock.Text = "A Propos"; MyFrame.Navigate(typeof(APropos));}
             else if (EventMap.IsSelected) { NamePageTextBlock.Text = "Carte Des Evenement"; MyFrame.Navigate(typeof(EventMap)); }

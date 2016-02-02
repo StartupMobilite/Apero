@@ -100,9 +100,9 @@
                             </StackPanel>
                         </ListBoxItem>
 
-                        <ListBoxItem Name="FavoritesListBoxItem">
+                        <ListBoxItem Name="ProfilListBoxItem">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Favorites" 
+                                <TextBlock Text="Profil" 
                                            FontSize="24" 
                                            Margin="20,0,0,0"
                                            />
