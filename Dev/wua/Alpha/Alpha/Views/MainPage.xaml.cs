@@ -49,33 +49,34 @@ namespace Alpha.Views
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
-        }
-
-        private void InfoButton_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Navigate(typeof(APropos));
-            NamePageTextBlock.Text = "A Propos";
-            AProposListBoxItem.IsSelected =true;
-        }
-
-        private void HamburgerListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            HamburgerSplitView.IsPaneOpen = false;
-
-            if (ContactListBoxItem.IsSelected) { NamePageTextBlock.Text = "Contactes"; MyFrame.Navigate(typeof(Contacts)); }
-            else if (ProfilListBoxItem.IsSelected) {  NamePageTextBlock.Text = "Profil";MyFrame.Navigate(typeof(MesInfosPerso));}
-            else if (HomeListBoxItem.IsSelected) { NamePageTextBlock.Text = "Home"; MyFrame.Navigate(typeof(Home));}
-            else if (AProposListBoxItem.IsSelected) { NamePageTextBlock.Text = "A Propos"; MyFrame.Navigate(typeof(APropos));}
-            else if (EventMap.IsSelected) { NamePageTextBlock.Text = "Carte Des Evenement"; MyFrame.Navigate(typeof(EventMap)); }
-
+            MyFrame.Navigate(typeof(Home));
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
         }
-
         #endregion
+
+        private void AProposListBoxItem_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(APropos));
+
+        }
+
+        private void FavoritesListBoxItem_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Home));
+        }
+
+        private void EventMap_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(EventMap));
+        }
+
+        private void ContactListBoxItem_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Contacts));
+        }
     }
 }

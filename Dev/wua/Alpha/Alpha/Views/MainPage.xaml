@@ -6,137 +6,107 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
-    <StackPanel Name="MainPanel" 
-                Background="#2883CC">
 
-        <RelativePanel Name="TopControlBarStackPanel"
+    <SplitView     Name="HamburgerSplitView"
+                   DisplayMode="CompactInline"
+                   OpenPaneLength= "306"
+                   CompactPaneLength="42"
+                   VerticalContentAlignment="Stretch"
+                   HorizontalContentAlignment="Stretch"
+                   >
+
+        <SplitView.Pane>
+            <StackPanel Name="HamburgerListBox">
+
+                <RadioButton Name="HomeListBoxItem"
+                             Content="Home"
+                               FontSize="24"
+                               Margin="20,0,0,0"
+                               Click="HomeButton_Click"/>
+
+                <RadioButton Name="ContactListBoxItem"
+                    Content="Contacts"
+                    FontSize="24"
+                    Margin="20,0,0,0"
+                    Click="ContactListBoxItem_Click"/>
+
+                <RadioButton Name="FavoritesListBoxItem"
+                             Content="Favorits"
+                             FontSize="24"
+                             Margin="20,0,0,0"
+                             Click="FavoritesListBoxItem_Click"
+                                           />
+                <RadioButton Name="AProposListBoxItem"
+                             Content="A Propos"
+                             FontSize="24"
+                             Margin="20,0,0,0"
+                             Click="AProposListBoxItem_Click"/>
+
+                <RadioButton Name="EventMap"
+                             Content="Carte Des Events"
+                             FontSize="24"
+                             Margin="20,0,0,0"
+                             Click="EventMap_Click"/>
+            </StackPanel>
+        </SplitView.Pane>
+
+        <SplitView.Content>
+            <StackPanel>
+                <RelativePanel Name="TopControlBarStackPanel"
                     BorderBrush="White"
                     Background="#2883CC"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignTopWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True">
 
-            <StackPanel Name="HomeButtonPanel"
+                    <StackPanel Name="HomeButtonPanel"
                         RelativePanel.AlignVerticalCenterWithPanel="True"
                         RelativePanel.AlignLeftWithPanel="True">
-                <Button Name="HamburgerButton" 
-                    FontFamily="Segoe MDL2 Assets"
-                    Content="&#xE700;" 
-                    FontSize="32" 
-                    Click="HamburgerButton_Click"
-                    RelativePanel.AlignVerticalCenterWithPanel="True"
-                    RelativePanel.AlignLeftWithPanel="True"/>
-            </StackPanel>
+                        <Button Name="HamburgerButton" 
+                                FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE700;" 
+                                FontSize="32" 
+                                Click="HamburgerButton_Click"
+                                RelativePanel.AlignVerticalCenterWithPanel="True"
+                                RelativePanel.AlignLeftWithPanel="True"/>
+                    </StackPanel>
 
-            <StackPanel Name="PageTitlePanel"
+                    <StackPanel Name="PageTitlePanel"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         RelativePanel.AlignVerticalCenterWithPanel="True"
                         RelativePanel.RightOf="HomeButtonPanel"
                         RelativePanel.LeftOf="InfoPanel">
-                <TextBlock Name="NamePageTextBlock"
+                        <TextBlock Name="NamePageTextBlock"
                            Text=""
                            FontSize="16"
                            Foreground="White"
                            Margin="5,5,5,5"
                            HorizontalAlignment="Center"
                         />
-            </StackPanel>
+                    </StackPanel>
 
-            <StackPanel Name="InfoPanel" 
+                    <StackPanel Name="InfoPanel" 
                         Orientation="Horizontal" 
                         RelativePanel.AlignRightWithPanel="True"
                         Margin="0,5,5,5">
-                <Button Name="InfoButton"
+
+                        <Button Name="InfoButton"
                         Content="?"
                         Margin="5,5,5,5"
                         FontSize="16"
-                        Click="InfoButton_Click"
+                        Click="AProposListBoxItem_Click"
                         />
 
+                    </StackPanel>
+
+                </RelativePanel>
+
+                <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"/>
             </StackPanel>
 
-        </RelativePanel>
 
-        <RelativePanel Name="LeftControlBarStackPanel"
-                    BorderBrush="Black"
-                    RelativePanel.AlignLeftWithPanel="True"
-                       >
-            
-        
+        </SplitView.Content>
 
-        <Frame Name="MyFrame" RelativePanel.AlignLeftWithPanel="True"
-               Background="#2883CC">
-            
-        </Frame>
-            
-            <SplitView Name="HamburgerSplitView" 
-                   DisplayMode="CompactOverlay" 
-                   OpenPaneLength= "{StaticResource SplitViewOpenPaneThemeLength}" 
-                   CompactPaneLength="0"
-                   HorizontalAlignment="Left">
-
-                <SplitView.Pane>
-                    <ListBox SelectionMode="Single"
-                     Name="HamburgerListBox" 
-                     SelectionChanged="HamburgerListBox_SelectionChanged"
-                             >
-
-                        <ListBoxItem Name="HomeListBoxItem">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Home" 
-                                           FontSize="24" 
-                                           Margin="20,0,0,0"
-                                           />
-                            </StackPanel>
-                        </ListBoxItem>
-
-                        <ListBoxItem Name="ContactListBoxItem" >
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Contactes" 
-                                           FontSize="24" 
-                                           Margin="20,0,0,0"
-                                           />
-                            </StackPanel>
-                        </ListBoxItem>
-
-                        <ListBoxItem Name="ProfilListBoxItem">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Profil" 
-                                           FontSize="24" 
-                                           Margin="20,0,0,0"
-                                           />
-                            </StackPanel>
-                        </ListBoxItem>
-                        
-                        <ListBoxItem Name="AProposListBoxItem">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="A Propos"
-                                           FontSize="24"
-                                           Margin="20,0,0,0"
-                                           />
-                            </StackPanel>
-                        </ListBoxItem>
-                        
-                        <ListBoxItem Name="EventMap">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Carte Des Events"
-                                           FontSize="24"
-                                           Margin="20,0,0,0"
-                                           />
-                            </StackPanel>
-                        </ListBoxItem>
-
-                    </ListBox>
-                </SplitView.Pane>
-                
-            </SplitView>
-            
-        </RelativePanel>
-        
-    </StackPanel>
-        
-    
-
+    </SplitView>
 
 </Page>
