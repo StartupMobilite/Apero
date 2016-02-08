@@ -16,30 +16,21 @@
                     Height="300"
                     Width="300"
                     >
-            
+
             <Image Stretch="UniformToFill" Source="/Assets/FFA-logo-ss-fd-298x300.png"/>
         </StackPanel>
 
-        <Grid x:Name="LayoutRoot" Background="Transparent">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <StackPanel Name="ButtonConnectPanel" Orientation="Horizontal">
+            <Button Content="Connexion via Facebook"
+                        Click="Button_Click"
+                        Style="{StaticResource ButtonStyle}"/>
 
-            <Grid x:Name="ContentPanel" Grid.Row="1">
-                <Button Content="Connexion via Facebook" Height="42" Width="240" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Bottom" BorderThickness="3" Foreground="White" BorderBrush="White" Background="Transparent"/>
-            </Grid>
-        </Grid>
-       
-        <Button x:Name="LogAdButton"
+
+            <Button x:Name="LogAdButton"
             	Content="go"
-                Foreground="White"
-            	Background="#2883CC"
-            	FontSize="20"
-                Margin="5"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
+                Style="{StaticResource ButtonStyle}"
                 Click="LogAdButton_Click"
             	/>
+        </StackPanel>
     </StackPanel>
 </Page>

@@ -51,13 +51,14 @@
         </SplitView.Pane>
 
         <SplitView.Content>
-            <StackPanel>
+            <StackPanel Style="{StaticResource StackPanelStyleLRR}" >
                 <RelativePanel Name="TopControlBarStackPanel"
                     BorderBrush="White"
                     Background="#2883CC"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignTopWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True">
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True">
 
                     <StackPanel Name="HomeButtonPanel"
                         RelativePanel.AlignVerticalCenterWithPanel="True"
@@ -88,7 +89,8 @@
                     <StackPanel Name="InfoPanel" 
                         Orientation="Horizontal" 
                         RelativePanel.AlignRightWithPanel="True"
-                        Margin="0,5,5,5">
+                        Margin="0,5,5,5"
+                        >
 
                         <Button Name="InfoButton"
                         Content="?"
@@ -101,7 +103,7 @@
 
                 </RelativePanel>
 
-                <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"/>
+                <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}" />
             </StackPanel>
 
 

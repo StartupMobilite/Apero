@@ -24,5 +24,10 @@
             VerticalAlignment="Center"/>
         </StackPanel>
 
+        <StackPanel Name="EventInfoPanel">
+            
+            
+        </StackPanel>
+
     </StackPanel>
 </Page>
