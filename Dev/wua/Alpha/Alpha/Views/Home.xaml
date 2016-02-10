@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="#2883CC">
-        <RelativePanel>
+        <RelativePanel
+             Background="#2883CC">
 
             <StackPanel Name="HomeButtonsPanel"
                         Orientation="Horizontal"
@@ -19,7 +19,6 @@
                         RelativePanel.AlignTopWithPanel="True"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         HorizontalAlignment="Center"
-                        Margin="10,10,10,10"
                     >
 
                 <Button Name="IGiveButton"
@@ -48,25 +47,26 @@
                            HorizontalAlignment="Center"/>
                 <ListBox Margin="10,10,10,10"
                          BorderThickness="5"
-                     BorderBrush="Black">
+                         BorderBrush="Black"
+                         Background="Azure">
                     <ListBoxItem>
                         <StackPanel>
 
                         </StackPanel>
                     </ListBoxItem>
-                    
+
                     <ListBoxItem>
                         <StackPanel>
 
                         </StackPanel>
                     </ListBoxItem>
-                    
+
                     <ListBoxItem>
                         <StackPanel>
 
                         </StackPanel>
                     </ListBoxItem>
-                    
+
                 </ListBox>
             </StackPanel>
 
@@ -78,11 +78,9 @@
                         MinHeight="60"
                         MinWidth="310"
                         >
-                
+
             </StackPanel>
 
         </RelativePanel>
-
-    </StackPanel>
 
 </Page>

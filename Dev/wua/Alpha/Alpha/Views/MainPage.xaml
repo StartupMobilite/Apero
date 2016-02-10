@@ -16,7 +16,7 @@
                    >
 
         <SplitView.Pane>
-            <StackPanel Name="HamburgerListBox">
+            <StackPanel Name="HamburgerListBox" Background="Gray">
 
                 <RadioButton Name="HomeListBoxItem"
                              Content="Home"
@@ -51,32 +51,32 @@
         </SplitView.Pane>
 
         <SplitView.Content>
-            <StackPanel Style="{StaticResource StackPanelStyleLRR}" >
+            <RelativePanel Name="FrameContentPanel" Background="Red">
+                
                 <RelativePanel Name="TopControlBarStackPanel"
                     BorderBrush="White"
                     Background="#2883CC"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignTopWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True"
-                    RelativePanel.AlignBottomWithPanel="True">
+                    Height="Auto"
+                    >
 
                     <StackPanel Name="HomeButtonPanel"
-                        RelativePanel.AlignVerticalCenterWithPanel="True"
+                        RelativePanel.AlignTopWithPanel="True"
                         RelativePanel.AlignLeftWithPanel="True">
                         <Button Name="HamburgerButton" 
                                 FontFamily="Segoe MDL2 Assets"
                                 Content="&#xE700;" 
                                 FontSize="32" 
-                                Click="HamburgerButton_Click"
-                                RelativePanel.AlignVerticalCenterWithPanel="True"
-                                RelativePanel.AlignLeftWithPanel="True"/>
+                                Click="HamburgerButton_Click"/>
                     </StackPanel>
 
                     <StackPanel Name="PageTitlePanel"
-                        RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        RelativePanel.AlignVerticalCenterWithPanel="True"
+                        RelativePanel.AlignTopWithPanel="True"
                         RelativePanel.RightOf="HomeButtonPanel"
                         RelativePanel.LeftOf="InfoPanel">
+                        
                         <TextBlock Name="NamePageTextBlock"
                            Text=""
                            FontSize="16"
@@ -89,6 +89,7 @@
                     <StackPanel Name="InfoPanel" 
                         Orientation="Horizontal" 
                         RelativePanel.AlignRightWithPanel="True"
+                        RelativePanel.AlignTopWithPanel="True"
                         Margin="0,5,5,5"
                         >
 
@@ -102,9 +103,17 @@
                     </StackPanel>
 
                 </RelativePanel>
-
+                <StackPanel Name="framePanel"
+                    RelativePanel.Below="TopControlBarStackPanel"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    Background="Blue"
+                    >
                 <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}" />
-            </StackPanel>
+
+                </StackPanel>
+            </RelativePanel>
 
 
         </SplitView.Content>

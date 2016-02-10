@@ -15,21 +15,16 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Alpha.Views
+namespace dotNet.Views
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class Home : Page
+    public sealed partial class HomePage : Page
     {
-        public Home()
+        public HomePage()
         {
             this.InitializeComponent();
-        }
-
-        private void IGiveButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.SourcePageType=(typeof(JePropose));
         }
     }
 }

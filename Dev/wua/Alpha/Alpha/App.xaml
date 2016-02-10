@@ -26,19 +26,19 @@
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="CornerRadius" Value="10"/>
             <Setter Property="Margin" Value="3"/>
+            <Setter Property="Height" Value="Auto"/>
+            <Setter Property="Width" Value="Auto"/>
         </Style>
-        
+
         <Style TargetType="Frame" x:Key="FramePanelStyle">
             <Setter Property="Background" Value="#2883CC"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
-            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
             <Setter Property="BorderBrush" Value="Black"/>
-            <Setter Property="BorderThickness" Value="15"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="Margin" Value="3"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
-        
+
     </Application.Resources>
 
 </Application>

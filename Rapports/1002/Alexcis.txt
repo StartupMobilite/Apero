@@ -1,0 +1,4 @@
+Assgnation des taches
+Resolution de problemes
+Cours sur le responsive : https://channel9.msdn.com/events/Windows/Developers-Guide-to-Windows-10-RTM/Adaptive-UI
+Modifications des vues et creations de style pours les differents elements de l'application
