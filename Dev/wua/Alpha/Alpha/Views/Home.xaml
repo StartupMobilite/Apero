@@ -29,14 +29,14 @@
                         Click="IGiveButton_Click"
                         />
 
-                <Button Name="ISoldButton"
+                <!--<Button Name="ISoldButton"
                         Content="Je vend"
                         Background="Gray"
                         Margin="10,10,10,10"
                         FontSize="16"
                         BorderThickness="0.5"
                         BorderBrush="Black"
-                        />
+                        />-->
 
             </StackPanel>
 
