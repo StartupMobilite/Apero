@@ -52,14 +52,13 @@
 
         <SplitView.Content>
             <RelativePanel Name="FrameContentPanel" Background="Red">
-                
+
                 <RelativePanel Name="TopControlBarStackPanel"
                     BorderBrush="White"
                     Background="#2883CC"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignTopWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True"
-                    Height="Auto"
                     >
 
                     <StackPanel Name="HomeButtonPanel"
@@ -76,7 +75,7 @@
                         RelativePanel.AlignTopWithPanel="True"
                         RelativePanel.RightOf="HomeButtonPanel"
                         RelativePanel.LeftOf="InfoPanel">
-                        
+
                         <TextBlock Name="NamePageTextBlock"
                            Text=""
                            FontSize="16"
@@ -97,27 +96,25 @@
                         Content="?"
                         Margin="5,5,5,5"
                         FontSize="16"
-                        Click="AProposListBoxItem_Click"
-                        />
-
+                        Click="AProposListBoxItem_Click"/>
                     </StackPanel>
-
                 </RelativePanel>
                 <StackPanel Name="framePanel"
                     RelativePanel.Below="TopControlBarStackPanel"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True"
-                    Background="Blue"
+                    Background="Yellow"
+                    Height="Auto"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Padding="5"
                     >
-                <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}" />
-
+                    <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"
+                           />
                 </StackPanel>
             </RelativePanel>
-
-
         </SplitView.Content>
-
     </SplitView>
 
 </Page>

@@ -31,12 +31,9 @@
         </Style>
 
         <Style TargetType="Frame" x:Key="FramePanelStyle">
-            <Setter Property="Background" Value="#2883CC"/>
+            <Setter Property="Background" Value="Red"/>
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="3"/>
-            <Setter Property="Margin" Value="3"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
     </Application.Resources>
