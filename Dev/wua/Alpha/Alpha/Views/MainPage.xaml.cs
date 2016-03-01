@@ -51,6 +51,10 @@ namespace Alpha.Views
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
             NamePageTextBlock.Text = "Home";
+            if (HamburgerSplitView.IsPaneOpen)
+            {
+                HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
+            }
             MyFrame.Navigate(typeof(Home));
         }
 
@@ -63,6 +67,10 @@ namespace Alpha.Views
         private void AProposListBoxItem_Click(object sender, RoutedEventArgs e)
         {
             NamePageTextBlock.Text = "A Propos";
+            if (HamburgerSplitView.IsPaneOpen)
+            {
+                HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
+            }
             MyFrame.Navigate(typeof(APropos));
 
         }
@@ -70,18 +78,30 @@ namespace Alpha.Views
         private void FavoritesListBoxItem_Click(object sender, RoutedEventArgs e)
         {
             NamePageTextBlock.Text = "Favorits";
+            if (HamburgerSplitView.IsPaneOpen)
+            {
+                HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
+            }
             MyFrame.Navigate(typeof(Home));
         }
 
         private void EventMap_Click(object sender, RoutedEventArgs e)
         {
             NamePageTextBlock.Text = "Event Map";
+            if (HamburgerSplitView.IsPaneOpen)
+            {
+                HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
+            }
             MyFrame.Navigate(typeof(EventMap));
         }
 
         private void ContactListBoxItem_Click(object sender, RoutedEventArgs e)
         {
             NamePageTextBlock.Text = "Contacts";
+            if (HamburgerSplitView.IsPaneOpen)
+            {
+                HamburgerSplitView.IsPaneOpen = !HamburgerSplitView.IsPaneOpen;
+            }
             MyFrame.Navigate(typeof(Contacts));
         }
     }
