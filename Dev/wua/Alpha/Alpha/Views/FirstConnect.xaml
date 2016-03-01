@@ -18,7 +18,12 @@
                     >
 
             <Image Stretch="UniformToFill" Source="/Assets/FFA-logo-ss-fd-298x300.png"/>
+
         </StackPanel>
+
+        <!--<MediaElement Source="Assets/severestormovermandurahmp4.mp4" AutoPlay="True" Height="Auto" Width="Auto" Stretch="UniformToFill" temps/> **/-->
+
+
 
         <StackPanel Name="ButtonConnectPanel" Orientation="Horizontal">
             <Button Content="Connexion via Facebook"
