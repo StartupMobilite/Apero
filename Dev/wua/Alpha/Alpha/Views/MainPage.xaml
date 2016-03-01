@@ -10,7 +10,7 @@
     <SplitView     Name="HamburgerSplitView"
                    DisplayMode="CompactInline"
                    OpenPaneLength= "306"
-                   CompactPaneLength="42"
+                   CompactPaneLength="46"
                    VerticalContentAlignment="Stretch"
                    HorizontalContentAlignment="Stretch"
                    >
@@ -18,34 +18,40 @@
         <SplitView.Pane>
             <StackPanel Name="HamburgerListBox" Background="Gray">
 
+                    <Button Name="HamburgerButton" 
+                                FontFamily="Segoe MDL2 Assets"
+                                Content="&#xE700;" 
+                                FontSize="30" 
+                                Click="HamburgerButton_Click"/>
+
                 <RadioButton Name="HomeListBoxItem"
                              Content="Home"
-                               FontSize="24"
-                               Margin="20,0,0,0"
+                               FontSize="30"
+                               Margin="10,0,0,0"
                                Click="HomeButton_Click"/>
 
                 <RadioButton Name="ContactListBoxItem"
                     Content="Contacts"
-                    FontSize="24"
-                    Margin="20,0,0,0"
+                    FontSize="30"
+                    Margin="10,0,0,0"
                     Click="ContactListBoxItem_Click"/>
 
                 <RadioButton Name="FavoritesListBoxItem"
                              Content="Favorits"
-                             FontSize="24"
-                             Margin="20,0,0,0"
+                             FontSize="30"
+                             Margin="10,0,0,0"
                              Click="FavoritesListBoxItem_Click"
                                            />
                 <RadioButton Name="AProposListBoxItem"
                              Content="A Propos"
-                             FontSize="24"
-                             Margin="20,0,0,0"
+                             FontSize="30"
+                             Margin="10,0,0,0"
                              Click="AProposListBoxItem_Click"/>
 
                 <RadioButton Name="EventMap"
                              Content="Carte Des Events"
-                             FontSize="24"
-                             Margin="20,0,0,0"
+                             FontSize="30"
+                             Margin="10,0,0,0"
                              Click="EventMap_Click"/>
             </StackPanel>
         </SplitView.Pane>
@@ -61,19 +67,8 @@
                     RelativePanel.AlignRightWithPanel="True"
                     >
 
-                    <StackPanel Name="HomeButtonPanel"
-                        RelativePanel.AlignTopWithPanel="True"
-                        RelativePanel.AlignLeftWithPanel="True">
-                        <Button Name="HamburgerButton" 
-                                FontFamily="Segoe MDL2 Assets"
-                                Content="&#xE700;" 
-                                FontSize="32" 
-                                Click="HamburgerButton_Click"/>
-                    </StackPanel>
-
                     <StackPanel Name="PageTitlePanel"
                         RelativePanel.AlignTopWithPanel="True"
-                        RelativePanel.RightOf="HomeButtonPanel"
                         RelativePanel.LeftOf="InfoPanel">
 
                         <TextBlock Name="NamePageTextBlock"
@@ -99,6 +94,7 @@
                         Click="AProposListBoxItem_Click"/>
                     </StackPanel>
                 </RelativePanel>
+
                 <StackPanel Name="framePanel"
                     RelativePanel.Below="TopControlBarStackPanel"
                     RelativePanel.AlignLeftWithPanel="True"
@@ -108,13 +104,12 @@
                     Height="Auto"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch"
-                    Padding="5"
-                    >
-                    <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"
-                           />
+                    Padding="5">
+
+                    <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"/>
+
                 </StackPanel>
             </RelativePanel>
         </SplitView.Content>
     </SplitView>
-
 </Page>

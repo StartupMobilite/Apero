@@ -31,6 +31,7 @@ namespace Alpha.Views
         {
             this.InitializeComponent();
             MyFrame.Navigate(typeof(FirstConnect));
+            NamePageTextBlock.Text = "FirstConnect";
         }
 
         #region "ajout d'events"
@@ -49,6 +50,7 @@ namespace Alpha.Views
 
         private void HomeButton_Click(object sender, RoutedEventArgs e)
         {
+            NamePageTextBlock.Text = "Home";
             MyFrame.Navigate(typeof(Home));
         }
 
@@ -60,22 +62,26 @@ namespace Alpha.Views
 
         private void AProposListBoxItem_Click(object sender, RoutedEventArgs e)
         {
+            NamePageTextBlock.Text = "A Propos";
             MyFrame.Navigate(typeof(APropos));
 
         }
 
         private void FavoritesListBoxItem_Click(object sender, RoutedEventArgs e)
         {
+            NamePageTextBlock.Text = "Favorits";
             MyFrame.Navigate(typeof(Home));
         }
 
         private void EventMap_Click(object sender, RoutedEventArgs e)
         {
+            NamePageTextBlock.Text = "Event Map";
             MyFrame.Navigate(typeof(EventMap));
         }
 
         private void ContactListBoxItem_Click(object sender, RoutedEventArgs e)
         {
+            NamePageTextBlock.Text = "Contacts";
             MyFrame.Navigate(typeof(Contacts));
         }
     }
