@@ -27,7 +27,7 @@
 
         <StackPanel Name="ButtonConnectPanel" Orientation="Horizontal">
             <Button Content="Connexion via Facebook"
-                        Click="Button_Click"
+                        Click="ButtonBase_OnClick"
                         Style="{StaticResource ButtonStyle}"/>
 
 

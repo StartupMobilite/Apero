@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Facebook;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Security.Authentication.Web;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -34,12 +38,75 @@ namespace Alpha.Views
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+
+
+        private const string AppId = "740198296080898";
+        private const string ExtendedPermissions ="publish_actions, user_managed_groups, user_groups";
+
+
+        private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            var result = await AuthenticateFacebookAsync();
+            var md = new MessageDialog("you'r token" + result);
+            await md.ShowAsync();
+        }
+
+        private async Task<string> AuthenticateFacebookAsync()
+        {
+            try
+            {
+                var fb = new FacebookClient();
+
+                var redirectUri =
+                  WebAuthenticationBroker.GetCurrentApplicationCallbackUri().ToString();
+
+                var loginUri = fb.GetLoginUrl(new
+                {
+                    client_id = AppId,
+                    redirect_uri = redirectUri,
+                    scope = ExtendedPermissions,
+                    display = "popup",
+                    response_type = "f2dd67015d5091b36b927bcd01831513"
+                });
+
+                var callbackUri = new Uri(redirectUri, UriKind.Absolute);
+
+                var authenticationResult =
+                  await
+                    WebAuthenticationBroker.AuthenticateAsync(
+                    WebAuthenticationOptions.None,
+                    loginUri, callbackUri);
+
+                return ParseAuthenticationResult(fb, authenticationResult);
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string ParseAuthenticationResult(FacebookClient fb,WebAuthenticationResult result)
+        {
+            switch (result.ResponseStatus)
+            {
+                case WebAuthenticationStatus.ErrorHttp:
+                    return "Error";
+                case WebAuthenticationStatus.Success:
+
+                    var oAuthResult = fb.ParseOAuthCallbackUrl(new Uri(result.ResponseData));
+                    return oAuthResult.AccessToken;
+                case WebAuthenticationStatus.UserCancel:
+                    return "Operation aborted";
+            }
+            return null;
+        }
+
     }
 }
