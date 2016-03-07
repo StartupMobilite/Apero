@@ -145,6 +145,10 @@ namespace Alpha.Views
             mapIcon1.NormalizedAnchorPoint = new Point(0.5, 1.0);
             mapIcon1.Title = "SpaceNeedle";
             mapIcon1.ZIndex = 1;
+            MapControl1.MapElements.Add(mapIcon1);
+
+
+
 
             //Add Image to MapIcon
             mapIcon1.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/customicon.png"));
