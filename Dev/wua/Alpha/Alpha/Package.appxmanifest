@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="715f22d0-08b6-414a-9f26-1b4e430ad3fd" Publisher="CN=alexc" Version="0.1.3.0" />
+  <Identity Name="23926Alxc.EventMyLife" Publisher="CN=69661744-4604-4F96-BA1B-3907E988B634" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="715f22d0-08b6-414a-9f26-1b4e430ad3fd" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Alpha</DisplayName>
-    <PublisherDisplayName>alexc</PublisherDisplayName>
+    <DisplayName>EventMyLife</DisplayName>
+    <PublisherDisplayName>Alxc</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Alpha.App">
-      <uap:VisualElements DisplayName="Alpha" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Alpha" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="EventMyLife" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Alpha" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
