@@ -18,15 +18,10 @@
             ZoomInteractionMode="GestureAndControl"
             TiltInteractionMode="GestureAndControl"
             MapServiceToken="NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8"
-            MinHeight="320"
+            MinHeight="350"
             MinWidth="500"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"/>
-        </StackPanel>
-
-        <StackPanel Name="EventInfoPanel">
-            
-            
         </StackPanel>
 
     </StackPanel>
