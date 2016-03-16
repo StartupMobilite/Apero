@@ -144,9 +144,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\FFA-logo-ss-fd-298x300.png" />
+    <Content Include="Assets\icon-map.png" />
+    <Content Include="Assets\map-pin.png" />
     <Content Include="Assets\NY31752LOGO.jpe" />
     <Content Include="Assets\severestormovermandurahmp4.mp4" />
     <Content Include="Assets\user.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image01.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image02.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image03.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image04.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image05.png" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

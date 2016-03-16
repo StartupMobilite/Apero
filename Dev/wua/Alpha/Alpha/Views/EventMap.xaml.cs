@@ -57,6 +57,21 @@ namespace Alpha.Views
                     MapControl1.Center = myLocation;
                     MapControl1.ZoomLevel = 12;
                     MapControl1.LandmarksVisible = true;
+
+                    BasicGeoposition startLocation = new BasicGeoposition() { Latitude = myLocation.Position.Latitude, Longitude = myLocation.Position.Longitude };
+
+                    //set a map icon (mylocation)
+
+                    Geopoint snPoint = new Geopoint(startLocation);
+                    MapIcon mapIconStart = new MapIcon();
+                    mapIconStart.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/map-pin.png"));
+                    mapIconStart.Location = snPoint;
+                    mapIconStart.NormalizedAnchorPoint = new Point(0.5, 1.0);
+                    mapIconStart.Title = "Vous";
+                    mapIconStart.ZIndex = 0;
+                    MapControl1.MapElements.Add(mapIconStart);
+
+
                     break;
 
                 case GeolocationAccessStatus.Denied:
