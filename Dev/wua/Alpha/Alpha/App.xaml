@@ -16,29 +16,28 @@
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="Style" Value="{StaticResource EllipsisButton}"/>
-            <Setter Property="ContentTemplate" Value="{StaticResource EllipsisButton}"/>
         </Style>
 
         <Style TargetType="StackPanel" x:Key="StackPanelStyleLRR">
-            <Setter Property="Background" Value="#34495e"/>
+            <Setter Property="Background" Value="Gray"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="#f1c40f"/>
+            <Setter Property="BorderBrush" Value="LightGray"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="CornerRadius" Value="0.6"/>
             <Setter Property="Margin" Value="3"/>
             <Setter Property="Height" Value="Auto"/>
             <Setter Property="Width" Value="Auto"/>
         </Style>
 
         <Style TargetType="Frame" x:Key="FramePanelStyle">
-            <Setter Property="Background" Value="Green"/>
+            <Setter Property="Background" Value="LightBlue"/>
             <Setter Property="VerticalAlignment" Value="Stretch"/>
             <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="BorderBrush" Value="BlueViolet"/>
             <Setter Property="BorderThickness" Value="5"/>
+            
         </Style>
 
     </Application.Resources>

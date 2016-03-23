@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="23926Alxc.EventMyLife" Publisher="CN=69661744-4604-4F96-BA1B-3907E988B634" Version="1.1.0.0" />
+  <Identity Name="23926Alxc.EventMyLife" Publisher="CN=69661744-4604-4F96-BA1B-3907E988B634" Version="1.1.2.0" />
   <mp:PhoneIdentity PhoneProductId="715f22d0-08b6-414a-9f26-1b4e430ad3fd" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>EventMyLife</DisplayName>
@@ -24,6 +24,8 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <uap:Capability Name="userAccountInformation" />
     <DeviceCapability Name="location" />
   </Capabilities>
 </Package>

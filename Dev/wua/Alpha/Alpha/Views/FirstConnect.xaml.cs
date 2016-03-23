@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Security.Authentication.Web;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -48,17 +49,22 @@ namespace Alpha.Views
 
 
         private const string AppId = "740198296080898";
-        private const string ExtendedPermissions ="publish_actions, user_managed_groups, user_groups";
+        private const string ExtendedPermissions ="publish_actions,user_managed_groups,user_groups";
 
 
         private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            var result = await AuthenticateFacebookAsync();
-            var md = new MessageDialog("you'r token" + result);
+            string token ="";
+            var dispatcher = Windows.UI.Core.CoreWindow.GetForCurrentThread().Dispatcher;
+            await  Task.Run(async () =>
+            {
+                token = await AuthenticateFacebookAsync();
+            });
+            var md = new MessageDialog("your token " + token);
             await md.ShowAsync();
         }
 
-        private async Task<string> AuthenticateFacebookAsync()
+         private async Task<string> AuthenticateFacebookAsync()
         {
             try
             {
@@ -97,13 +103,13 @@ namespace Alpha.Views
             switch (result.ResponseStatus)
             {
                 case WebAuthenticationStatus.ErrorHttp:
-                    return "Error";
+                    return "Error http";
                 case WebAuthenticationStatus.Success:
 
                     var oAuthResult = fb.ParseOAuthCallbackUrl(new Uri(result.ResponseData));
                     return oAuthResult.AccessToken;
                 case WebAuthenticationStatus.UserCancel:
-                    return "Operation aborted";
+                    return "User Cancel";
             }
             return null;
         }

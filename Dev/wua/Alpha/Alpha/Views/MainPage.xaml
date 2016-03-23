@@ -57,7 +57,7 @@
         </SplitView.Pane>
 
         <SplitView.Content>
-            <RelativePanel Name="FrameContentPanel" Background="Red">
+            <RelativePanel Name="FrameContentPanel" Background="Gray" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
 
                 <RelativePanel Name="TopControlBarStackPanel"
                     BorderBrush="White"
@@ -67,48 +67,36 @@
                     RelativePanel.AlignRightWithPanel="True"
                     >
 
-                    <StackPanel Name="PageTitlePanel"
-                        RelativePanel.AlignTopWithPanel="True"
-                        RelativePanel.LeftOf="InfoPanel">
-
                         <TextBlock Name="NamePageTextBlock"
                            Text=""
                            FontSize="16"
                            Foreground="White"
                            Margin="5,5,5,5"
+                           RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
                            HorizontalAlignment="Center"
                         />
-                    </StackPanel>
-
-                    <StackPanel Name="InfoPanel" 
-                        Orientation="Horizontal" 
-                        RelativePanel.AlignRightWithPanel="True"
-                        RelativePanel.AlignTopWithPanel="True"
-                        Margin="0,5,5,5"
-                        >
 
                         <Button Name="InfoButton"
                         Content="?"
                         Margin="5,5,5,5"
                         FontSize="16"
+                        RelativePanel.AlignRightWithPanel="True"
+                        RelativePanel.AlignTopWithPanel="True"
                         Click="AProposListBoxItem_Click"/>
-                    </StackPanel>
+                    
                 </RelativePanel>
 
-                <StackPanel Name="framePanel"
+                <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"
                     RelativePanel.Below="TopControlBarStackPanel"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True"
-                    Background="Yellow"
-                    Height="Auto"
+                    Background="LightSlateGray"
                     VerticalAlignment="Stretch"
                     HorizontalAlignment="Stretch"
-                    Padding="5">
+                    Padding="5"/>
 
-                    <Frame Name="MyFrame" Style="{StaticResource FramePanelStyle}"/>
-
-                </StackPanel>
             </RelativePanel>
         </SplitView.Content>
     </SplitView>
