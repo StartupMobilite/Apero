@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="XamlCSharpApp.Views.Forms"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamlCSharpApp.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="CheckBox"/>
+                <StackPanel>
+                    <CheckBox Name="MyCheckBox" Content="agree ?" Tapped="MyCheckBox_Tapped"/>
+                </StackPanel>
+                <TextBlock TextAlignment="Justify" Text="&lt;CheckBox Name=&quot;CheckBox&quot; Content=&quot;Agree?&quot; Taped=&quot;MycheckBox_Tapped&quot;/&gt;"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="RadioButton"/>
+                <StackPanel>
+                    <RadioButton Name="YesRadioButton"
+                         Content="Yes"
+                         GroupName="MyGroup"
+                         Checked="RadioButton_Checked"
+                         />
+                    <RadioButton Name="NoRadioButton"
+                         Content="No"
+                         GroupName="MyGroup"
+                         Checked="RadioButton_Checked"
+                         />
+                </StackPanel>
+                <TextBlock TextAlignment="Justify" Text="&lt;RadioButton Name=&quot;YesRadioButton Content=YesGroupName=&quot;MyGroup&quot; Checked=&quot;RadioButton_Checked&quot; /&gt;&#10;&lt;RadioButton Name=&quot;NoRadioButton&quot;Content=&quot;No&quot; GroupName=&quot;MyGroup&quot; Checked=&quot;RadioButton_Checked&quot; /&gt;"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="ComboBox"/>
+                    <StackPanel>
+                        <ComboBox SelectionChanged="ComboBox_SelectionChanged" >
+                            <ComboBoxItem Content="Fourth" />
+                            <ComboBoxItem Content="Fifth" />
+                            <ComboBoxItem Content="Sixth" IsSelected="True" />
+                        </ComboBox>
+                        <TextBlock Name="ComboResult" Text="resultat"/>
+                    </StackPanel>
+                    <TextBlock TextAlignment="Justify" Text="&lt;ComboBox SelectionChanged=&quot;ComboBox_SelectionChanged&quot; &gt;&#10;
+&lt;ComboBoxItem Content=&quot;Fourth&quot;/&gt;&#10;
+&lt;ComboBoxItem Content=&quot;Fifth&quot;/&gt;&#10;
+&lt;ComboBoxItem Content=&quot;Sixth&quot;IsSelected=&quot;True&quot;/&gt;&#10;
+&lt;/ComboBox&gt;" ToolTipService.ToolTip="private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e){;&#10;
+            if (ComboBoxResultTextBlock == null) return;;&#10;
+            var combo = (ComboBox)sender;;&#10;
+            var item = (ComboBoxItem)combo.SelectedItem;;&#10;
+            ComboBoxResultTextBlock.Text = item.Content.ToString();;&#10;
+        }"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Name"/>
+                    <StackPanel>
+                        
+                    </StackPanel>
+                    <TextBlock TextAlignment="Justify" Text="content"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Name"/>
+                    <StackPanel>
+                        
+                    </StackPanel>
+                    <TextBlock TextAlignment="Justify" Text="content"/>
+                </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
