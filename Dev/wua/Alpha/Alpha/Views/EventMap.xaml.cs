@@ -129,9 +129,9 @@ namespace Alpha.Views
 
                 // Create the map scene.
                 MapScene hwScene = MapScene.CreateFromLocationAndRadius(hwPoint,
-                                                                                     80, /* show this many meters around */
-                                                                                     0, /* looking at it to the North*/
-                                                                                     60 /* degrees pitch */);
+                                   80, /* show this many meters around */
+                                   0, /* looking at it to the North*/
+                                   60 /* degrees pitch */);
                 // Set the 3D view with animation.
                 await MapControl1.TrySetSceneAsync(hwScene, MapAnimationKind.Bow);
             }

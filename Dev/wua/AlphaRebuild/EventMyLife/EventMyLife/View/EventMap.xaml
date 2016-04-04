@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="EventMyLife.ViewModel.EventMap"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventMyLife.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Map="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <StackPanel Name="eventMap">
+        <Map:MapControl x:Name="mapControl"
+                        ZoomInteractionMode="GestureAndControl"
+                        TiltInteractionMode="GestureAndControl"
+                        MapServiceToken="NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8"
+                        MinWidth="228"
+                        MinHeight="300"
+                        LandmarksVisible="True"
+                        ZoomLevel="1"/>
+    </StackPanel>
+    
+</Page>
