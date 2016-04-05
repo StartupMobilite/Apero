@@ -26,5 +26,15 @@ namespace EventMyLife.View
         {
             this.InitializeComponent();
         }
+
+        private void SendBugButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CancelBugButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }
