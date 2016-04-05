@@ -38,9 +38,8 @@
                            HorizontalAlignment="Center"/>
             <ListView x:Name="eventsListView"
                               VerticalAlignment="Stretch"
-                              SelectionMode="Single"
+                              SelectionMode="None"
                               IsItemClickEnabled="True"
-                              ItemClick="ListView_ItemClick"
                               >
                 <ListView.ItemTemplate>
                     <DataTemplate>
