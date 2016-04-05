@@ -70,7 +70,16 @@
                 </ListBox>
             </StackPanel>
 
-            <StackPanel Name="PubPanel"
+        <Frame Name="MyFrameMap" Style="{StaticResource FramePanelStyle}"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    Background="LightSlateGray"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    Padding="5"/>
+
+        <StackPanel Name="PubPanel"
                         RelativePanel.AlignBottomWithPanel="True"
                         RelativePanel.AlignHorizontalCenterWithPanel="True"
                         RelativePanel.AlignLeftWithPanel="True"

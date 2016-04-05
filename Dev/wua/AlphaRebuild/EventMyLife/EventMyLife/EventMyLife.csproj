@@ -96,6 +96,13 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\BadgesList.cs" />
+    <Compile Include="Model\ContactClass.cs" />
+    <Compile Include="Model\ContactListClass.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\EventList.cs" />
+    <Compile Include="Model\ProfilAdvanceClass.cs" />
+    <Compile Include="Model\ProfilClass.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>

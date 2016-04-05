@@ -31,5 +31,9 @@ namespace Alpha.Views
         {
             Frame.SourcePageType=(typeof(JePropose));
         }
+        private void MyFrameMap(object sender, RoutedEventArgs e)
+        {
+            Frame.SourcePageType = (typeof(EventMap));
+        }
     }
 }
