@@ -13,21 +13,21 @@ namespace EventMyLife.Model
         public string TitreEvent { get; set; }
         public string ThemeEvent { get; set; }
         public DateTime DateEvent { get; set; }
-        public int Nbparticipevent { get; set; }
+        public int NbParticipEvent { get; set; }
         public DateTime DureeEvent { get; set; }
         public string AdresseEvent { get; set; }
-        public string Descripevent { get; set; }
+        public string DescripEvent { get; set; }
 
-        public Event(string photoEvent, string titreEvent, string themeEvent, DateTime dateEvent, int nbparticipevent, DateTime dureeEvent, string adresseEvent, string descripevent)
+        public Event(string photoEvent, string titreEvent, string themeEvent, DateTime dateEvent, int nbParticipEvent, DateTime dureeEvent, string adresseEvent, string descripEvent)
         {
             PhotoEvent = photoEvent;
             TitreEvent = titreEvent;
             ThemeEvent = themeEvent;
             DateEvent = dateEvent;
-            Nbparticipevent = nbparticipevent;
+            NbParticipEvent = nbParticipEvent;
             DureeEvent = dureeEvent;
             AdresseEvent = adresseEvent;
-            Descripevent = descripevent;
+            DescripEvent = descripEvent;
         }
     }
 }

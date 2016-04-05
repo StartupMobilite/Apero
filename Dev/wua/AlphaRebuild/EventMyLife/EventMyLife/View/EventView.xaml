@@ -7,21 +7,36 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel>
-        <ListView x:Name="eventView"
-                              VerticalAlignment="Stretch"
-                              SelectionMode="None"
-                              IsItemClickEnabled="True"
-                      HorizontalAlignment="Stretch"
-                  HorizontalContentAlignment="Center">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="2,0,0,0">
-                        <TextBlock Text="{Binding ThemeEvent}"/>
-                        <TextBlock Text="{Binding PhotoEvent}" Margin="24,0,0,0" VerticalAlignment="Center"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackPanel>
+
+    <RelativePanel Name=" eventView">
+        <TextBlock Text="{Binding PhotoEvent}" Name="photoEvent" RelativePanel.AlignLeftWithPanel="True"
+                   RelativePanel.AlignRightWithPanel="True"
+                   RelativePanel.AlignTopWithPanel="True" FontSize="50"/>
+        <TextBlock Text="{Binding TitreEvent}" Name="titreTextBlock"
+                   RelativePanel.Below="photoEvent" 
+                   FontSize="30"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True" FontFamily="Tw Cen MT"/>
+        <TextBlock Text="{Binding DateEvent}" Name="datePicker"
+                   FontSize="18"
+                    RelativePanel.Below="themeTextBlock" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+        <TextBlock Text="{Binding ThemeEvent}" Name="themeTextBlock" FontFamily="Tw Cen MT" 
+                   FontSize="26"
+                   RelativePanel.Below="titreTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock Text="{Binding NbParticipEvent}" Name="nbPartText" 
+                   FontSize="18"
+                   RelativePanel.Below="datePicker" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+        <TextBlock Text="{Binding DureeEvent}" Name="duree"
+                   FontSize="18"
+                   RelativePanel.Below="nbPartText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+        <TextBlock Text="{Binding AdresseEvent}" Name="adresseText"
+                   RelativePanel.Below="duree" FontFamily="Tw Cen MT" 
+                               FontSize="18" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+        <TextBlock Text="{Binding DescripEvent}" Name="description"
+                               FontSize="18"
+                   RelativePanel.Below="adresseText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+    </RelativePanel>
+
 </Page>

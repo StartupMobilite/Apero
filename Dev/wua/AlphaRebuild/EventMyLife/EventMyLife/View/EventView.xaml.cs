@@ -24,19 +24,18 @@ namespace EventMyLife.View
     /// </summary>
     public sealed partial class EventView : Page
     {
-        public ObservableCollection<Event> MenuItems;
+        public Event MenuItems;
         public EventView()
         {
             this.InitializeComponent();
-            MenuItems = new ObservableCollection<Event>();
-            eventView.ItemsSource = MenuItems;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (e.Parameter is Event)
             {
-                MenuItems.Add( e.Parameter as Event);
+                MenuItems = e.Parameter as Event;
+                eventView.DataContext = MenuItems;
                 ;
             }
         }
