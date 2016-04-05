@@ -25,6 +25,7 @@ namespace EventMyLife.View
         public About()
         {
             this.InitializeComponent();
+
         }
 
 

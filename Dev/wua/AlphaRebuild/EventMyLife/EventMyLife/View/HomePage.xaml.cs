@@ -1,5 +1,7 @@
-﻿using System;
+﻿using EventMyLife.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +27,9 @@ namespace EventMyLife.View
         public HomePage()
         {
             this.InitializeComponent();
+            var EventsList = new ObservableCollection<MenuItem>();
+            //Remplir eventsList avec la base de données par rapport a la pos exemple cree une fonction connexion recuperation
+            eventsListView.ItemsSource = EventsList;
         }
 
         private void IGiveButton_Click(object sender, RoutedEventArgs e)

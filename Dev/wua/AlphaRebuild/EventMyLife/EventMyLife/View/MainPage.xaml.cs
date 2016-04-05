@@ -62,6 +62,7 @@ namespace EventMyLife.ViewModel
                         if(menu.Id == pageName)
                         {
                             menusListView.SelectedItem = item;
+                            titleText.Text = menu.Title;
                             return;
                         }
                     }
@@ -89,33 +90,38 @@ namespace EventMyLife.ViewModel
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var menu = e.ClickedItem as MenuItem;
-            if (menu.Title == "Accueil")
+            if (menu.Id == "HomePage")
             {
                 MyFrame.Navigate(typeof(HomePage));
             }
-            if (menu.Title == "Carte Des Evenements")
-            {
-                MyFrame.Navigate(typeof(EventMap));
-                titleText.Text = "Carte Des Evenements";
-            }
-            if (menu.Title == "Contacts")
+            if (menu.Id == "EventMap")
             {
                 MyFrame.Navigate(typeof(EventMap));
             }
-            if (menu.Title == "FavoritsPage")
+            if (menu.Id == "ContactsPage")
+            {
+                MyFrame.Navigate(typeof(Contacts));
+            }
+            if (menu.Id == "FavoritsPage")
             {
                 MyFrame.Navigate(typeof(EventMap));
             }
-            if (menu.Title == "AboutPage")
+            if (menu.Id == "AboutPage")
             {
-                MyFrame.Navigate(typeof(EventMap));
+                MyFrame.Navigate(typeof(About));
             }
+            titleText.Text = menu.Title;
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             MyFrame.Navigate(typeof(HomePage));
             menusListView.SelectedIndex = 0;
             titleText.Text = "Home";
+        }
+
+        public void setTitleName(string pageName)
+        {
+            titleText.Text = pageName;
         }
     }
 }

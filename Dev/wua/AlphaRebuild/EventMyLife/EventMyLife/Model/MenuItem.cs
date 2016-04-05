@@ -15,7 +15,7 @@ namespace EventMyLife.ViewModel
 
         public MenuItem(string title, Symbol symbol,string id)
         {
-            Id = Id;
+            Id = id;
             Title = title;
             Symbol = symbol;
         }

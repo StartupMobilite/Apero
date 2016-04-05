@@ -25,5 +25,11 @@ namespace EventMyLife.ViewModel
             this.InitializeComponent();
         }
 
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            
+        }
+
     }
 }

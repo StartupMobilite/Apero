@@ -50,11 +50,11 @@
                 <FontIcon FontFamily="{ThemeResource ContentControlThemeFontFamily}"
                           Glyph="&#x2261;" FontSize="32"/>
             </Button>
-            <TextBlock Name="titleText" Text="Titre De La Page" VerticalAlignment="Center" Margin="12,0,0,0">
+            <TextBlock Name="titleText" Text="{Binding TitlePage}" VerticalAlignment="Center" Margin="12,0,0,0">
             </TextBlock>
         </StackPanel>
 
-        <SplitView Name="splitView" CompactPaneLength="48" Background="#260980" VerticalAlignment="Stretch" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="topBar" DisplayMode="CompactOverlay" OpenPaneLength="700">
+        <SplitView Name="splitView" CompactPaneLength="48" Background="#260980" VerticalAlignment="Stretch" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="topBar" DisplayMode="CompactOverlay" OpenPaneLength="250">
 
             <SplitView.Pane >
                 <StackPanel Background="#260980">
@@ -69,7 +69,6 @@
                                 <StackPanel Orientation="Horizontal" Margin="2,0,0,0">
                                     <SymbolIcon Symbol="{Binding Symbol}"/>
                                     <TextBlock Text="{Binding Title}" Margin="24,0,0,0" VerticalAlignment="Center"/>
-                                    <TextBlock Text="{Binding Title}" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
