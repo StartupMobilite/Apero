@@ -37,15 +37,16 @@
             <TextBlock Text="Les Plus Populaires"
                            HorizontalAlignment="Center"/>
             <ListView x:Name="eventsListView"
-                              VerticalAlignment="Stretch"
-                              SelectionMode="None"
+                              VerticalAlignment="Center"
+                              SelectionMode="Single"
                               IsItemClickEnabled="True"
-                              >
+                      HorizontalAlignment="Center"
+                      ItemClick="eventsListView_ItemClick">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" Margin="2,0,0,0">
-                            <SymbolIcon Symbol="{Binding Id}"/>
-                            <TextBlock Text="{Binding Name}" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding TitreEvent}"/>
+                            <TextBlock Text="{Binding PhotoEvent}" Margin="24,0,0,0" VerticalAlignment="Center"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

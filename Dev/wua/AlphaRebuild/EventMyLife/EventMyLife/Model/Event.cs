@@ -9,24 +9,24 @@ namespace EventMyLife.Model
 {
     public class Event
     {
-        public string Photoevent { get; set; }
-        public string Titreevent { get; set; }
-        public string Themeevent { get; set; }
-        public DateTime Dateevent { get; set; }
+        public string PhotoEvent { get; set; }
+        public string TitreEvent { get; set; }
+        public string ThemeEvent { get; set; }
+        public DateTime DateEvent { get; set; }
         public int Nbparticipevent { get; set; }
-        public DateTime Dureeevent { get; set; }
-        public string Adresseevent { get; set; }
+        public DateTime DureeEvent { get; set; }
+        public string AdresseEvent { get; set; }
         public string Descripevent { get; set; }
 
-        public Event(string phtoevent, string titreevent, string themeevent, DateTime dateevent, int nbparticipevent, DateTime dureeevent, string adresseevent, string descripevent)
+        public Event(string photoEvent, string titreEvent, string themeEvent, DateTime dateEvent, int nbparticipevent, DateTime dureeEvent, string adresseEvent, string descripevent)
         {
-            Photoevent = phtoevent;
-            Titreevent = titreevent;
-            Themeevent = themeevent;
-            Dateevent = dateevent;
+            PhotoEvent = photoEvent;
+            TitreEvent = titreEvent;
+            ThemeEvent = themeEvent;
+            DateEvent = dateEvent;
             Nbparticipevent = nbparticipevent;
-            Dureeevent = dureeevent;
-            Adresseevent = adresseevent;
+            DureeEvent = dureeEvent;
+            AdresseEvent = adresseEvent;
             Descripevent = descripevent;
         }
     }

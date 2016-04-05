@@ -1,4 +1,5 @@
-﻿using EventMyLife.ViewModel;
+﻿using EventMyLife.Model;
+using EventMyLife.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,14 +28,23 @@ namespace EventMyLife.View
         public HomePage()
         {
             this.InitializeComponent();
-            var EventsList = new ObservableCollection<MenuItem>();
+            var EventsList = new ObservableCollection<Event>();
             //Remplir eventsList avec la base de données par rapport a la pos exemple cree une fonction connexion recuperation
+            EventsList.Add(new Event("toto", "Event1", "Theme1",(new DateTime(2004,10,13,16,53,24)),12,(new DateTime(2004,10,14)),"rue de toto","bonjour description 1"));
+            EventsList.Add(new Event("toto", "Event2", "Theme2", (new DateTime(2004, 10, 13, 16, 53, 24)), 12, (new DateTime(2004, 10, 14)), "rue de toto", "bonjour description 1"));
+            EventsList.Add(new Event("toto", "Event3", "Theme3", (new DateTime(2004, 10, 13, 16, 53, 24)), 12, (new DateTime(2004, 10, 14)), "rue de toto", "bonjour description 1"));
             eventsListView.ItemsSource = EventsList;
         }
 
         private void IGiveButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void eventsListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var eventCliked = e.ClickedItem as Event;
+                Frame.Navigate(typeof(EventView),eventCliked);
         }
     }
 }

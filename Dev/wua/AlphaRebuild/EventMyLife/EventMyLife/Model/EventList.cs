@@ -9,13 +9,13 @@ namespace EventMyLife.Model
 {
     public class EventList
     {
-        public string Nomevent { get; set; }
-        public string Photoevent { get; set; }
+        public string NameEvent { get; set; }
+        public string PhotoEvent { get; set; }
 
-        public EventList(string nomevent, string photoevent)
+        public EventList(string nameEvent, string photoEvent)
         {
-            Nomevent = nomevent;
-            Photoevent = photoevent;
+            NameEvent = nameEvent;
+            PhotoEvent = photoEvent;
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="EventMyLife.View.EventView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventMyLife.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <ListView x:Name="eventView"
+                              VerticalAlignment="Stretch"
+                              SelectionMode="None"
+                              IsItemClickEnabled="True"
+                      HorizontalAlignment="Stretch"
+                  HorizontalContentAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="2,0,0,0">
+                        <TextBlock Text="{Binding ThemeEvent}"/>
+                        <TextBlock Text="{Binding PhotoEvent}" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Page>
