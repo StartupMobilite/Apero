@@ -20,34 +20,11 @@ namespace EventMyLife.View
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class About : Page
+    public sealed partial class AddBug : Page
     {
-        public About()
+        public AddBug()
         {
             this.InitializeComponent();
         }
-
-
-        private void BugListBoxItem_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.SourcePageType = typeof(AddBug);
-        }
-
-        private void MentionsLegales_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.SourcePageType = typeof(MentionsLegales);
-
-        }
-
-        private void CGU_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.SourcePageType = typeof(CGU);
-        }
-
-        private void NousContacter_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Frame.SourcePageType = typeof(NousContacter);
-        }
-
     }
 }

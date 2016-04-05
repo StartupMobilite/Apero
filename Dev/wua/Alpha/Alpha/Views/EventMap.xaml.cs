@@ -111,6 +111,7 @@ namespace Alpha.Views
                     Title = "Streetside is not supported",
                     Content = "\nStreetside views are not supported on this device.",
                     PrimaryButtonText = "OK"
+                    
                 };
                 await viewNotSupportedDialog.ShowAsync();
             }
