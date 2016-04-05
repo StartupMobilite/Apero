@@ -26,5 +26,10 @@ namespace EventMyLife.View
         {
             this.InitializeComponent();
         }
+
+        private void CancelNContactButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 }
