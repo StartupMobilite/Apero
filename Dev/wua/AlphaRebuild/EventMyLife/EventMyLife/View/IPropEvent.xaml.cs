@@ -2,7 +2,6 @@
 using EventMyLife.ViewModel;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,30 +22,36 @@ namespace EventMyLife.View
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class HomePage : Page
+    public sealed partial class IPropEvent : Page
     {
-        public EventGest eventman = new EventGest();
-        public HomePage()
+        public IPropEvent()
         {
             this.InitializeComponent();
-            //Remplir eventsList avec la base de données par rapport a la pos exemple cree une fonction connexion recuperation
         }
 
-        private void IGiveButton_Click(object sender, RoutedEventArgs e)
+
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(IPropEvent));
+            Frame.GoBack();
         }
 
-        private void eventsListView_ItemClick(object sender, ItemClickEventArgs e)
+        private void JePropose1_Click(object sender, RoutedEventArgs e)
         {
-            var eventCliked = e.ClickedItem as Event;
-                Frame.Navigate(typeof(EventView),eventCliked);
-        }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            eventman.recupEvent();
-            eventsListView.ItemsSource = eventman.AllEvents;
+            var NewEvent = new Event
+            {
+                TitreEvent = TextBoxTitre.Text,
+                NbParticipEvent = int.Parse(TextBoxNbrPartMax.Text.ToString()),
+                ThemeEvent = TextBoxTheme.Text,
+                AdresseEvent = TextBoxAdress.Text,
+                DateEvent = CalendarStart.Date,
+                DescripEvent = DescriptionTextboxTitre.Text,
+                PhotoEvent = ImageTextBox.Text
+            };
+            var eventSending = new EventGest();
+            eventSending.sendEvent(NewEvent);
+            Frame.GoBack();
         }
 
     }

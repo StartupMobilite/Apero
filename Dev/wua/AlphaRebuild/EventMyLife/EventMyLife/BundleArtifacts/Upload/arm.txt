@@ -1,0 +1,2 @@
+MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Release\Upload\EventMyLife_1.1.0.0_ARM.appx
+SymbolPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\AppPackages\EventMyLife_1.1.0.0\EventMyLife_1.1.0.0_ARM.appxsym

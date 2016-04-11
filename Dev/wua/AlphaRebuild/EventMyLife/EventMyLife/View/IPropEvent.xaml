@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="EventMyLife.View.IPropEvent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventMyLife.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <RelativePanel HorizontalAlignment="Center"
+                   VerticalAlignment="Stretch">
+        <StackPanel Name="ImageJeproposePanel"
+                    Margin="10"
+                    HorizontalAlignment="Center"
+                    RelativePanel.AlignTopWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True">
+            <Image MinHeight="50"
+                   MinWidth="50"
+                   Source="Assets/Square44x44Logo.png"/>
+            <TextBox Name="ImageTextBox" Text="" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel  Name="JeProposeInformationsListBox"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="10">
+
+            <TextBox Text="Titre *"
+                         Margin="5"
+                     Name="TextBoxTitre"/>
+
+            <TextBox Text="Thème *"
+                         Margin="5"
+                     Name="TextBoxTheme"/>
+            <TextBox Text="Description *"
+                     Name="DescriptionTextboxTitre"
+                     Margin="5"/>
+
+            <TextBox Text="Téléphone *"
+                         Margin="5"
+                     Name="TextBoxTel"/>
+
+            <TextBox Text="Email *"
+                         Margin="5"
+                     Name="TextBoxMail"/>
+
+            <DatePicker HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Margin="5"
+                                Name="CalendarStart"
+                               />
+
+            <TextBox Text="nombre de participant max"
+                         Margin="5"
+                     Name="TextBoxNbrPartMax"/>
+
+            <TextBox Text="Durée"
+                       Margin="5"
+                     Name="TextBoxTime"/>
+
+            <TextBox Text="adresse *"
+                       Margin="5"
+                     Name="TextBoxAdress"/>
+
+            <Button x:Name="JePropose1"
+            	Content="Je propose"
+            	Background="Gray"
+            	FontSize="15"
+                Click="JePropose1_Click"
+            	/>
+            <Button x:Name="Cancel"
+            	Content="Annuler"
+            	Background="Gray"
+            	FontSize="15"
+                Click="Cancel_Click"
+            	/>
+        </StackPanel>
+    </RelativePanel>
+</Page>

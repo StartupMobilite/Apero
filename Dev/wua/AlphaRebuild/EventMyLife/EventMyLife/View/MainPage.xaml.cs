@@ -1,5 +1,7 @@
 ﻿using EventMyLife;
+using EventMyLife.Model;
 using EventMyLife.View;
+using EventMyLife.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -79,6 +81,12 @@ namespace EventMyLife.ViewModel
             };
         
     }
+
+
+        public async void senditem(TodoItem toItem)
+        {
+            await App.MobileService.GetTable<TodoItem>().InsertAsync(toItem);
+        }
 
         public MainPageViewModel ViewModels { get; set; }
 
