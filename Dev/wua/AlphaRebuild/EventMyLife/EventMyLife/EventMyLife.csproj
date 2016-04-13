@@ -118,6 +118,9 @@
     <Compile Include="View\AddBug.xaml.cs">
       <DependentUpon>AddBug.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\auth.xaml.cs">
+      <DependentUpon>auth.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CGU.xaml.cs">
       <DependentUpon>CGU.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\AddBug.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\auth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -2,6 +2,7 @@
 using EventMyLife.Model;
 using EventMyLife.View;
 using EventMyLife.ViewModel;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,7 +11,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Security.Credentials;
 using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -122,14 +125,25 @@ namespace EventMyLife.ViewModel
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            MyFrame.Navigate(typeof(HomePage));
+            MyFrame.Navigate(typeof(auth));
             menusListView.SelectedIndex = 0;
-            titleText.Text = "Home";
+            titleText.Text = "Authentification";
         }
 
         public void setTitleName(string pageName)
         {
             titleText.Text = pageName;
+        }
+
+        private async void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            try {
+                await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.Facebook);
+            }
+            catch
+            {
+
+            }
         }
     }
 }

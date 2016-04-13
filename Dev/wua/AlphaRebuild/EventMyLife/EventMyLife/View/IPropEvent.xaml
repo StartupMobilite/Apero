@@ -17,7 +17,7 @@
             <Image MinHeight="50"
                    MinWidth="50"
                    Source="Assets/Square44x44Logo.png"/>
-            <TextBox Name="ImageTextBox" Text="" Margin="5"/>
+            
         </StackPanel>
 
         <StackPanel  Name="JeProposeInformationsListBox"
@@ -25,8 +25,10 @@
                      VerticalAlignment="Center"
                      Margin="10">
 
+            <TextBox Name="ImageTextBox" Text="Nom Image" Margin="5"/>
+
             <TextBox Text="Titre *"
-                         Margin="5"
+                     Margin="5"
                      Name="TextBoxTitre"/>
 
             <TextBox Text="Thème *"
@@ -36,19 +38,10 @@
                      Name="DescriptionTextboxTitre"
                      Margin="5"/>
 
-            <TextBox Text="Téléphone *"
-                         Margin="5"
-                     Name="TextBoxTel"/>
-
-            <TextBox Text="Email *"
-                         Margin="5"
-                     Name="TextBoxMail"/>
-
             <DatePicker HorizontalAlignment="Left"
-                                VerticalAlignment="Top"
-                                Margin="5"
-                                Name="CalendarStart"
-                               />
+                        VerticalAlignment="Top"
+                        Margin="5"
+                        Name="CalendarStart" />
 
             <TextBox Text="nombre de participant max"
                          Margin="5"

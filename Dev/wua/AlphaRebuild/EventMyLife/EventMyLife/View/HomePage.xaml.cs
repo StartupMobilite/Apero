@@ -30,6 +30,8 @@ namespace EventMyLife.View
         {
             this.InitializeComponent();
             //Remplir eventsList avec la base de données par rapport a la pos exemple cree une fonction connexion recuperation
+            eventman.recupEvent();
+            eventsListView.ItemsSource = eventman.AllEvents;
         }
 
         private void IGiveButton_Click(object sender, RoutedEventArgs e)

@@ -52,6 +52,7 @@
             </Button>
             <TextBlock Name="titleText" Text="{Binding TitlePage}" VerticalAlignment="Center" Margin="12,0,0,0">
             </TextBlock>
+            <Button Name="Logout" Content="Logout" Click="Logout_Click"/>
         </StackPanel>
 
         <SplitView Name="splitView" CompactPaneLength="48" Background="#260980" VerticalAlignment="Stretch" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="topBar" DisplayMode="CompactOverlay" OpenPaneLength="250">
