@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Name="ButtonLogin" Click="ButtonLogin_Click" Content="Auth"/>
-    </Grid>
+    <RelativePanel Style="{StaticResource MainRelativePan}" >
+        <Button Name="ButtonLogin" Click="ButtonLogin_Click" Content="Auth" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+        
+    </RelativePanel>
+    
 </Page>

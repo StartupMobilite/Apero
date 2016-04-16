@@ -7,34 +7,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <RelativePanel Style="{StaticResource MainRelativePan}"> 
 
 
         <ListBox Name="listBoxAbout" Margin="10,10,0,0">
 
             <ListBoxItem Content="CGU"
-                         FontSize="24"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                         Style="{StaticResource ListBoxItemSimple}"
                          Tapped="CGU_Tapped"/>
 
             <ListBoxItem Content="Mentions Légales"
-                         FontSize="24"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                         Style="{StaticResource ListBoxItemSimple}"
                          Tapped="MentionsLegales_Tapped"/>
 
             <ListBoxItem Name="BugListBoxItem"
                          Content="Signaler un bug"
-                         FontSize="24"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                         Style="{StaticResource ListBoxItemSimple}"
                          Tapped="BugListBoxItem_Tapped"/>
 
             <ListBoxItem Content="Nous contacter"
-                         FontSize="24"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
+                         Style="{StaticResource ListBoxItemSimple}"
                          Tapped="NousContacter_Tapped"/>
         </ListBox>
 

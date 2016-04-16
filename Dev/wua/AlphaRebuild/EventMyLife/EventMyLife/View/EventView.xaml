@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
 
-    <RelativePanel Name=" eventView">
+    <RelativePanel Name=" eventView" Style="{StaticResource MainRelativePan}">
         <TextBlock Text="{Binding PhotoEvent}" Name="photoEvent" RelativePanel.AlignLeftWithPanel="True"
                    RelativePanel.AlignRightWithPanel="True"
                    RelativePanel.AlignTopWithPanel="True" FontSize="50"/>

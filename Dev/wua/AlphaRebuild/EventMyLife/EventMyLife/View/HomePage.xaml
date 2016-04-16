@@ -8,17 +8,14 @@
     mc:Ignorable="d">
 
     <RelativePanel
-             Background="#2883CC"
+             Style="{StaticResource MainRelativePan}"
              >
         <StackPanel Name="HomeButtonsPanel"
                         Orientation="Horizontal"
                         BorderThickness="2"
                         BorderBrush="Black"
-                        RelativePanel.AlignLeftWithPanel="True"
-                        RelativePanel.AlignRightWithPanel="True"
+                        Style="{StaticResource FrameStackPan}"
                         RelativePanel.AlignTopWithPanel="True"
-                        RelativePanel.AlignHorizontalCenterWithPanel="True"
-                        HorizontalAlignment="Center"
                     >
             <Button Name="IGiveButton"
                         Content="Je Propose"
@@ -31,10 +28,8 @@
 
         <StackPanel Name="PopulairePanel"
                     RelativePanel.Below="HomeButtonsPanel"
-                    RelativePanel.AlignLeftWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True" 
-                    CornerRadius="5"
-                    HorizontalAlignment="Center">
+                    Style="{StaticResource FrameStackPan}"
+                    CornerRadius="5">
             <TextBlock Text="Les Plus Populaires"
                        HorizontalAlignment="Center"/>
             <ListView x:Name="eventsListView"

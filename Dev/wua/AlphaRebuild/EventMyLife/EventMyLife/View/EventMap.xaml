@@ -8,7 +8,7 @@
     xmlns:Map="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
-    <StackPanel Name="eventMap">
+    <RelativePanel Style="{StaticResource MainRelativePan}" Name="eventMap">
         <Map:MapControl x:Name="mapControl"
                         ZoomInteractionMode="GestureAndControl"
                         TiltInteractionMode="GestureAndControl"
@@ -17,6 +17,6 @@
                         MinHeight="300"
                         LandmarksVisible="True"
                         ZoomLevel="1"/>
-    </StackPanel>
+    </RelativePanel>
     
 </Page>

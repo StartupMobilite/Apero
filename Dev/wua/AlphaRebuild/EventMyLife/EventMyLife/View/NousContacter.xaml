@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <StackPanel HorizontalAlignment="Center">
+    <RelativePanel Style="{StaticResource MainRelativePan}" HorizontalAlignment="Center">
     <TextBox FontSize="24"
                  BorderThickness="2"
                  BorderBrush="Black"
@@ -36,6 +36,6 @@
                 Click="CancelNContactButton_Click"
                 Margin="10,10,10,10"/>
     </StackPanel>
-</StackPanel>
+</RelativePanel>
 
 </Page>

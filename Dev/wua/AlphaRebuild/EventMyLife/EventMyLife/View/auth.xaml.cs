@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -30,8 +31,6 @@ namespace EventMyLife.View
             this.InitializeComponent();
         }
 
-
-
         private async void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
             // Login the user and then load data from the mobile app.
@@ -42,7 +41,6 @@ namespace EventMyLife.View
                 //await InitLocalStoreAsync(); //offline sync support.
                 Frame.Navigate(typeof(HomePage));
             }
-
         }
 
         // Define a member variable for storing the signed-in user. 
@@ -108,15 +106,15 @@ namespace EventMyLife.View
                     message = "You must log in. Login Required";
                 }
             }
+            var userInfo = App.MobileService.InvokeApiAsync("userInfo", HttpMethod.Get, null);
 
-            var dialog = new MessageDialog(message);
+            var dialog = new MessageDialog(userInfo.ToString());
+
             dialog.Commands.Add(new UICommand("OK"));
             await dialog.ShowAsync();
 
             return success;
         }
-
-
 
     }
 }

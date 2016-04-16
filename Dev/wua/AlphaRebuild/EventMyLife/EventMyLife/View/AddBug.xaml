@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel HorizontalAlignment="Center">
+    <RelativePanel Style="{StaticResource MainRelativePan}"
+        HorizontalAlignment="Center">
         <TextBox FontSize="24"
                  BorderThickness="2"
                  BorderBrush="Black"
@@ -17,7 +18,8 @@
         <TextBox FontSize="16"
                  BorderBrush="Black"
                  BorderThickness="2"
-                 Text="Votre rappport de bug"
+                 Text=""
+                 PlaceholderText="Votre rapport de bug"
                  Margin="10"
                  MinHeight="200"
                  />
@@ -31,5 +33,5 @@
                 Click="CancelBugButton_Click"
                 Margin="10,10,10,10"/>
         </StackPanel>
-    </StackPanel>
+    </RelativePanel>
 </Page>

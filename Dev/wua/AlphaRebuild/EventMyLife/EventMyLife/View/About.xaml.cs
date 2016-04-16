@@ -31,7 +31,7 @@ namespace EventMyLife.View
 
         private void BugListBoxItem_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            Frame.SourcePageType = typeof(AddBug);
+            Frame.Navigate(typeof(AddBug));
         }
 
         private void MentionsLegales_Tapped(object sender, TappedRoutedEventArgs e)

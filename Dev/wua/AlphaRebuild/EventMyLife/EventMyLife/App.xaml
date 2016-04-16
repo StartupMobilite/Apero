@@ -16,7 +16,52 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
-        
+        <Style x:Key="SimpleButton" TargetType="Button">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="logoutButton" TargetType="Button">
+            <Setter Property="Background" Value="DarkRed"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="MainFrame" TargetType="Frame">
+            <Setter Property="Background" Value="BlanchedAlmond"/>
+        </Style>
+
+        <Style x:Key="SimpleTextBlock" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="BurlyWood"/>
+        </Style>
+
+        <Style x:Key="MainRelativePan" TargetType="RelativePanel">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+
+        <Style x:Key="MenuStackPan" TargetType="StackPanel">
+            <Setter Property="Background" Value="#260980"/>
+        </Style>
+
+        <Style x:Key="ListBoxItemSimple" TargetType="ListBoxItem">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="TextBoxSimple" TargetType="TextBox">
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style x:Key="FrameStackPan" TargetType="StackPanel">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="RelativePanel.AlignLeftWithPanel" Value="True"/>
+            <Setter Property="RelativePanel.AlignRightWithPanel" Value="True"/>
+            <Setter Property="RelativePanel.AlignHorizontalCenterWithPanel" Value="True"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
     </Application.Resources>
 
 </Application>

@@ -8,7 +8,8 @@
     mc:Ignorable="d">
 
     <RelativePanel HorizontalAlignment="Center"
-                   VerticalAlignment="Stretch">
+                   VerticalAlignment="Stretch"
+                   Style="{StaticResource MainRelativePan}">
         <StackPanel Name="ImageJeproposePanel"
                     Margin="10"
                     HorizontalAlignment="Center"
@@ -25,34 +26,42 @@
                      VerticalAlignment="Center"
                      Margin="10">
 
-            <TextBox Name="ImageTextBox" Text="Nom Image" Margin="5"/>
+            <TextBox Name="ImageTextBox" Text="" Margin="5" PlaceholderText="Image*"/>
 
-            <TextBox Text="Titre *"
+            <TextBox Text=""
+                     PlaceholderText="Titre*"
                      Margin="5"
                      Name="TextBoxTitre"/>
 
-            <TextBox Text="Thème *"
-                         Margin="5"
+            <TextBox Text=""
+                     PlaceholderText="Thème*"
+                     Margin="5"
                      Name="TextBoxTheme"/>
-            <TextBox Text="Description *"
+            <TextBox Text=""
+                     PlaceholderText="Description*"
                      Name="DescriptionTextboxTitre"
                      Margin="5"/>
 
             <DatePicker HorizontalAlignment="Left"
-                        VerticalAlignment="Top"
                         Margin="5"
                         Name="CalendarStart" />
 
-            <TextBox Text="nombre de participant max"
-                         Margin="5"
+            <TextBox Text=""
+                     InputScope="Number"
+                     PlaceholderText="Nombre de participants*"
+                     Margin="5"
                      Name="TextBoxNbrPartMax"/>
 
-            <TextBox Text="Durée"
-                       Margin="5"
+            <TextBox Text=""
+                     PlaceholderText="Temps*"
+                     InputScope="TimeHour"
+                     Margin="5"
                      Name="TextBoxTime"/>
 
-            <TextBox Text="adresse *"
-                       Margin="5"
+            <TextBox Text=""
+                     PlaceholderText="Adresse*"
+                     InputScope="Maps"
+                     Margin="5"
                      Name="TextBoxAdress"/>
 
             <Button x:Name="JePropose1"
@@ -66,7 +75,7 @@
             	Background="Gray"
             	FontSize="15"
                 Click="Cancel_Click"
-            	/>
+            	/> 
         </StackPanel>
     </RelativePanel>
 </Page>

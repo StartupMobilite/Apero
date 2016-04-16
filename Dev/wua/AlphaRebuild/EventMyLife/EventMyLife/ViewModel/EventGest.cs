@@ -28,15 +28,22 @@ namespace EventMyLife.ViewModel
         {
 
             List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
-            if (AllEvents != null)
+            try
             {
-                AllEvents.Clear();
-            }
+                if (AllEvents != null)
+                {
+                    AllEvents.Clear();
+                }
                 if (listevents != null)
                     foreach (var item in listevents)
                     {
                         AllEvents.Add(item);
                     }
+            }
+            catch
+            {
+
+            }
         }
 
     }
