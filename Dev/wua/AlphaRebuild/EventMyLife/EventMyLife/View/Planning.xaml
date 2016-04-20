@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="EventMyLife.View.Planning"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EventMyLife.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <RelativePanel >
+        <StackPanel Name="PopulairePanel"
+                    Style="{StaticResource FrameStackPan}"
+                    CornerRadius="5">
+            <TextBlock Text="Les Plus Populaires"
+                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"/>
+
+            <ListView x:Name="eventsListView"
+                      VerticalAlignment="Center"
+                      SelectionMode="Single"
+                      Margin="10"
+                      IsItemClickEnabled="True"
+                      HorizontalAlignment="Center"
+                      ItemClick="eventsListView_ItemClick"
+                      BorderBrush="#1f4e5f" BorderThickness="2"
+                      ItemContainerStyle="{StaticResource listViewItemsStyle}">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <StackPanel Style="{StaticResource StackListViewPan}" >
+                            <TextBlock Text="{Binding TitreEvent}"
+                                       Style="{StaticResource SimpleTextBlock}"/>
+                            <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
+                        </StackPanel>
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackPanel>
+    </RelativePanel>
+</Page>

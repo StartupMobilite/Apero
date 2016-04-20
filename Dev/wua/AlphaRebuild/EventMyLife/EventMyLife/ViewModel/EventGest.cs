@@ -14,6 +14,8 @@ namespace EventMyLife.ViewModel
 
         private ObservableCollection<Event> myEvents;
 
+        private ObservableCollection<Event> eventIGo;
+
         public ObservableCollection<Event> AllEvents
         {
             get
@@ -22,7 +24,13 @@ namespace EventMyLife.ViewModel
             }
         }
 
-
+        public ObservableCollection<Event> EventIGo
+        {
+            get
+            {
+                return eventIGo ?? (eventIGo = new ObservableCollection<Event>());
+            }
+        }
 
         public ObservableCollection<Event> MyEvent
         {
@@ -37,9 +45,18 @@ namespace EventMyLife.ViewModel
             await App.MobileService.GetTable<Event>().InsertAsync(sEvent);
         }
 
+        public async void supprEvent(Event sEvent)
+        {
+            await App.MobileService.GetTable<Event>().DeleteAsync(sEvent);
+        }
+
+        public async void updateEvent(Event sEvent)
+        {
+            await App.MobileService.GetTable<Event>().RefreshAsync(sEvent);
+        }
+
         public async void recupEvent()
         {
-
             
             try
             {
@@ -51,11 +68,7 @@ namespace EventMyLife.ViewModel
                 if (listevents != null)
                     foreach (var item in listevents)
                     {
-                        if (item.IdUser == App.MobileService.CurrentUser.UserId.ToString())
-                        {
-
-                        }
-                        else
+                        if (item.IdUser != App.MobileService.CurrentUser.UserId.ToString())
                         {
                             AllEvents.Add(item);
                         }
@@ -67,6 +80,38 @@ namespace EventMyLife.ViewModel
             }
         }
 
+        public List<string> recupListId(string parseEventsId)
+        {
+            List<string> list = parseEventsId.Split('/').ToList<string>();
+            return list;
+        }
+
+
+        public async void recupEventIGo()
+        {
+            List<string> listId;
+            try
+            {
+                List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
+                if (AllEvents != null)
+                {
+                    AllEvents.Clear();
+                }
+                if (listevents != null)
+                    foreach (var item in listevents)
+                    {
+                        listId = recupListId(item.ParticipateUserIds);
+                        if (listId.Contains(App.MobileService.CurrentUser.UserId.ToString()))
+                        {
+                            AllEvents.Add(item);
+                        }
+                    }
+            }
+            catch
+            {
+
+            }
+        }
 
 
         public async void recupMyEvent()

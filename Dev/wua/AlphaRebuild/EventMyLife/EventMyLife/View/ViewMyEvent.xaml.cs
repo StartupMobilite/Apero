@@ -22,28 +22,28 @@ namespace EventMyLife.View
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MyEvents : Page
+    public sealed partial class ViewMyEvent : Page
     {
-        public EventGest eventman = new EventGest();
-
-        public MyEvents()
+        public Event MenuItems;
+        public ViewMyEvent()
         {
             this.InitializeComponent();
-            eventman.recupEvent();
-            MyeventsListView.ItemsSource = eventman.MyEvent;
-        }
-
-
-        private void MyeventsListView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var eventCliked = e.ClickedItem as Event;
-            Frame.Navigate(typeof(ViewMyEvent), eventCliked);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            eventman.recupMyEvent();
-            MyeventsListView.ItemsSource = eventman.MyEvent;
+            if (e.Parameter is Event)
+            {
+                MenuItems = e.Parameter as Event;
+                eventView.DataContext = MenuItems;
+            }
+        }
+
+        private void SupprEvent_Click(object sender, RoutedEventArgs e)
+        {
+            var eventSuppres = new EventGest();
+            eventSuppres.supprEvent(MenuItems);
+            Frame.GoBack();
         }
     }
 }

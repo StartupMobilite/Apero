@@ -109,10 +109,12 @@
     <Compile Include="Model\EventList.cs" />
     <Compile Include="Model\ProfilAdvanceClass.cs" />
     <Compile Include="Model\ProfilClass.cs" />
+    <Compile Include="Model\TmpUser.cs" />
     <Compile Include="Model\TodoItem.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="ViewModel\AzureConnect.cs" />
     <Compile Include="ViewModel\EventGest.cs" />
+    <Compile Include="ViewModel\UserGest.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
@@ -155,6 +157,12 @@
     </Compile>
     <Compile Include="View\NousContacter.xaml.cs">
       <DependentUpon>NousContacter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Planning.xaml.cs">
+      <DependentUpon>Planning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewMyEvent.xaml.cs">
+      <DependentUpon>ViewMyEvent.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +236,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NousContacter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Planning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewMyEvent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -18,5 +18,6 @@ namespace EventMyLife.Model
         public string DescripEvent { get; set; }
         public string DateEvent { get; set; }
         public string IdUser { get; set; }
+        public string ParticipateUserIds { get; set; }
     }
 }

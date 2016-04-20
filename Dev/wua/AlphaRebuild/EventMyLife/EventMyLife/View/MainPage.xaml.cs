@@ -42,7 +42,7 @@ namespace EventMyLife.ViewModel
 
             MenuItems.Add(new MenuItem("Contacts", Symbol.Contact, "ContactsPage"));
 
-            MenuItems.Add(new MenuItem("Favorits", Symbol.Favorite, "FavoritsPage"));
+            MenuItems.Add(new MenuItem("Planning", Symbol.Calendar, "Planning"));
 
             MenuItems.Add(new MenuItem("A Propos", Symbol.Document, "AboutPage"));
 
@@ -117,9 +117,9 @@ namespace EventMyLife.ViewModel
             {
                 MyFrame.Navigate(typeof(Contacts));
             }
-            if (menu.Id == "FavoritsPage")
+            if (menu.Id == "Planning")
             {
-                MyFrame.Navigate(typeof(EventMap));
+                MyFrame.Navigate(typeof(Planning));
             }
             if (menu.Id == "AboutPage")
             {

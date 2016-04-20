@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="EventMyLife.View.EventView"
+    x:Class="EventMyLife.View.ViewMyEvent"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EventMyLife.View"
@@ -42,9 +42,7 @@
                    RelativePanel.Below="adresseText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Style="{StaticResource SimpleTextBlock}"/>
         
-        <Button Name="IParticipate" Content="Je Participe" Style="{StaticResource SimpleButton}" 
-             RelativePanel.Below="description"
-                Click="IParticipate_Click"/>
+        <Button Name="SupprEvent" Content="Supprimer" Click="SupprEvent_Click" RelativePanel.Below="description" RelativePanel.AlignBottomWithPanel="True" Style="{StaticResource SimpleButton}"/>
 
     </RelativePanel>
 

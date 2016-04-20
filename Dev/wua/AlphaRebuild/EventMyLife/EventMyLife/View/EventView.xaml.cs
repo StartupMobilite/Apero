@@ -1,4 +1,5 @@
 ﻿using EventMyLife.Model;
+using EventMyLife.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,9 +37,15 @@ namespace EventMyLife.View
             {
                 MenuItems = e.Parameter as Event;
                 eventView.DataContext = MenuItems;
-                ;
             }
         }
 
+        private void IParticipate_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItems.IdUser.ToString().Insert(0, string.Format("{0}/",App.MobileService.CurrentUser.UserId.ToString() ));
+            var eventSending = new EventGest();
+            eventSending.updateEvent(MenuItems);
+            Frame.GoBack();
+        }
     }
 }
