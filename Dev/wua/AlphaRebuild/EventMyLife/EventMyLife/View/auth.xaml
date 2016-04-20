@@ -8,7 +8,10 @@
     mc:Ignorable="d">
 
     <RelativePanel Style="{StaticResource MainRelativePan}" >
-        <Button Name="ButtonLogin" Click="ButtonLogin_Click" Content="Auth" VerticalAlignment="Center" HorizontalAlignment="Center" Height="50"/>
+        <Button Name="ButtonLogin" Click="ButtonLogin_Click" Content="Auth" 
+                Style="{StaticResource SimpleButton}"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center" Height="50"/>
         
     </RelativePanel>
     

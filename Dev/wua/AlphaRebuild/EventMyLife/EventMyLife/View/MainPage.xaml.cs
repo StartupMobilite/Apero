@@ -46,6 +46,8 @@ namespace EventMyLife.ViewModel
 
             MenuItems.Add(new MenuItem("A Propos", Symbol.Document, "AboutPage"));
 
+            MenuItems.Add(new MenuItem("Logout", Symbol.DisconnectDrive, "Logout"));
+
             menusListView.ItemsSource = MenuItems;
 
             MyFrame.Navigated += (s, e) =>
@@ -121,6 +123,10 @@ namespace EventMyLife.ViewModel
             {
                 MyFrame.Navigate(typeof(About));
             }
+            if(menu.Id=="Logout")
+            {
+                LogoutFunct();
+            }
             titleText.Text = menu.Title;
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -135,9 +141,15 @@ namespace EventMyLife.ViewModel
             titleText.Text = pageName;
         }
 
-        private async void Logout_Click(object sender, RoutedEventArgs e)
+        private void Logout_Click(object sender, RoutedEventArgs e)
         {
-            try {
+            LogoutFunct();
+        }
+
+        private async void LogoutFunct()
+        {
+            try
+            {
                 await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.Facebook);
             }
             catch

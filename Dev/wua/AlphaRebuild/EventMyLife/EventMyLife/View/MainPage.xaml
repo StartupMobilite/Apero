@@ -44,21 +44,20 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <StackPanel Name="topBar" Background="#260980" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Height="55" Orientation="Horizontal"
+        <StackPanel Name="topBar" Style="{StaticResource MenuStackPan}" RelativePanel.AlignTopWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" Height="55" Orientation="Horizontal"
           >
             <Button Name="splitViewButton" Click="splitViewButton_Click" Style="{StaticResource SquareButton48x48Style}">
                 <FontIcon FontFamily="{ThemeResource ContentControlThemeFontFamily}"
                           Glyph="&#x2261;" FontSize="32"/>
             </Button>
-            <TextBlock Name="titleText" Text="{Binding TitlePage}" VerticalAlignment="Center" Margin="12,0,0,0">
+            <TextBlock Name="titleText" Text="{Binding TitlePage}" Style="{StaticResource TextMenus}" VerticalAlignment="Center" Margin="12,0,0,0">
             </TextBlock>
-            <Button Name="Logout" Content="Logout" Click="Logout_Click" Style="{StaticResource logoutButton}"/>
         </StackPanel>
 
         <SplitView Name="splitView" CompactPaneLength="48" Background="#260980" VerticalAlignment="Stretch" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="topBar" DisplayMode="CompactOverlay" OpenPaneLength="250">
 
             <SplitView.Pane >
-                <StackPanel Background="#260980">
+                <StackPanel Style="{StaticResource MenuStackPan}">
                     <ListView x:Name="menusListView"
                               VerticalAlignment="Stretch"
                               SelectionMode="Single"
@@ -68,8 +67,8 @@
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" Margin="2,0,0,0">
-                                    <SymbolIcon Symbol="{Binding Symbol}"/>
-                                    <TextBlock Text="{Binding Title}" Margin="24,0,0,0" VerticalAlignment="Center"/>
+                                    <SymbolIcon Symbol="{Binding Symbol}" Style="{StaticResource SymboliconMenu}"/>
+                                    <TextBlock Text="{Binding Title}" Style="{StaticResource TextMenus}" Margin="24,0,0,0" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>

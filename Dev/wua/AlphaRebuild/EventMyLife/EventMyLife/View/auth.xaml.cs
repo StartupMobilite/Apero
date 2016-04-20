@@ -1,4 +1,6 @@
-﻿using Microsoft.WindowsAzure.MobileServices;
+﻿using EventMyLife.Model;
+using Microsoft.WindowsAzure.MobileServices;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -106,13 +108,12 @@ namespace EventMyLife.View
                     message = "You must log in. Login Required";
                 }
             }
-            var userInfo = App.MobileService.InvokeApiAsync("userInfo", HttpMethod.Get, null);
-
-            var dialog = new MessageDialog(userInfo.ToString());
+            UserInf userInfo = await App.MobileService.InvokeApiAsync<UserInf>("userInfo", HttpMethod.Get, null);
+            message = string.Format("login with :  \n\n{0}", userInfo.ToString());
+            var dialog = new MessageDialog(message);
 
             dialog.Commands.Add(new UICommand("OK"));
             await dialog.ShowAsync();
-
             return success;
         }
 

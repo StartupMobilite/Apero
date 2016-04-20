@@ -19,9 +19,9 @@
                     >
             <Button Name="IGiveButton"
                         Content="Je Propose"
-                        Background="Gray"
+                        Style="{StaticResource SimpleButton}"
                         FontSize="16"
-                        Margin="10,10,10,10"
+                        Margin="10"
                         Click="IGiveButton_Click"
                         />
         </StackPanel>
@@ -31,22 +31,28 @@
                     Style="{StaticResource FrameStackPan}"
                     CornerRadius="5">
             <TextBlock Text="Les Plus Populaires"
-                       HorizontalAlignment="Center"/>
+                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"/>
+
             <ListView x:Name="eventsListView"
                       VerticalAlignment="Center"
                       SelectionMode="Single"
                       Margin="10"
                       IsItemClickEnabled="True"
                       HorizontalAlignment="Center"
-                      ItemClick="eventsListView_ItemClick">
+                      ItemClick="eventsListView_ItemClick"
+                      BorderBrush="#1f4e5f" BorderThickness="2"
+                      ItemContainerStyle="{StaticResource listViewItemsStyle}">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="5">
-                            <TextBlock Text="{Binding TitreEvent}" Margin="0,0,10,0"/>
-                            <TextBlock Text="{Binding ThemeEvent}"/>
+                    <DataTemplate >
+                        <StackPanel Style="{StaticResource StackListViewPan}" >
+                            <TextBlock Text="{Binding TitreEvent}"
+                                       Style="{StaticResource SimpleTextBlock}"/>
+                            <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
                         </StackPanel>
                     </DataTemplate>
+
                 </ListView.ItemTemplate>
+
             </ListView>
         </StackPanel>
         

@@ -8,15 +8,22 @@
     xmlns:Map="using:Windows.UI.Xaml.Controls.Maps"
     mc:Ignorable="d">
 
-    <RelativePanel Style="{StaticResource MainRelativePan}" Name="eventMap">
+    <RelativePanel Style="{StaticResource MainRelativePan}" Name="eventMap" >
+
         <Map:MapControl x:Name="mapControl"
                         ZoomInteractionMode="GestureAndControl"
                         TiltInteractionMode="GestureAndControl"
                         MapServiceToken="NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8"
-                        MinWidth="228"
-                        MinHeight="300"
+                        VerticalAlignment="Stretch"
+                        HorizontalAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"
+                        HorizontalContentAlignment="Stretch"
                         LandmarksVisible="True"
-                        ZoomLevel="1"/>
+                        ZoomLevel="1"
+                RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignTopWithPanel="True"/>
+
     </RelativePanel>
-    
 </Page>

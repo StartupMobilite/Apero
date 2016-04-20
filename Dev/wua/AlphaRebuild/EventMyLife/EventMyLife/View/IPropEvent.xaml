@@ -24,55 +24,64 @@
         <StackPanel  Name="JeProposeInformationsListBox"
                      HorizontalAlignment="Center"
                      VerticalAlignment="Center"
-                     Margin="10">
+                     Margin="10"
+                     Style="{StaticResource FrameStackPan}">
 
-            <TextBox Name="ImageTextBox" Text="" Margin="5" PlaceholderText="Image*"/>
+            <TextBox Name="ImageTextBox" Text="" Margin="5" PlaceholderText="Image*"
+                     Style="{StaticResource TextBoxSimple}"/>
 
             <TextBox Text=""
                      PlaceholderText="Titre*"
                      Margin="5"
-                     Name="TextBoxTitre"/>
+                     Name="TextBoxTitre"
+                     Style="{StaticResource TextBoxSimple}"/>
 
             <TextBox Text=""
                      PlaceholderText="Thème*"
                      Margin="5"
-                     Name="TextBoxTheme"/>
+                     Name="TextBoxTheme"
+                     Style="{StaticResource TextBoxSimple}"/>
             <TextBox Text=""
                      PlaceholderText="Description*"
                      Name="DescriptionTextboxTitre"
-                     Margin="5"/>
+                     Margin="5"
+                     Style="{StaticResource TextBoxSimple}"/>
 
             <DatePicker HorizontalAlignment="Left"
                         Margin="5"
-                        Name="CalendarStart" />
+                        Name="CalendarStart"
+                        />
 
             <TextBox Text=""
                      InputScope="Number"
                      PlaceholderText="Nombre de participants*"
                      Margin="5"
-                     Name="TextBoxNbrPartMax"/>
+                     Name="TextBoxNbrPartMax"
+                     Style="{StaticResource TextBoxSimple}"/>
 
             <TextBox Text=""
                      PlaceholderText="Temps*"
                      InputScope="TimeHour"
                      Margin="5"
-                     Name="TextBoxTime"/>
+                     Name="TextBoxTime"
+                     Style="{StaticResource TextBoxSimple}"/>
 
             <TextBox Text=""
                      PlaceholderText="Adresse*"
                      InputScope="Maps"
                      Margin="5"
-                     Name="TextBoxAdress"/>
+                     Name="TextBoxAdress"
+                     Style="{StaticResource TextBoxSimple}"/>
 
             <Button x:Name="JePropose1"
             	Content="Je propose"
-            	Background="Gray"
+                Style="{StaticResource SimpleButton}"
             	FontSize="15"
                 Click="JePropose1_Click"
             	/>
             <Button x:Name="Cancel"
             	Content="Annuler"
-            	Background="Gray"
+            	Style="{StaticResource SimpleButton}"
             	FontSize="15"
                 Click="Cancel_Click"
             	/> 

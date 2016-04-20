@@ -110,6 +110,7 @@
     <Compile Include="Model\ProfilAdvanceClass.cs" />
     <Compile Include="Model\ProfilClass.cs" />
     <Compile Include="Model\TodoItem.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="ViewModel\AzureConnect.cs" />
     <Compile Include="ViewModel\EventGest.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />

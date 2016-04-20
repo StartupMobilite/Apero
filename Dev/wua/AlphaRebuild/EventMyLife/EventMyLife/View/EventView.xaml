@@ -15,27 +15,30 @@
         <TextBlock Text="{Binding TitreEvent}" Name="titreTextBlock"
                    RelativePanel.Below="photoEvent" 
                    FontSize="30"
-                   RelativePanel.AlignHorizontalCenterWithPanel="True" FontFamily="Tw Cen MT"/>
+                   RelativePanel.AlignHorizontalCenterWithPanel="True" FontFamily="Tw Cen MT" Style="{StaticResource SimpleTextBlock}"/>
         <TextBlock Text="{Binding DateEvent}" Name="datePicker"
                    FontSize="18"
-                    RelativePanel.Below="themeTextBlock" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
-        <TextBlock Text="{Binding ThemeEvent}" Name="themeTextBlock" FontFamily="Tw Cen MT" 
+                    RelativePanel.Below="themeTextBlock" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True" Style="{StaticResource SimpleTextBlock}"/>
+        <TextBlock Text="{Binding ThemeEvent}" Name="themeTextBlock" FontFamily="Tw Cen MT" Style="{StaticResource SimpleTextBlock}"
                    FontSize="26"
                    RelativePanel.Below="titreTextBlock" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
 
         <TextBlock Text="{Binding NbParticipEvent}" Name="nbPartText" 
                    FontSize="18"
-                   RelativePanel.Below="datePicker" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+                   RelativePanel.Below="datePicker" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True" Style="{StaticResource SimpleTextBlock}"/>
         <TextBlock Text="{Binding DureeEvent}" Name="duree"
                    FontSize="18"
-                   RelativePanel.Below="nbPartText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+                   RelativePanel.Below="nbPartText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Style="{StaticResource SimpleTextBlock}"/>
 
         <TextBlock Text="{Binding AdresseEvent}" Name="adresseText"
                    RelativePanel.Below="duree" FontFamily="Tw Cen MT" 
-                               FontSize="18" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+                               FontSize="18" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Style="{StaticResource SimpleTextBlock}"/>
         <TextBlock Text="{Binding DescripEvent}" Name="description"
                                FontSize="18"
-                   RelativePanel.Below="adresseText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+                   RelativePanel.Below="adresseText" FontFamily="Tw Cen MT" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Style="{StaticResource SimpleTextBlock}"/>
 
     </RelativePanel>
 
