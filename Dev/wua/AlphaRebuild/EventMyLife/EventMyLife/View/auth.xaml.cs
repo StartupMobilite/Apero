@@ -35,6 +35,7 @@ namespace EventMyLife.View
 
         private async void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             // Login the user and then load data from the mobile app.
             if (await AuthenticateAsync())
             {
@@ -42,6 +43,11 @@ namespace EventMyLife.View
                 ButtonLogin.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 //await InitLocalStoreAsync(); //offline sync support.
                 Frame.Navigate(typeof(HomePage));
+            }
+            }
+            catch
+            {
+
             }
         }
 
@@ -108,8 +114,14 @@ namespace EventMyLife.View
                     message = "You must log in. Login Required";
                 }
             }
-            UserInf userInfo = await App.MobileService.InvokeApiAsync<UserInf>("userInfo", HttpMethod.Get, null);
-            message = string.Format("login with :  \n\n{0}", userInfo.ToString());
+            try {
+                UserInf userInfo = await App.MobileService.InvokeApiAsync<UserInf>("userInfo", HttpMethod.Get, null);
+                message = string.Format("login with :  \n\n{0}", userInfo.ToString());
+            }
+            catch
+            {
+
+            }
             var dialog = new MessageDialog(message);
 
             dialog.Commands.Add(new UICommand("OK"));

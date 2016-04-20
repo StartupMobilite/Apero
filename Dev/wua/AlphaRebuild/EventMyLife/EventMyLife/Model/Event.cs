@@ -16,7 +16,7 @@ namespace EventMyLife.Model
         public int NbParticipEvent { get; set; }
         public string AdresseEvent { get; set; }
         public string DescripEvent { get; set; }
-        public DateTimeOffset DateEvent { get; set; }
-
+        public string DateEvent { get; set; }
+        public string IdUser { get; set; }
     }
 }

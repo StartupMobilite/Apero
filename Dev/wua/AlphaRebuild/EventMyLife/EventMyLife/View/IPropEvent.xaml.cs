@@ -45,9 +45,14 @@ namespace EventMyLife.View
                 NbParticipEvent = int.Parse(TextBoxNbrPartMax.Text.ToString()),
                 ThemeEvent = TextBoxTheme.Text,
                 AdresseEvent = TextBoxAdress.Text,
-                DateEvent = CalendarStart.Date,
+                DateEvent = string.Format("{0}/{1}/{2}", 
+                CalendarStart.Date.Day.ToString(),
+                CalendarStart.Date.Month.ToString(),
+                CalendarStart.Date.Year.ToString()),
                 DescripEvent = DescriptionTextboxTitre.Text,
-                PhotoEvent = ImageTextBox.Text
+                PhotoEvent = ImageTextBox.Text,
+                IdUser = App.MobileService.CurrentUser.UserId.ToString()
+                
             };
             var eventSending = new EventGest();
             eventSending.sendEvent(NewEvent);

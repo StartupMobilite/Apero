@@ -48,6 +48,8 @@ namespace EventMyLife.ViewModel
 
             MenuItems.Add(new MenuItem("Logout", Symbol.DisconnectDrive, "Logout"));
 
+            MenuItems.Add(new MenuItem("Mes Events", Symbol.GoToToday, "MesEvents"));
+
             menusListView.ItemsSource = MenuItems;
 
             MyFrame.Navigated += (s, e) =>
@@ -126,6 +128,10 @@ namespace EventMyLife.ViewModel
             if(menu.Id=="Logout")
             {
                 LogoutFunct();
+            }
+            if(menu.Id== "MesEvents")
+            {
+                MyFrame.Navigate(typeof(MyEvents));
             }
             titleText.Text = menu.Title;
         }

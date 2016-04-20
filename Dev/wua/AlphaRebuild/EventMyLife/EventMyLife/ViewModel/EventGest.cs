@@ -11,11 +11,24 @@ namespace EventMyLife.ViewModel
     public class EventGest
     {
         private ObservableCollection<Event> allEvents;
+
+        private ObservableCollection<Event> myEvents;
+
         public ObservableCollection<Event> AllEvents
         {
             get
             {
                 return allEvents ?? (allEvents = new ObservableCollection<Event>());
+            }
+        }
+
+
+
+        public ObservableCollection<Event> MyEvent
+        {
+            get
+            {
+                return myEvents ?? (myEvents = new ObservableCollection<Event>());
             }
         }
 
@@ -27,9 +40,10 @@ namespace EventMyLife.ViewModel
         public async void recupEvent()
         {
 
-            List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
+            
             try
             {
+                List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
                 if (AllEvents != null)
                 {
                     AllEvents.Clear();
@@ -37,7 +51,14 @@ namespace EventMyLife.ViewModel
                 if (listevents != null)
                     foreach (var item in listevents)
                     {
-                        AllEvents.Add(item);
+                        if (item.IdUser == App.MobileService.CurrentUser.UserId.ToString())
+                        {
+
+                        }
+                        else
+                        {
+                            AllEvents.Add(item);
+                        }
                     }
             }
             catch
@@ -46,5 +67,35 @@ namespace EventMyLife.ViewModel
             }
         }
 
-    }
+
+
+        public async void recupMyEvent()
+        {
+
+
+            try
+            {
+                List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
+                if (MyEvent != null)
+                {
+                    MyEvent.Clear();
+                }
+                if (listevents != null)
+                    foreach (var item in listevents)
+                    {
+                        if (item.IdUser == App.MobileService.CurrentUser.UserId.ToString())
+                        {
+                            MyEvent.Add(item);
+                        }
+                    }
+            }
+            catch
+            {
+
+            }
+        }
+
+
+
+        }
 }
