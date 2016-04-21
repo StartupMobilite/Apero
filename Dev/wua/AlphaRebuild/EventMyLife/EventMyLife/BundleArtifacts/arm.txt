@@ -1,2 +1,3 @@
-MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Release\EventMyLife_1.1.0.0_ARM.appx
-SymbolPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\AppPackages\EventMyLife_1.1.0.0\EventMyLife_1.1.0.0_ARM.appxsym
+MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.1.1.0_ARM_Debug.appx
+ResourcePack=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.1.1.0_language-en.appx
+ResourcePack=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.1.1.0_language-fr.appx

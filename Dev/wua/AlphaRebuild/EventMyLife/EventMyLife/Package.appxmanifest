@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="23926Alxc.EventMyLife" Publisher="CN=69661744-4604-4F96-BA1B-3907E988B634" Version="1.1.0.0" />
+  <Identity Name="23926Alxc.EventMyLife" Publisher="CN=69661744-4604-4F96-BA1B-3907E988B634" Version="1.1.1.0" />
   <mp:PhoneIdentity PhoneProductId="932a4a7b-9307-496d-b7ba-facfc00cab58" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>EventMyLife</DisplayName>

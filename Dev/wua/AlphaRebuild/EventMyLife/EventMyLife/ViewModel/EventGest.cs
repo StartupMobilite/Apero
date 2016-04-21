@@ -11,11 +11,8 @@ namespace EventMyLife.ViewModel
     public class EventGest
     {
         private ObservableCollection<Event> allEvents;
-
         private ObservableCollection<Event> myEvents;
-
         private ObservableCollection<Event> eventIGo;
-
         public ObservableCollection<Event> AllEvents
         {
             get
@@ -52,7 +49,7 @@ namespace EventMyLife.ViewModel
 
         public async void updateEvent(Event sEvent)
         {
-            await App.MobileService.GetTable<Event>().RefreshAsync(sEvent);
+            await App.MobileService.GetTable<Event>().UpdateAsync(sEvent);
         }
 
         public async void recupEvent()
@@ -80,31 +77,21 @@ namespace EventMyLife.ViewModel
             }
         }
 
-        public List<string> recupListId(string parseEventsId)
-        {
-            List<string> list = parseEventsId.Split('/').ToList<string>();
-            return list;
-        }
-
-
         public async void recupEventIGo()
         {
-            List<string> listId;
             try
             {
                 List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
-                if (AllEvents != null)
+
+                List<Event> listevent = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).Where(eventitems => eventitems.Id == "0").ToListAsync();
+                if (eventIGo != null)
                 {
-                    AllEvents.Clear();
+                    eventIGo.Clear();
                 }
                 if (listevents != null)
                     foreach (var item in listevents)
                     {
-                        listId = recupListId(item.ParticipateUserIds);
-                        if (listId.Contains(App.MobileService.CurrentUser.UserId.ToString()))
-                        {
-                            AllEvents.Add(item);
-                        }
+                            eventIGo.Add(item);
                     }
             }
             catch

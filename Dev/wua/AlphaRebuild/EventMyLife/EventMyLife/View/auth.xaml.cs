@@ -3,6 +3,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -35,15 +36,16 @@ namespace EventMyLife.View
 
         private async void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            try { 
-            // Login the user and then load data from the mobile app.
-            if (await AuthenticateAsync())
+            try
             {
-                // Hide the login button and load items from the mobile app.
-                ButtonLogin.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                //await InitLocalStoreAsync(); //offline sync support.
-                Frame.Navigate(typeof(HomePage));
-            }
+                // Login the user and then load data from the mobile app.
+                if (await AuthenticateAsync())
+                {
+                    // Hide the login button and load items from the mobile app.
+                    ButtonLogin.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                    //await InitLocalStoreAsync(); //offline sync support.
+                    Frame.Navigate(typeof(HomePage));
+                }
             }
             catch
             {
@@ -99,8 +101,7 @@ namespace EventMyLife.View
                 try
                 {
                     // Login with the identity provider.
-                    user = await App.MobileService
-                        .LoginAsync(provider);
+                    user = await App.MobileService.LoginAsync(provider);
                     // Create and store the user credentials.
                     credential = new PasswordCredential(provider.ToString(),
                         user.UserId, user.MobileServiceAuthenticationToken);
@@ -114,12 +115,19 @@ namespace EventMyLife.View
                     message = "You must log in. Login Required";
                 }
             }
-            try {
-                UserInf userInfo = await App.MobileService.InvokeApiAsync<UserInf>("userInfo", HttpMethod.Get, null);
-                message = string.Format("login with :  \n\n{0}", userInfo.ToString());
+            try
+            {
+
+                var unJToken = await App.MobileService.InvokeApiAsync("userInfo", HttpMethod.Get, null);
+
+                var dlgUser = new MessageDialog(unJToken.ToString());
+                dlgUser.Commands.Add(new UICommand("Fermer"));
+                await dlgUser.ShowAsync();
+
             }
             catch
             {
+                Debug.WriteLine("Erreur InvokeApiAsync");
 
             }
             var dialog = new MessageDialog(message);

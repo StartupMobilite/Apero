@@ -19,7 +19,7 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>EventMyLife_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>32A2847938492364EB04B1D59DBC4EED358E0502</PackageCertificateThumbprint>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
@@ -107,13 +107,15 @@
     <Compile Include="Model\ContactListClass.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\EventList.cs" />
+    <Compile Include="Model\ParticipTicket.cs" />
     <Compile Include="Model\ProfilAdvanceClass.cs" />
     <Compile Include="Model\ProfilClass.cs" />
-    <Compile Include="Model\TmpUser.cs" />
     <Compile Include="Model\TodoItem.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="ViewModel\AzureConnect.cs" />
     <Compile Include="ViewModel\EventGest.cs" />
+    <Compile Include="ViewModel\JsonClass.cs" />
+    <Compile Include="ViewModel\ParticipTicketGest.cs" />
     <Compile Include="ViewModel\UserGest.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\About.xaml.cs">
