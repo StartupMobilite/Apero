@@ -111,7 +111,8 @@
     <Compile Include="Model\ProfilAdvanceClass.cs" />
     <Compile Include="Model\ProfilClass.cs" />
     <Compile Include="Model\TodoItem.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserEML.cs" />
+    <Compile Include="Model\UserInf.cs" />
     <Compile Include="ViewModel\AzureConnect.cs" />
     <Compile Include="ViewModel\EventGest.cs" />
     <Compile Include="ViewModel\JsonClass.cs" />
@@ -162,6 +163,9 @@
     </Compile>
     <Compile Include="View\Planning.xaml.cs">
       <DependentUpon>Planning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ViewMyEvent.xaml.cs">
       <DependentUpon>ViewMyEvent.xaml</DependentUpon>
@@ -242,6 +246,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Planning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

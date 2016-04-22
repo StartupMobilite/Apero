@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EventMyLife.Model
 {
-    class UserInf
+   public class UserInf
     {
         [JsonProperty("email")]
         public String Email { get; set; }
@@ -22,6 +22,7 @@ namespace EventMyLife.Model
         [JsonProperty("idp")]
         public String Idp { get; set; }
 
+        public string IdProvider { get; set; }
         public string Id { get; set; }
     }
 }

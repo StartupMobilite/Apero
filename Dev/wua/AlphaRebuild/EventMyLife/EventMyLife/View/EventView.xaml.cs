@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -40,11 +41,22 @@ namespace EventMyLife.View
             }
         }
 
-        private void IParticipate_Click(object sender, RoutedEventArgs e)
+        private async void IParticipate_Click(object sender, RoutedEventArgs e)
         {
-            MenuItems.IdUser.ToString().Insert(0, string.Format("{0}/",App.MobileService.CurrentUser.UserId.ToString() ));
-            var eventSending = new EventGest();
-            eventSending.updateEvent(MenuItems);
+            string message = null;
+            try {
+                ParticipTicket Pt = new ParticipTicket(MenuItems.Id, App.MyProfile.IdProvider, 2/*remplacer par le nombre de participant en cour*/);
+                ParticipTicketGest ptG = new ParticipTicketGest();
+                ptG.sendParticipTicket(Pt);
+                message = "Demande Envoyée";
+            }
+            catch
+            {
+                message = "Echec de la demande";
+            }
+            var dialog = new MessageDialog(message);
+            dialog.Commands.Add(new UICommand("OK"));
+            await dialog.ShowAsync();
             Frame.GoBack();
         }
     }

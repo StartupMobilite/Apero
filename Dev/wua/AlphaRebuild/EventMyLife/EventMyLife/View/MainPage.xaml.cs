@@ -46,9 +46,11 @@ namespace EventMyLife.ViewModel
 
             MenuItems.Add(new MenuItem("A Propos", Symbol.Document, "AboutPage"));
 
-            MenuItems.Add(new MenuItem("Logout", Symbol.DisconnectDrive, "Logout"));
+            MenuItems.Add(new MenuItem("Profile", Symbol.Account, "Profile"));
 
             MenuItems.Add(new MenuItem("Mes Events", Symbol.GoToToday, "MesEvents"));
+
+            MenuItems.Add(new MenuItem("Logout", Symbol.DisconnectDrive, "Logout"));
 
             menusListView.ItemsSource = MenuItems;
 
@@ -133,6 +135,11 @@ namespace EventMyLife.ViewModel
             {
                 MyFrame.Navigate(typeof(MyEvents));
             }
+            if(menu.Id == "Profile")
+            {
+                MyFrame.Navigate(typeof(Profile));
+            }
+            splitView.IsPaneOpen = false;
             titleText.Text = menu.Title;
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)

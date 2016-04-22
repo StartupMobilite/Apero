@@ -1,4 +1,5 @@
 ﻿using EventMyLife.Model;
+using EventMyLife.ViewModel;
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json.Linq;
 using System;
@@ -119,10 +120,15 @@ namespace EventMyLife.View
             {
 
                 var unJToken = await App.MobileService.InvokeApiAsync("userInfo", HttpMethod.Get, null);
-
+                JsonClass jparser = new JsonClass();
+                App.MyProfile = jparser.userDeserialize(unJToken.ToString());
+                App.MyProfile.IdProvider = App.MobileService.CurrentUser.UserId.ToString();
+                var su = new UserGest();
+                su.sendUserInf(App.MyProfile);
+                /*
                 var dlgUser = new MessageDialog(unJToken.ToString());
                 dlgUser.Commands.Add(new UICommand("Fermer"));
-                await dlgUser.ShowAsync();
+                await dlgUser.ShowAsync();*/
 
             }
             catch

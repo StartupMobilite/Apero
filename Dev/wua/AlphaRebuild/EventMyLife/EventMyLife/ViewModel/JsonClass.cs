@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using Windows.System;
 using Newtonsoft.Json.Linq;
 using EventMyLife.Model;
+using System.Diagnostics;
 
 namespace EventMyLife.ViewModel
 {
-    class JsonClass
+    public class JsonClass
     {
-        public UserInf userDeserialize(JObject juser)
+        public UserInf userDeserialize(string juser)
         {
             var records = Newtonsoft.Json.JsonConvert.
-                DeserializeObject<UserInf>(juser["records"].ToString());
-
+                DeserializeObject<UserInf>(juser);
+            Debug.WriteLine(records.ToString());
             return records;
         }
     }

@@ -83,7 +83,7 @@ namespace EventMyLife.ViewModel
             {
                 List<Event> listevents = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
 
-                List<Event> listevent = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).Where(eventitems => eventitems.Id == "0").ToListAsync();
+                List<Event> listevent = await App.MobileService.GetTable<Event>().Where(eventitems => eventitems.NbParticipEvent != 0).ToListAsync();
                 if (eventIGo != null)
                 {
                     eventIGo.Clear();

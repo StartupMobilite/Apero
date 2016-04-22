@@ -52,7 +52,6 @@ namespace EventMyLife.View
                 DescripEvent = DescriptionTextboxTitre.Text,
                 PhotoEvent = ImageTextBox.Text,
                 IdUser = App.MobileService.CurrentUser.UserId.ToString()
-                
             };
             var eventSending = new EventGest();
             eventSending.sendEvent(NewEvent);
