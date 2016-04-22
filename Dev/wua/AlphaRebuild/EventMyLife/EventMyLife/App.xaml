@@ -41,15 +41,28 @@
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
 
+        <Style x:Key="facebookBoutton" TargetType="Button">
+            <Setter Property="Background" Value="#3b5998"/>
+            <Setter Property="Content" Value="Facebook"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="34"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="52"/>
+        </Style>
+
         <Style x:Key="MainFrame" TargetType="Frame">
             <Setter Property="Background" Value="#f4f7f7"/>
         </Style>
 
         <Style x:Key="SimpleTextBlock" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#1f4e5f"/>
-            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
+        
+        
         <Style x:Key="MainRelativePan" TargetType="RelativePanel">
             <Setter Property="Background" Value="Transparent"/>
         </Style>
@@ -60,8 +73,8 @@
 
         <Style x:Key="ListBoxItemSimple" TargetType="ListBoxItem">
             <Setter Property="FontSize" Value="24"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
         </Style>
 
         <Style x:Key="TextBoxSimple" TargetType="TextBox">
@@ -83,6 +96,7 @@
         
         <Style x:Key="StackListViewPan" TargetType="StackPanel">
             <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
         
         <Style x:Key="FrameStackPan" TargetType="StackPanel">

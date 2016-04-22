@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
     <RelativePanel Name=" eventView" Style="{StaticResource MainRelativePan}">
         <TextBlock Text="{Binding PhotoEvent}" Name="photoEvent" RelativePanel.AlignLeftWithPanel="True"
                    RelativePanel.AlignRightWithPanel="True"
@@ -47,5 +47,5 @@
                 Click="IParticipate_Click"/>
 
     </RelativePanel>
-
+    </ScrollViewer>
 </Page>

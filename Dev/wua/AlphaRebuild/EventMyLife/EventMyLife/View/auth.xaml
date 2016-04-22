@@ -8,10 +8,16 @@
     mc:Ignorable="d">
 
     <RelativePanel Style="{StaticResource MainRelativePan}" >
-        <Button Name="ButtonLogin" Click="ButtonLogin_Click" Content="Auth" 
-                Style="{StaticResource SimpleButton}"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center" Height="50"/>
+        <TextBlock Text="Se connecter avec : " FontSize="56"
+                   Name="ConnectText"
+                   RelativePanel.AlignTopWithPanel="True"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Style="{StaticResource SimpleTextBlock}"/>
+        <Button Name="ButtonLogin" Click="ButtonLogin_Click" 
+                Style="{StaticResource facebookBoutton}"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                RelativePanel.AlignVerticalCenterWithPanel="True"
+                RelativePanel.Below="ConnectText"/>
         
     </RelativePanel>
     

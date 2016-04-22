@@ -6,24 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <ScrollContentPresenter LineStackingStrategy="MaxHeight">
     <RelativePanel Style="{StaticResource MainRelativePan}"
         HorizontalAlignment="Center">
         <TextBox FontSize="24"
+                 Name="TitreText"
                  BorderThickness="2"
                  BorderBrush="Black"
                  Text="Titre"
                  Margin="10"/>
 
         <TextBox FontSize="16"
+                 Name="Rapport"
                  BorderBrush="Black"
                  BorderThickness="2"
                  Text=""
+                 RelativePanel.Below="TitreText"
+                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                  PlaceholderText="Votre rapport de bug"
                  Margin="10"
                  MinHeight="200"
                  />
-        <StackPanel Orientation="Horizontal" Margin="5">
+        <StackPanel Orientation="Horizontal" Name="ButtonPan" Margin="5" RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    RelativePanel.Below="Rapport">
             <Button Name="SendBugButton"
                 Content="Envoyer"
                 Click="SendBugButton_Click"
@@ -34,4 +39,5 @@
                 Margin="10,10,10,10"/>
         </StackPanel>
     </RelativePanel>
+    </ScrollContentPresenter>
 </Page>

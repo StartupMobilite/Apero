@@ -57,6 +57,9 @@
         <SplitView Name="splitView" CompactPaneLength="48" Background="#260980" VerticalAlignment="Stretch" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="topBar" DisplayMode="CompactOverlay" OpenPaneLength="250">
 
             <SplitView.Pane >
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                              VerticalScrollBarVisibility="Auto"
+                              >
                 <StackPanel Style="{StaticResource MenuStackPan}">
                     <ListView x:Name="menusListView"
                               VerticalAlignment="Stretch"
@@ -74,6 +77,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackPanel>
+                </ScrollViewer>
             </SplitView.Pane>
 
             <SplitView.Content>

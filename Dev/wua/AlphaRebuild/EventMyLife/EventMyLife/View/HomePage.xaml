@@ -26,27 +26,37 @@
                         />
         </StackPanel>
 
-        <StackPanel Name="PopulairePanel"
+        <RelativePanel Name="PopulairePanel"
                     RelativePanel.Below="HomeButtonsPanel"
-                    Style="{StaticResource FrameStackPan}"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    
                     CornerRadius="5">
-            <TextBlock Text="Les Plus Populaires"
-                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"/>
+            <TextBlock  Name="OngletName"
+                Text="Les Plus Populaires"
+                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"
+                      RelativePanel.AlignTopWithPanel="True"
+                        RelativePanel.AlignLeftWithPanel="True"
+                        RelativePanel.AlignRightWithPanel="True"/>
 
             <ListView x:Name="eventsListView"
                       VerticalAlignment="Center"
                       SelectionMode="Single"
                       Margin="10"
                       IsItemClickEnabled="True"
-                      HorizontalAlignment="Center"
                       ItemClick="eventsListView_ItemClick"
                       BorderBrush="#1f4e5f" BorderThickness="2"
-                      ItemContainerStyle="{StaticResource listViewItemsStyle}">
+                      ItemContainerStyle="{StaticResource listViewItemsStyle}"
+                      RelativePanel.Below="OngletName"
+                      RelativePanel.AlignBottomWithPanel="True"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      Padding="4">
                 <ListView.ItemTemplate>
                     <DataTemplate >
-                        <StackPanel Style="{StaticResource StackListViewPan}" >
+                        <StackPanel Style="{StaticResource StackListViewPan}">
                             <TextBlock Text="{Binding TitreEvent}"
-                                       Style="{StaticResource SimpleTextBlock}"/>
+                                       Style="{StaticResource SimpleTextBlock}" Margin="0,0,20,0"/>
                             <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
                         </StackPanel>
                     </DataTemplate>
@@ -54,9 +64,10 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-        </StackPanel>
+        </RelativePanel>
         
         <StackPanel Name="PubPanel"
+                    RelativePanel.Below="PopulairePanel"
                     RelativePanel.AlignBottomWithPanel="True"
                     RelativePanel.AlignHorizontalCenterWithPanel="True"
                     RelativePanel.AlignLeftWithPanel="True"
