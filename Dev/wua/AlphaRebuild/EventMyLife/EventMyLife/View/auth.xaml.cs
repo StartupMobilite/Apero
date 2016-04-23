@@ -37,21 +37,24 @@ namespace EventMyLife.View
 
         private async void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
+            ButtonLogin.IsEnabled = false;
             try
             {
+                
                 // Login the user and then load data from the mobile app.
                 if (await AuthenticateAsync())
                 {
                     // Hide the login button and load items from the mobile app.
                     ButtonLogin.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                     //await InitLocalStoreAsync(); //offline sync support.
-                    Frame.Navigate(typeof(HomePage));
+                    Frame.Navigate(typeof(MainPage));
                 }
             }
             catch
             {
-
+                
             }
+            ButtonLogin.IsEnabled = true;
         }
 
         // Define a member variable for storing the signed-in user. 

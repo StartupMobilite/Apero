@@ -109,44 +109,65 @@ namespace EventMyLife.ViewModel
             var menu = e.ClickedItem as MenuItem;
             if (menu.Id == "HomePage")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(HomePage));
             }
             if (menu.Id == "EventMap")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(EventMap));
             }
             if (menu.Id == "ContactsPage")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(Contacts));
             }
             if (menu.Id == "Planning")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(Planning));
             }
             if (menu.Id == "AboutPage")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(About));
             }
             if(menu.Id=="Logout")
             {
+                MyFrame.BackStack.Clear();
                 LogoutFunct();
+                Frame.Navigate(typeof(auth));
             }
             if(menu.Id== "MesEvents")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(MyEvents));
             }
             if(menu.Id == "Profile")
             {
+                MyFrame.BackStack.Clear();
                 MyFrame.Navigate(typeof(Profile));
+                
             }
-            splitView.IsPaneOpen = false;
+            if (stategroup.CurrentState != VisualStateMin1024)
+            {
+                splitView.IsPaneOpen = false;
+            }
+            else
+            {
+                splitView.IsPaneOpen = true;
+            }
+
             titleText.Text = menu.Title;
+            MyFrame.BackStack.Clear();
         }
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            MyFrame.Navigate(typeof(auth));
+            MyFrame.Navigate(typeof(HomePage));
+            secondFrame.Navigate(typeof(EventMap));
             menusListView.SelectedIndex = 0;
             titleText.Text = "Authentification";
+            Frame.BackStack.Clear();
         }
 
         public void setTitleName(string pageName)
@@ -163,7 +184,7 @@ namespace EventMyLife.ViewModel
         {
             try
             {
-                await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.Facebook);
+                await App.MobileService.LogoutAsync();
             }
             catch
             {

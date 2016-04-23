@@ -8,25 +8,33 @@
     mc:Ignorable="d">
 
     <RelativePanel>
-        <StackPanel Name="MyEvent"
-                    Style="{StaticResource FrameStackPan}"
+        <RelativePanel Name="MyEvent"
+                    Style="{StaticResource MainRelativePan}"
                     CornerRadius="5"
                     RelativePanel.AlignBottomWithPanel="True"
                     RelativePanel.AlignLeftWithPanel="True"
                     RelativePanel.AlignRightWithPanel="True"
                     RelativePanel.AlignTopWithPanel="True">
             <TextBlock Text="Mes Events"
-                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"/>
+                       Name="MyEventTextBlock"
+                       Style="{StaticResource SimpleTextBlock}"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                      />
 
             <ListView x:Name="MyeventsListView"
-                      VerticalAlignment="Center"
                       SelectionMode="Single"
                       Margin="10"
                       IsItemClickEnabled="True"
-                      HorizontalAlignment="Center"
                       ItemClick="MyeventsListView_ItemClick"
-                      BorderBrush="#1f4e5f" BorderThickness="2"
-                      ItemContainerStyle="{StaticResource listViewItemsStyle}">
+                      BorderBrush="#1f4e5f"
+                      BorderThickness="2"
+                      ItemContainerStyle="{StaticResource listViewItemsStyle}"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      RelativePanel.Below="MyEventTextBlock">
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <StackPanel Style="{StaticResource StackListViewPan}" >
@@ -39,8 +47,6 @@
                 </ListView.ItemTemplate>
 
             </ListView>
-        </StackPanel>
-
-
+        </RelativePanel>
     </RelativePanel>
 </Page>

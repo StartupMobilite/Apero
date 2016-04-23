@@ -29,7 +29,7 @@ namespace EventMyLife
     {
         public static MobileServiceClient MobileService = new MobileServiceClient("https://eventmylife.azurewebsites.net");
 
-
+        public static string PageTitle ="";
         public static UserInf MyProfile = null;
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
@@ -77,7 +77,7 @@ namespace EventMyLife
                 // Quand la pile de navigation n'est pas restaurée, accédez à la première page,
                 // puis configurez la nouvelle page en transmettant les informations requises en tant que
                 // paramètre
-                rootFrame.Navigate(typeof(ViewModel.MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(View.auth), e.Arguments);
             }
             // Vérifiez que la fenêtre actuelle est active
             Window.Current.Activate();

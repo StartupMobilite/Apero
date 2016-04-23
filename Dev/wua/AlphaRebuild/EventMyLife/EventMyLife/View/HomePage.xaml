@@ -27,17 +27,17 @@
         </StackPanel>
 
         <RelativePanel Name="PopulairePanel"
-                    RelativePanel.Below="HomeButtonsPanel"
-                    RelativePanel.AlignLeftWithPanel="True"
-                    RelativePanel.AlignRightWithPanel="True"
-                    
-                    CornerRadius="5">
-            <TextBlock  Name="OngletName"
-                Text="Les Plus Populaires"
+                       RelativePanel.Below="HomeButtonsPanel"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       CornerRadius="5">
+            
+            <TextBlock Name="OngletName"
+                       Text="Les Plus Populaires"
                        HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"
-                      RelativePanel.AlignTopWithPanel="True"
-                        RelativePanel.AlignLeftWithPanel="True"
-                        RelativePanel.AlignRightWithPanel="True"/>
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"/>
 
             <ListView x:Name="eventsListView"
                       VerticalAlignment="Center"
@@ -50,13 +50,12 @@
                       RelativePanel.Below="OngletName"
                       RelativePanel.AlignBottomWithPanel="True"
                       RelativePanel.AlignLeftWithPanel="True"
-                      RelativePanel.AlignRightWithPanel="True"
-                      Padding="4">
+                      RelativePanel.AlignRightWithPanel="True">
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <StackPanel Style="{StaticResource StackListViewPan}">
                             <TextBlock Text="{Binding TitreEvent}"
-                                       Style="{StaticResource SimpleTextBlock}" Margin="0,0,20,0"/>
+                                       Style="{StaticResource SimpleTextBlock}"/>
                             <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
                         </StackPanel>
                     </DataTemplate>

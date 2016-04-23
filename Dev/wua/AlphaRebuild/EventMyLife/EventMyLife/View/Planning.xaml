@@ -8,18 +8,28 @@
     mc:Ignorable="d">
 
     <RelativePanel >
-        <StackPanel Name="PopulairePanel"
-                    Style="{StaticResource FrameStackPan}"
-                    CornerRadius="5">
-            <TextBlock Text="Les Plus Populaires"
-                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"/>
+        <RelativePanel Name="PlanningPannel"
+                    Style="{StaticResource MainRelativePan}"
+                    CornerRadius="5"
+                    RelativePanel.AlignTopWithPanel="True"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True">
+            <TextBlock Text="Mon Planning"
+                       Name="TitrePannel"
+                       HorizontalAlignment="Center" Style="{StaticResource SimpleTextBlock}"
+                       RelativePanel.AlignTopWithPanel="True"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignRightWithPanel="True"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"/>
 
             <ListView x:Name="eventsListView"
-                      VerticalAlignment="Center"
                       SelectionMode="Single"
                       Margin="10"
+                      RelativePanel.Below="TitrePannel"
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
                       IsItemClickEnabled="True"
-                      HorizontalAlignment="Center"
                       ItemClick="eventsListView_ItemClick"
                       BorderBrush="#1f4e5f" BorderThickness="2"
                       ItemContainerStyle="{StaticResource listViewItemsStyle}">
@@ -28,13 +38,14 @@
                         <StackPanel Style="{StaticResource StackListViewPan}" >
                             <TextBlock Text="{Binding TitreEvent}"
                                        Style="{StaticResource SimpleTextBlock}"/>
-                            <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
+                            <TextBlock Text="{Binding ThemeEvent}"
+                                       Style="{StaticResource SimpleTextBlock}"/>
                         </StackPanel>
                     </DataTemplate>
 
                 </ListView.ItemTemplate>
 
             </ListView>
-        </StackPanel>
+        </RelativePanel>
     </RelativePanel>
 </Page>
