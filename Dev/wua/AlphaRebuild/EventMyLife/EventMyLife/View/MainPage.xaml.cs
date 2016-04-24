@@ -155,7 +155,6 @@ namespace EventMyLife.ViewModel
             }
             else
             {
-                splitView.IsPaneOpen = true;
             }
 
             titleText.Text = menu.Title;
@@ -164,7 +163,6 @@ namespace EventMyLife.ViewModel
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             MyFrame.Navigate(typeof(HomePage));
-            secondFrame.Navigate(typeof(EventMap));
             menusListView.SelectedIndex = 0;
             titleText.Text = "Authentification";
             Frame.BackStack.Clear();

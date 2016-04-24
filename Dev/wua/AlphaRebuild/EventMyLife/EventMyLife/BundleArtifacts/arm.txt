@@ -1,3 +1,3 @@
-MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.1.1.0_ARM_Debug.appx
-ResourcePack=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.1.1.0_language-en.appx
-ResourcePack=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.1.1.0_language-fr.appx
+MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.2.1.0_ARM_Debug.appx
+ResourcePack=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.2.1.0_language-en.appx
+ResourcePack=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\ARM\Debug\EventMyLife_1.2.1.0_language-fr.appx

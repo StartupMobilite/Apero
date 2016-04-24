@@ -60,6 +60,8 @@
             <Setter Property="TextWrapping" Value="NoWrap"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Tw Cen MT"/>
+            <Setter Property="TextAlignment" Value="DetectFromContent"/>
         </Style>
         
         <Style x:Key="MainRelativePan" TargetType="RelativePanel">

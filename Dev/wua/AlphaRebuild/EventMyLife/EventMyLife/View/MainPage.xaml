@@ -18,9 +18,9 @@
                     <VisualState.Setters>
                         <Setter Target="splitView.DisplayMode" Value="Overlay"/>
                         <Setter Target="splitView.IsPaneOpen" Value="False"/>
-                        <Setter Target="secondFrame.IsEnabled" Value="False"/>
+                        <!--<Setter Target="secondFrame.IsEnabled" Value="False"/>
                         <Setter Target="secondFrame.Visibility" Value="Collapsed"/>
-                        <Setter Target="MyFrame.(RelativePanel.AlignRightWithPanel)" Value="True"/>
+                        <Setter Target="MyFrame.(RelativePanel.AlignRightWithPanel)" Value="True"/>-->
                     </VisualState.Setters>
                 </VisualState>
 
@@ -31,9 +31,9 @@
                     <VisualState.Setters>
                         <Setter Target="splitView.DisplayMode" Value="CompactInline"/>
                         <Setter Target="splitView.IsPaneOpen" Value="False"/>
-                        <Setter Target="secondFrame.IsEnabled" Value="False"/>
+                        <!--<Setter Target="secondFrame.IsEnabled" Value="False"/>
                         <Setter Target="secondFrame.Visibility" Value="Collapsed"/>
-                        <Setter Target="MyFrame.(RelativePanel.AlignRightWithPanel)" Value="True"/>
+                        <Setter Target="MyFrame.(RelativePanel.AlignRightWithPanel)" Value="True"/>-->
                     </VisualState.Setters>
                 </VisualState>
 
@@ -44,9 +44,9 @@
                     <VisualState.Setters>
                         <Setter Target="splitView.DisplayMode" Value="CompactInline"/>
                         <Setter Target="splitView.IsPaneOpen" Value="True"/>
-                        <Setter Target="secondFrame.IsEnabled" Value="True"/>
+                        <!--<Setter Target="secondFrame.IsEnabled" Value="True"/>
                         <Setter Target="secondFrame.Visibility" Value="Visible"/>
-                        <Setter Target="MyFrame.(RelativePanel.AlignRightWithPanel)" Value="False"/>
+                        <Setter Target="MyFrame.(RelativePanel.AlignRightWithPanel)" Value="False"/>-->
                     </VisualState.Setters>
                 </VisualState>
 
@@ -119,20 +119,20 @@
 
             <SplitView.Content>
                 <RelativePanel>
-                <Frame Name="MyFrame"
+                    <Frame Name="MyFrame"
                        Style="{StaticResource MainFrame}"
                        RelativePanel.AlignBottomWithPanel="True"
                        RelativePanel.AlignLeftWithPanel="True"
                        RelativePanel.AlignRightWithPanel="True"
                        RelativePanel.AlignTopWithPanel="True"/>
-                    <Frame Name="secondFrame"
+                    <!--<Frame Name="secondFrame"
                            Visibility="Collapsed"
                            IsEnabled="False"
                            Style="{StaticResource MainFrame}"
                            RelativePanel.RightOf="MyFrame"
                            RelativePanel.AlignRightWithPanel="True"
                            RelativePanel.AlignBottomWithPanel="True"
-                           RelativePanel.AlignTopWithPanel="True"/>
+                           RelativePanel.AlignTopWithPanel="True"/>-->
                 </RelativePanel>
             </SplitView.Content>
         </SplitView>
