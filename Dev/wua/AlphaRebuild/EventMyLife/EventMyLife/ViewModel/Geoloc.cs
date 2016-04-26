@@ -92,13 +92,14 @@ namespace EventMyLife.ViewModel
                       await MapLocationFinder.FindLocationsAsync(
                                         addressToGeocode,
                                         hintPoint,
-                                        3);
+                                        4);
 
                 // If the query returns results, display the coordinates
                 // of the first result.
                 if (result.Status == MapLocationFinderStatus.Success)
                 {
                     Debug.WriteLine("reussi liste 1");
+                    Debug.WriteLine(result.Locations.Count);
                     return result;
                 }
             }

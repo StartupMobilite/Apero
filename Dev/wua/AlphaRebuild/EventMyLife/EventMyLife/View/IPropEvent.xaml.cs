@@ -100,18 +100,35 @@ namespace EventMyLife.View
 
         public  async Task<List<string>> addressList(string address)
         {
-            
-            MapLocationFinderResult listAdress = await App.gs.geocode(address,App.gs.myLocation);
             List<string> addressListR = new List<string>();
-            string tmp = "";
-            foreach (var item in listAdress.Locations)
+            try
             {
-                tmp = string.Format("{0} {1} {3}", item.Address.StreetNumber, item.Address.PostCode, item.Address.Town);
-                addressListR.Add(tmp);
+                MapLocationFinderResult listAdress = await App.gs.geocode(address, App.gs.myLocation);
+                string tmp = "";
+                foreach (var item in listAdress.Locations.ToList())
+                {
+                    try
+                    {
+                        Debug.WriteLine(string.Format("element :", item.DisplayName.ToString()));
+
+                        tmp = string.Format("{0} {1} {2} {3}", item.Address.StreetNumber.ToString(),item.Address.Street, item.Address.PostCode.ToString(), item.Address.Town.ToString());
+                        Debug.WriteLine(tmp);
+                        addressListR.Add(tmp);
+                    }
+                    catch
+                    {
+                        Debug.WriteLine(tmp);
+                    }
+                }
+            }
+            catch
+            {
+                Debug.WriteLine("erreur addresslist");
             }
 
             return addressListR;
         }
+
 
 
         private void JePropose1_Click(object sender, RoutedEventArgs e)
