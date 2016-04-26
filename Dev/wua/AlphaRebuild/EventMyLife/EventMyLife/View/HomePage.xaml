@@ -54,10 +54,10 @@
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <StackPanel Style="{StaticResource StackListViewPan}">
-                            <TextBlock Text="{Binding TitreEvent}"
+                                <TextBlock Text="{Binding TitreEvent}"
                                        Style="{StaticResource SimpleTextBlock}"/>
-                            <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
-                        </StackPanel>
+                                <TextBlock Text="{Binding ThemeEvent}" Style="{StaticResource SimpleTextBlock}"/>
+                            </StackPanel>
                     </DataTemplate>
 
                 </ListView.ItemTemplate>

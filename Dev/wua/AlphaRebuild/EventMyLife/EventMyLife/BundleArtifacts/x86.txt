@@ -1,1 +1,2 @@
-MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\x86\Debug\EventMyLife_1.1.1.0_x86_Debug.appx
+MainPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\bin\x86\Debug\EventMyLife_1.2.4.0_x86_Debug.appx
+SymbolPackage=C:\Users\alexc\Documents\GitHub\Apero\Dev\wua\AlphaRebuild\EventMyLife\EventMyLife\AppPackages\EventMyLife_1.2.4.0_Debug_Test\EventMyLife_1.2.4.0_x86_Debug.appxsym

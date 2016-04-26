@@ -17,6 +17,7 @@
             x:Name="MapControl1"
             ZoomInteractionMode="GestureAndControl"
             TiltInteractionMode="GestureAndControl"
+                ZoomLevel="3"
             MapServiceToken="NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8"
             MinWidth="320"
             MinHeight="320"

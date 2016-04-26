@@ -1,4 +1,5 @@
 ﻿using EventMyLife.Model;
+using EventMyLife.ViewModel;
 using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
@@ -31,6 +33,7 @@ namespace EventMyLife
 
         public static string PageTitle ="";
         public static UserInf MyProfile = null;
+        public static Geoloc gs = null;
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
         /// à être exécutée. Elle correspond donc à l'équivalent logique de main() ou WinMain().
@@ -39,6 +42,9 @@ namespace EventMyLife
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            gs = new Geoloc();
+            gs.refreshLoc();
+
         }
 
         

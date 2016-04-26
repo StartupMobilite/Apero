@@ -128,6 +128,7 @@ namespace EventMyLife.View
                 App.MyProfile.IdProvider = App.MobileService.CurrentUser.UserId.ToString();
                 var su = new UserGest();
                 su.sendUserInf(App.MyProfile);
+                message = string.Format("Bonjour {0} {1} !", App.MyProfile.Given_name,App.MyProfile.Family_name);
                 /*
                 var dlgUser = new MessageDialog(unJToken.ToString());
                 dlgUser.Commands.Add(new UICommand("Fermer"));

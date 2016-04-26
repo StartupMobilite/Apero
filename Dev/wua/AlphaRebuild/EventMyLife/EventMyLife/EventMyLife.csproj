@@ -21,7 +21,7 @@
     <PackageCertificateThumbprint>32A2847938492364EB04B1D59DBC4EED358E0502</PackageCertificateThumbprint>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -115,6 +115,7 @@
     <Compile Include="Model\UserInf.cs" />
     <Compile Include="ViewModel\AzureConnect.cs" />
     <Compile Include="ViewModel\EventGest.cs" />
+    <Compile Include="ViewModel\Geoloc.cs" />
     <Compile Include="ViewModel\JsonClass.cs" />
     <Compile Include="ViewModel\ParticipTicketGest.cs" />
     <Compile Include="ViewModel\UserGest.cs" />
@@ -179,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\customicon.png" />
+    <Content Include="Assets\icon-map.png" />
+    <Content Include="Assets\map-pin.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -10,7 +10,7 @@
 
     <RelativePanel Style="{StaticResource MainRelativePan}" Name="eventMap" >
 
-        <Map:MapControl x:Name="mapControl"
+        <Map:MapControl x:Name="MapControl1"
                         ZoomInteractionMode="GestureAndControl"
                         TiltInteractionMode="GestureAndControl"
                         MapServiceToken="NU84AueM7GMiPBOwHSoE~Ys6Syu5oct7d2PaDIdzl8g~AsQyIrLBonF8di9BqLCV0kg0tZnAFpbav2HztwHXPdUa3JOgL56tMLZP4E2vlTg8"

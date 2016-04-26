@@ -21,14 +21,14 @@
             
         </StackPanel>
 
-        <StackPanel  Name="JeProposeInformationsListBox"
+            <StackPanel  Name="JeProposeInformationsListBox"
                      HorizontalAlignment="Center"
                      VerticalAlignment="Center"
                      Margin="10"
                      Style="{StaticResource FrameStackPan}">
 
-            <TextBox Name="ImageTextBox" Text="" Margin="5" PlaceholderText="Image*"
-                     Style="{StaticResource TextBoxSimple}"/>
+                <TextBox Name="ImageTextBox" Text="" Margin="5" PlaceholderText="Image*"
+                     Style="{StaticResource TextBoxSimple}" TextChanged="TextBox_TextChanged"/>
 
             <TextBox Text=""
                      PlaceholderText="Titre*"
@@ -36,12 +36,9 @@
                      Name="TextBoxTitre"
                      Style="{StaticResource TextBoxSimple}"/>
 
-            <TextBox Text=""
-                     PlaceholderText="Thème*"
-                     Margin="5"
-                     Name="TextBoxTheme"
-                     Style="{StaticResource TextBoxSimple}"/>
-            <TextBox Text=""
+                <ComboBox Name="ThemeCombo" ItemsSource="{Binding themesList}" IsSynchronizedWithCurrentItem="{x:Null}" Header="Thémes :" Margin="5" 
+                  />
+                <TextBox Text=""
                      PlaceholderText="Description*"
                      Name="DescriptionTextboxTitre"
                      Margin="5"
@@ -72,11 +69,18 @@
                      Margin="5"
                      Name="TextBoxAdress"
                      Style="{StaticResource TextBoxSimple}"/>
+                <ComboBox Name="ComboAddress"  />
+                <AutoSuggestBox Name="adressSugest"
+                                QueryIcon="Find"
+                                TextChanged="AutoSuggestBox_TextChanged"
+                                QuerySubmitted="AutoSuggestBox_QuerySubmitted"
+                                SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
 
-            <Button x:Name="JePropose1"
+                <Button x:Name="JePropose1"
             	Content="Je propose"
                 Style="{StaticResource SimpleButton}"
             	FontSize="15"
+                    IsEnabled="False"
                 Click="JePropose1_Click"
             	/>
             <Button x:Name="Cancel"

@@ -15,25 +15,30 @@
                      RelativePanel.AlignTopWithPanel="True"
                      Stretch="Uniform"
                      MinHeight="50"
-                     MaxHeight="250">
-                <TextBlock Text="{Binding PhotoEvent}" Style="{StaticResource SimpleTextBlock}"/>
+                     MaxHeight="250"
+                     >
+                <TextBlock Text="{Binding PhotoEvent}"
+                           Style="{StaticResource SimpleTextBlock}"/>
             </Viewbox>
-        
+
+            <Viewbox Name="infoView"
+                     Stretch="Fill"
+                RelativePanel.Below="photoEvent"
+                   RelativePanel.AlignLeftWithPanel="True"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True" >
+                <RelativePanel >
             <TextBlock Text="{Binding TitreEvent}" Name="titreTextBlock"
                    FontSize="48"
-                   RelativePanel.Below="photoEvent"
-                   RelativePanel.AlignLeftWithPanel="True"
-                   RelativePanel.AlignHorizontalCenterWithPanel="True" 
                    Style="{StaticResource SimpleTextBlock}"/>
 
             <TextBlock Text="Date : "
                        Name="Date"
                        RelativePanel.LeftOf="datePicker"
                        RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.Below="themeTextBlock"/>
+                       RelativePanel.Below="themeTextBlock"
+                       Style="{StaticResource SimpleExplainTextBlock}"/>
             <TextBlock Text="{Binding DateEvent}"
                    Name="datePicker"
-                   FontSize="24"
                    RelativePanel.Below="themeTextBlock"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Style="{StaticResource SimpleTextBlock}"/>
@@ -43,11 +48,11 @@
                        Name="theme"
                        RelativePanel.LeftOf="themeTextBlock"
                        RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.Below="titreTextBlock"/>
+                       RelativePanel.Below="titreTextBlock"
+                       Style="{StaticResource SimpleExplainTextBlock}"/>
             <TextBlock Text="{Binding ThemeEvent}"
                        Name="themeTextBlock"
                        Style="{StaticResource SimpleTextBlock}"
-                       FontSize="24"
                        RelativePanel.Below="titreTextBlock"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"/>
         
@@ -56,10 +61,10 @@
                        Name="nbrpart"
                        RelativePanel.LeftOf="nbPartText"
                        RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.Below="datePicker"/>
+                       RelativePanel.Below="datePicker"
+                       Style="{StaticResource SimpleExplainTextBlock}"/>
             <TextBlock Text="{Binding NbParticipEvent}"
                        Name="nbPartText"
-                       FontSize="24"
                        RelativePanel.Below="datePicker"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                        Style="{StaticResource SimpleTextBlock}"/>
@@ -69,10 +74,10 @@
                        Name="timing"
                        RelativePanel.LeftOf="duree"
                        RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.Below="nbPartText"/>
+                       RelativePanel.Below="nbPartText"
+                       Style="{StaticResource SimpleExplainTextBlock}"/>
             <TextBlock Text="{Binding DureeEvent}"
                        Name="duree"
-                       FontSize="24"
                        RelativePanel.Below="nbPartText"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                        Style="{StaticResource SimpleTextBlock}"/>
@@ -82,11 +87,11 @@
                        Name="adresse"
                        RelativePanel.LeftOf="adresseText"
                        RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.Below="duree"/>
+                       RelativePanel.Below="duree"
+                       Style="{StaticResource SimpleExplainTextBlock}"/>
             <TextBlock Text="{Binding AdresseEvent}"
                        Name="adresseText"
                        RelativePanel.Below="duree"
-                       FontSize="24"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                        Style="{StaticResource SimpleTextBlock}"/>
         
@@ -95,19 +100,20 @@
                        Name="Descript"
                        RelativePanel.LeftOf="description"
                        RelativePanel.AlignLeftWithPanel="True"
-                       RelativePanel.Below="adresseText"/>
+                       RelativePanel.Below="adresseText"
+                       Style="{StaticResource SimpleExplainTextBlock}"/>
             <TextBlock Text="{Binding DescripEvent}"
                        Name="description"
-                       FontSize="24"
                        RelativePanel.Below="adresseText"
                        RelativePanel.AlignHorizontalCenterWithPanel="True"
                        Style="{StaticResource SimpleTextBlock}"/>
-        
-        
-        <Button Name="IParticipate"
+                </RelativePanel>
+            </Viewbox>
+
+            <Button Name="IParticipate"
                 Content="Je Participe"
                 Style="{StaticResource SimpleButton}"
-                RelativePanel.Below="description"
+                RelativePanel.Below="infoView"
                 RelativePanel.AlignBottomWithPanel="True"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Click="IParticipate_Click"/>
