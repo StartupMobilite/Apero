@@ -40,7 +40,7 @@ namespace EventMyLife.ViewModel
 
             MenuItems.Add(new MenuItem("Carte Des Evenements", Symbol.Map, "EventMap"));
 
-            MenuItems.Add(new MenuItem("Contacts", Symbol.Contact, "ContactsPage"));
+            //MenuItems.Add(new MenuItem("Contacts", Symbol.Contact, "ContactsPage"));
 
             MenuItems.Add(new MenuItem("Planning", Symbol.Calendar, "Planning"));
 

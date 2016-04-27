@@ -39,17 +39,37 @@ namespace EventMyLife.ViewModel
 
         public async void sendEvent(Event sEvent)
         {
-            await App.MobileService.GetTable<Event>().InsertAsync(sEvent);
+            try
+            {
+                await App.MobileService.GetTable<Event>().InsertAsync(sEvent);
+            }
+            catch
+            {
+
+            }
         }
 
         public async void supprEvent(Event sEvent)
         {
+            try { 
             await App.MobileService.GetTable<Event>().DeleteAsync(sEvent);
+            }
+            catch
+            {
+
+            }
         }
 
         public async void updateEvent(Event sEvent)
         {
-            await App.MobileService.GetTable<Event>().UpdateAsync(sEvent);
+            try
+            {
+                await App.MobileService.GetTable<Event>().UpdateAsync(sEvent);
+            }
+            catch
+            {
+
+            }
         }
 
         public async void recupEvent()

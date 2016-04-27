@@ -19,6 +19,7 @@ namespace EventMyLife.ViewModel
 
         public async void refreshLoc()
         {
+            try { 
             var accessStatus = await Geolocator.RequestAccessAsync();
             switch (accessStatus)
             {
@@ -41,6 +42,11 @@ namespace EventMyLife.ViewModel
                     Debug.WriteLine("Error unknow");
                     // Handle the case if  an unspecified error occurs.
                     break;
+            }
+            }
+            catch
+            {
+
             }
         }
 

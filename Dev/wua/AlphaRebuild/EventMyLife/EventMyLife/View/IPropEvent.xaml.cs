@@ -89,7 +89,7 @@ namespace EventMyLife.View
         {
             bool success = true;
             int tmp=0;
-            if (!(TextBoxTitre.Text.Length > 1))
+            if (!(TextBoxTitre.Text.Length > 1 && TextBoxTitre.Text.Length<28))
             {
                 TextBoxTitre.Background = new SolidColorBrush(Colors.IndianRed);
                 success = false;
@@ -124,6 +124,7 @@ namespace EventMyLife.View
             {
                 if (await verifaddress(adressSugest.Text) == false)
                 {
+                    adressSugest.Background = new SolidColorBrush(Colors.IndianRed);
                     success = false;
                 }
                 else
@@ -138,11 +139,11 @@ namespace EventMyLife.View
             }
             else
             {
-                CalendarStart.Background = new SolidColorBrush(Colors.Transparent);
+                CalendarStart.Foreground = new SolidColorBrush(Colors.Transparent);
             }
             if(!(TimePicker.Time != null))
             {
-                TimePicker.Background = new SolidColorBrush(Colors.IndianRed);
+                TimePicker.Foreground = new SolidColorBrush(Colors.IndianRed);
                 success = false;
 
             }
@@ -169,7 +170,7 @@ namespace EventMyLife.View
         {
             Geoloc gs = new Geoloc();
             MapLocationFinderResult listAdress = await gs.geocode(address,App.gs.myLocation);
-            if (listAdress.Locations.Count == 0)
+            if (listAdress.Locations[0].Point == null)
             {
                 return false;
             }
