@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventMyLife.Model;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -33,7 +34,20 @@ namespace EventMyLife.ViewModel
             this.InitializeComponent();
         }
 
-        public async void AddMapIcon(Geopoint snPoint)
+
+        public async void CreateListPin()
+        {
+            List<Event> list = new List<Event>();
+            list = App.eventGest.AllEvents.ToList<Event>();
+            foreach (var item in list)
+            {
+                MapLocationFinderResult results = await App.gs.geocode(item.AdresseEvent.ToString(), App.gs.myLocation);
+                AddMapIcon(results.Locations[0].Point, item.TitreEvent);
+            }
+        }
+
+
+        public async void AddMapIcon(Geopoint snPoint,string namePin)
         {
             try
             {
@@ -44,10 +58,10 @@ namespace EventMyLife.ViewModel
                     MapControl1.Center = myLocation;
                     //set a map icon start
                     MapIcon mapIconStart = new MapIcon();
-                    mapIconStart.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/map-pin.png"));
+                    mapIconStart.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/icon-map.png"));
                     mapIconStart.Location = myLocation;
                     mapIconStart.NormalizedAnchorPoint = new Point(0.5, 1.0);
-                    mapIconStart.Title = adresse;
+                    mapIconStart.Title = namePin;
                     mapIconStart.ZIndex = 1;
                     MapControl1.MapElements.Add(mapIconStart);
                     MapControl1.ZoomLevel = 14;
@@ -126,6 +140,8 @@ namespace EventMyLife.ViewModel
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             setCurrentPos();
+            App.eventGest.recupEvent();
+            CreateListPin();
         }
 
     }
