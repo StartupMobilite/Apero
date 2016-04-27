@@ -34,6 +34,8 @@ namespace EventMyLife
         public static string PageTitle ="";
         public static UserInf MyProfile = null;
         public static Geoloc gs = null;
+        public static EventGest eventGest = null;
+        public static ParticipTicketGest tickets = null;
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
         /// à être exécutée. Elle correspond donc à l'équivalent logique de main() ou WinMain().
@@ -43,8 +45,9 @@ namespace EventMyLife
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             gs = new Geoloc();
+            eventGest = new EventGest();
+            tickets = new ParticipTicketGest();
             gs.refreshLoc();
-
         }
 
         

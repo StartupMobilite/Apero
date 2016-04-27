@@ -7,89 +7,115 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ScrollViewer VerticalScrollBarVisibility="Hidden">
-    <RelativePanel HorizontalAlignment="Center"
+        <RelativePanel HorizontalAlignment="Center"
                    VerticalAlignment="Stretch"
-                   Style="{StaticResource MainRelativePan}">
-        <StackPanel Name="ImageJeproposePanel"
+                   Style="{StaticResource MainRelativePan}"
+                   >
+            <StackPanel Name="ImageJeproposePanel"
                     Margin="10"
                     HorizontalAlignment="Center"
                     RelativePanel.AlignTopWithPanel="True"
                     RelativePanel.AlignBottomWithPanel="True">
-            <Image MinHeight="50"
+                <Image MinHeight="50"
                    MinWidth="50"
                    Source="Assets/Square44x44Logo.png"/>
-            
-        </StackPanel>
 
-            <StackPanel  Name="JeProposeInformationsListBox"
-                     HorizontalAlignment="Center"
-                     VerticalAlignment="Center"
-                     Margin="10"
-                     Style="{StaticResource FrameStackPan}">
+            </StackPanel>
+            <Viewbox Stretch="None">
+            <StackPanel Name="JeProposeInformationsListBox"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"
+                        Margin="10"
+                        Style="{StaticResource FrameStackPan}">
 
-                <TextBox Name="ImageTextBox" Text="" Margin="5" PlaceholderText="Image*"
-                     Style="{StaticResource TextBoxSimple}" TextChanged="TextBox_TextChanged"/>
+                <TextBox Name="ImageTextBox"
+                         Text="" Margin="5"
+                         PlaceholderText="Image pour l'évenement*"
+                         Style="{StaticResource TextBoxSimple}"
+                         Visibility="Collapsed"/>
 
-            <TextBox Text=""
-                     PlaceholderText="Titre*"
-                     Margin="5"
-                     Name="TextBoxTitre"
-                     Style="{StaticResource TextBoxSimple}"/>
+                <TextBox Name="TextBoxTitre"
+                         Text=""
+                         PlaceholderText="Titre de l'évenement*"
+                         Margin="5"
+                         Style="{StaticResource TextBoxSimple}"/>
 
-                <ComboBox Name="ThemeCombo" ItemsSource="{Binding themesList}" IsSynchronizedWithCurrentItem="{x:Null}" Header="Thémes :" Margin="5" 
+                <ComboBox Name="ThemeCombo"
+                          ItemsSource="{Binding themesList}"
+                          PlaceholderText="Autre"
+                          Header="Le théme :"
+                          Margin="5" 
+                          HorizontalAlignment="Stretch"
                   />
-                <TextBox Text=""
-                     PlaceholderText="Description*"
-                     Name="DescriptionTextboxTitre"
-                     Margin="5"
-                     Style="{StaticResource TextBoxSimple}"/>
+                <TextBox Name="DescriptionTextboxTitre"
+                         Text=""
+                         PlaceholderText="Description"
+                         Margin="5"
+                         Style="{StaticResource TextBoxSimple}"/>
 
-            <DatePicker HorizontalAlignment="Left"
-                        Margin="5"
-                        Name="CalendarStart"
+                <CalendarDatePicker Name="CalendarStart"
+                                    Header="La date *"
+                                    HorizontalAlignment="Stretch"
+                                    DateFormat="{}{day.integer}/{month.integer}/{year.full}"
+                                    HorizontalContentAlignment="Center"
+                                    Margin="5"
                         />
 
-            <TextBox Text=""
-                     InputScope="Number"
-                     PlaceholderText="Nombre de participants*"
-                     Margin="5"
-                     Name="TextBoxNbrPartMax"
-                     Style="{StaticResource TextBoxSimple}"/>
+                    <TimePicker Name="TimePicker"
+                                Header="L'heure :"
+                                HorizontalAlignment="Stretch"
+                                Margin="5"
+                                UseLayoutRounding="True"
+                                HorizontalContentAlignment="Center"
+                                >
+                        <FlyoutBase.AttachedFlyout>
+                            <TimePickerFlyout Placement="Right" MinuteIncrement="2"/>
+                        </FlyoutBase.AttachedFlyout>
+                    </TimePicker>
 
-            <TextBox Text=""
-                     PlaceholderText="Temps*"
-                     InputScope="TimeHour"
-                     Margin="5"
-                     Name="TextBoxTime"
-                     Style="{StaticResource TextBoxSimple}"/>
+                    <TimePicker Name="DurationPicker"
+                                Header="la durée :"
+                                Margin="5"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Center"
+                                />
 
-            <TextBox Text=""
-                     PlaceholderText="Adresse*"
-                     InputScope="Maps"
-                     Margin="5"
-                     Name="TextBoxAdress"
-                     Style="{StaticResource TextBoxSimple}"/>
-                <ComboBox Name="ComboAddress"  />
+                    <TextBox Text=""
+                         InputScope="Number"
+                         PlaceholderText="Nombre de participants*"
+                         Margin="5"
+                         Name="TextBoxNbrPartMax"
+                         Style="{StaticResource TextBoxSimple}"/>
+
                 <AutoSuggestBox Name="adressSugest"
                                 QueryIcon="Find"
+                                HorizontalAlignment="Stretch"
+                                Margin="5"
+                                PlaceholderText="Et l'adresse :"
                                 TextChanged="AutoSuggestBox_TextChanged"
                                 QuerySubmitted="AutoSuggestBox_QuerySubmitted"
                                 SuggestionChosen="AutoSuggestBox_SuggestionChosen"/>
 
-                <Button x:Name="JePropose1"
-            	Content="Je propose"
-                Style="{StaticResource SimpleButton}"
-            	FontSize="15"
-                    IsEnabled="False"
-                Click="JePropose1_Click"
-            	/>
-            <Button x:Name="Cancel"
-            	Content="Annuler"
-            	Style="{StaticResource SimpleButton}"
-            	FontSize="15"
-                Click="Cancel_Click"
-            	/> 
-        </StackPanel>
-    </RelativePanel>
+                    <StackPanel Name="BoutonPan"
+                                Orientation="Horizontal"
+                                Margin="5">
+
+                    <Button x:Name="JePropose1"
+                            Content="Je propose"
+                            Style="{StaticResource SimpleButton}"
+                            FontSize="15"
+                            Click="JePropose1_Click"
+                            HorizontalAlignment="Left"/>
+                    <Button x:Name="Cancel"
+                            Content="Annuler"
+                            Style="{StaticResource SimpleButton}"
+                            FontSize="15"
+                            Click="Cancel_Click"
+                            HorizontalAlignment="Right"/>
+                </StackPanel>
+            
+            </StackPanel>
+            </Viewbox>
+        </RelativePanel>
     </ScrollViewer>
 </Page>

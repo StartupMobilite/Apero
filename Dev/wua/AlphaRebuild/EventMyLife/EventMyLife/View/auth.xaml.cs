@@ -141,7 +141,6 @@ namespace EventMyLife.View
 
             }
             var dialog = new MessageDialog(message);
-
             dialog.Commands.Add(new UICommand("OK"));
             await dialog.ShowAsync();
             return success;

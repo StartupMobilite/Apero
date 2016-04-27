@@ -17,6 +17,8 @@ namespace EventMyLife.Model
         public string AdresseEvent { get; set; }
         public string DescripEvent { get; set; }
         public string DateEvent { get; set; }
+        public string TimeEvent { get; set; }
+        public string Duration { get; set; }
         public string IdUser { get; set; }
     }
 }

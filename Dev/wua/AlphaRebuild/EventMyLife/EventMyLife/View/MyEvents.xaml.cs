@@ -24,15 +24,12 @@ namespace EventMyLife.View
     /// </summary>
     public sealed partial class MyEvents : Page
     {
-        public EventGest eventman = new EventGest();
 
         public MyEvents()
         {
             this.InitializeComponent();
-            eventman.recupEvent();
-            MyeventsListView.ItemsSource = eventman.MyEvent;
+            MyeventsListView.ItemsSource = App.eventGest.MyEvent;
         }
-
 
         private void MyeventsListView_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -42,8 +39,8 @@ namespace EventMyLife.View
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            eventman.recupMyEvent();
-            MyeventsListView.ItemsSource = eventman.MyEvent;
+            App.eventGest.recupMyEvent();
+            MyeventsListView.ItemsSource = App.eventGest.MyEvent;
         }
     }
 }

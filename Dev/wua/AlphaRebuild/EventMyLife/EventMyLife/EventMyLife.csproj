@@ -119,7 +119,6 @@
     <Compile Include="ViewModel\JsonClass.cs" />
     <Compile Include="ViewModel\ParticipTicketGest.cs" />
     <Compile Include="ViewModel\UserGest.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="View\About.xaml.cs">
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>

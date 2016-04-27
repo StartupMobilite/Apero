@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Services.Maps;
+using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,7 +33,7 @@ namespace EventMyLife.View
         {
             get
             {
-                return new List<string>() { "Sport", "Jeux Video", "Cinema", "Bar" };
+                return new List<string>() {"Autre", "Sport", "Jeux Video", "Cinema", "Bar", "Nature" };
             }
         }
 
@@ -39,51 +41,130 @@ namespace EventMyLife.View
         {
             this.InitializeComponent();
             ThemeCombo.ItemsSource = themesList;
+            ThemeCombo.SelectedIndex = 0;
+            CalendarStart.MinDate = System.DateTime.Now;
         }
 
-
-
+        #region Boutons
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Frame.GoBack();
         }
 
-        public bool verifForm()
+        private async void JePropose1_Click(object sender, RoutedEventArgs e)
+        {
+            string message = "";
+            var dialog = new MessageDialog("");
+            dialog.Title = "Proposition d'évenement :";
+            dialog.Commands.Add(new UICommand("OK"));
+            var eventSending = new EventGest();
+            if (await verifForm())
+            {
+                var NewEvent = new Event();
+
+                NewEvent.TitreEvent = TextBoxTitre.Text;
+                NewEvent.NbParticipEvent = int.Parse(TextBoxNbrPartMax.Text);
+                NewEvent.ThemeEvent = ThemeCombo.SelectedItem.ToString();
+                NewEvent.AdresseEvent = adressSugest.Text;
+                NewEvent.DateEvent = CalendarStart.Date.ToString();
+                NewEvent.DescripEvent = DescriptionTextboxTitre.Text;
+                NewEvent.PhotoEvent = ImageTextBox.Text;
+                NewEvent.IdUser = App.MobileService.CurrentUser.UserId.ToString();
+                NewEvent.TimeEvent = TimePicker.Time.Hours.ToString();
+                NewEvent.Duration = DurationPicker.Time.ToString();
+                eventSending.sendEvent(NewEvent);
+                Frame.GoBack();
+                message = "Envoyé avec succé :D";
+            }
+            else
+            {
+                message = "Champs invalide :(";
+            }
+            dialog.Content = message;
+            await dialog.ShowAsync();
+        }
+        #endregion
+
+        public async Task<bool> verifForm()
         {
             bool success = true;
+            int tmp=0;
             if (!(TextBoxTitre.Text.Length > 1))
             {
-                success = false;
-            }
-            if (!(TextBoxNbrPartMax.Text.Length > 0))
-            {
+                TextBoxTitre.Background = new SolidColorBrush(Colors.IndianRed);
                 success = false;
             }
             else
             {
-                if (int.Parse(TextBoxNbrPartMax.Text.ToString()) < 2)
-                {
-                    success = false;
-                }
+                TextBoxTitre.Background = new SolidColorBrush(Colors.Transparent);
             }
-            if (!(ThemeCombo.SelectedItem.ToString() ==""))
+            if (!(TextBoxNbrPartMax.Text.Length >= 1))
             {
-                success = false;
-            }
-            if (!(TextBoxAdress.Text.Length > 5))
-            {
+                TextBoxNbrPartMax.Background = new SolidColorBrush(Colors.IndianRed);
                 success = false;
             }
             else
             {
-                if(verifaddress(TextBoxAdress.Text).Result == false)
+                if(!(int.TryParse(TextBoxNbrPartMax.Text,out tmp)))
+                {
+                    success = false;
+                    TextBoxNbrPartMax.Background = new SolidColorBrush(Colors.IndianRed);
+                }
+                else
+                {
+                    TextBoxNbrPartMax.Background = new SolidColorBrush(Colors.Transparent);
+                }
+            }
+            if (!(adressSugest.Text.Length > 5))
+            {
+                adressSugest.Background = new SolidColorBrush(Colors.IndianRed);
+                success = false;
+            }
+            else
+            {
+                if (await verifaddress(adressSugest.Text) == false)
                 {
                     success = false;
                 }
+                else
+                {
+                    adressSugest.Background = new SolidColorBrush(Colors.Transparent);
+                }
             }
+            if(!(CalendarStart.Date != null))
+            {
+                CalendarStart.Background = new SolidColorBrush(Colors.IndianRed);
+                success = false;
+            }
+            else
+            {
+                CalendarStart.Background = new SolidColorBrush(Colors.Transparent);
+            }
+            if(!(TimePicker.Time != null))
+            {
+                TimePicker.Background = new SolidColorBrush(Colors.IndianRed);
+                success = false;
 
+            }
+            else
+            {
+                TimePicker.Background = new SolidColorBrush(Colors.Transparent);
+            }
+            if(!(DurationPicker.Time != null))
+            {
+                DurationPicker.Background = new SolidColorBrush(Colors.IndianRed);
+                success = false;
+            }
+            else
+            {
+                DurationPicker.Background = new SolidColorBrush(Colors.Transparent);
+            }
             return success;
         }
+
+        #region findAddress
+
+        //Verifie Si  l'adresse est valide
         public async Task<bool> verifaddress(string address)
         {
             Geoloc gs = new Geoloc();
@@ -98,6 +179,7 @@ namespace EventMyLife.View
             }
         }
 
+        //recupere une liste d'adresse proche pour la SuggestBox
         public  async Task<List<string>> addressList(string address)
         {
             List<string> addressListR = new List<string>();
@@ -129,34 +211,7 @@ namespace EventMyLife.View
             return addressListR;
         }
 
-
-
-        private void JePropose1_Click(object sender, RoutedEventArgs e)
-        {
-
-            var NewEvent = new Event();
-
-                    NewEvent.TitreEvent = TextBoxTitre.Text;
-                    NewEvent.NbParticipEvent = int.Parse(TextBoxNbrPartMax.Text.ToString());
-                    NewEvent.ThemeEvent = ThemeCombo.SelectedItem.ToString();
-                    NewEvent.AdresseEvent = TextBoxAdress.Text;
-                    NewEvent.DateEvent = string.Format("{0}/{1}/{2}",
-                CalendarStart.Date.Day.ToString(),
-                CalendarStart.Date.Month.ToString(),
-                CalendarStart.Date.Year.ToString());
-                    NewEvent.DescripEvent = DescriptionTextboxTitre.Text;
-                    NewEvent.PhotoEvent = ImageTextBox.Text;
-                    NewEvent.IdUser = App.MobileService.CurrentUser.UserId.ToString();
-            var eventSending = new EventGest();
-            eventSending.sendEvent(NewEvent);
-            Frame.GoBack();
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+        //verifie si le text de la suggest box a changer et lance la recherche de propositions
         private async void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             List<string> list = new List<string>();
@@ -181,6 +236,7 @@ namespace EventMyLife.View
             }
         }
 
+        //que faire quand une adresse est choisie
         private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
             if (args.ChosenSuggestion != null)
@@ -193,9 +249,13 @@ namespace EventMyLife.View
             }
         }
 
+
         private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
         {
 
         }
+
+        #endregion
+
     }
 }

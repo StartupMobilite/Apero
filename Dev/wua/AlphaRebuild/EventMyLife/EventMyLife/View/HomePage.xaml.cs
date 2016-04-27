@@ -25,13 +25,12 @@ namespace EventMyLife.View
     /// </summary>
     public sealed partial class HomePage : Page
     {
-        public EventGest eventman = new EventGest();
         public HomePage()
         {
             this.InitializeComponent();
             //Remplir eventsList avec la base de données par rapport a la pos exemple cree une fonction connexion recuperation
-            eventman.recupEvent();
-            eventsListView.ItemsSource = eventman.AllEvents;
+            App.eventGest.recupEvent();
+            eventsListView.ItemsSource = App.eventGest.AllEvents;
         }
 
         private void IGiveButton_Click(object sender, RoutedEventArgs e)
@@ -47,8 +46,9 @@ namespace EventMyLife.View
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            eventman.recupEvent();
-            eventsListView.ItemsSource = eventman.AllEvents;
+            App.eventGest.recupEvent();
+            eventsListView.ItemsSource = App.eventGest.AllEvents;
+            App.tickets.recupEvent();
         }
 
     }
